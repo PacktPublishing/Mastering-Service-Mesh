@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-v2
+  labels:
+    app: api-v2
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+    nodePort: 30147
+  selector:
+    app: api-v2
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-v2
+  labels:
+    app: api-v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-v2
+  template:
+    metadata:
+      labels:
+        app: api-v2
+      annotations:
+        "consul.hashicorp.com/connect-inject": "true"
+        "consul.hashicorp.com/service-meta-version": "2"
+        "consul.hashicorp.com/service-tags": "v2"
+    spec:
+      containers:
+        - name: api
+          image: docker.io/vikramkhatri/hello-admin:1.0
+          ports:
+          - containerPort: 8080
+            name: http
+          env:
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: HOST_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.hostIP
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace

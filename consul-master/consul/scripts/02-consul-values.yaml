@@ -1,0 +1,41 @@
+global:
+  datacenter: dc1
+  image: "consul:1.6.1"
+  imageK8S: "hashicorp/consul-k8s:0.9.3"
+
+server:
+  enabled: true
+  replicas: 3
+  bootstrapExpect: 3
+  affinity: ''
+  storageClass: "consul-storage"
+  storage: 2Gi
+  disruptionBudget:
+    enabled: true
+    maxUnavailable: 0
+
+client:
+  enabled: true
+  grpc: true
+
+dns:
+  enabled: true
+
+ui:
+  enabled: true
+
+connectInject:
+  enabled: true
+  imageEnvoy: "envoyproxy/envoy:v1.10.0"
+  default: true
+  centralConfig:
+    enabled: true
+    defaultProtocol: "http"
+    proxyDefaults: |
+      {
+        "envoy_dogstatsd_url": "udp://127.0.0.1:9125"
+      }
+
+# Sync Kubernetes and Consul services
+#syncCatalog:
+#  enabled: true

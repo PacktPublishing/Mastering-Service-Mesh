@@ -1,0 +1,89 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: consul-storage
+provisioner: kubernetes.io/no-provisioner
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: consul-data-0
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: data-consul-consul-server-0
+    namespace: consul
+  local:
+    path: /var/lib/consul0
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - osc01.servicemesh.local
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: consul-storage
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: consul-data-1
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: data-consul-consul-server-1
+    namespace: consul
+  local:
+    path: /var/lib/consul1
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - osc01.servicemesh.local
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: consul-storage
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: consul-data-2
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: data-consul-consul-server-2
+    namespace: consul
+  local:
+    path: /var/lib/consul2
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - osc01.servicemesh.local
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: consul-storage
+---
