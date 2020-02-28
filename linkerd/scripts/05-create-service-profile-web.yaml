@@ -1,0 +1,14 @@
+apiVersion: linkerd.io/v1alpha1
+kind: ServiceProfile
+metadata:
+  name: webapp.linkerd-lab.svc.cluster.local
+spec:
+  routes:
+  - name: '/books'
+    condition:
+      pathRegex: '/books'
+      method: POST
+  - name: '/books/{id}'
+    condition:
+      pathRegex: '/books/\d+'
+      method: GET

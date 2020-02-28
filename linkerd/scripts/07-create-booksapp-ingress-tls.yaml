@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: booksapp
+  annotations:
+    nginx.org/websocket-services: "webapp"
+    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header l5d-dst-override $service_name.$namespace.svc.cluster.local:7000;
+      proxy_hide_header l5d-remote-ip;
+      proxy_hide_header l5d-server-id;
+spec:
+  rules:
+  - host: booksapp.linkerd.local
+    http:
+      paths:
+      - backend:
+          serviceName: webapp
+          servicePort: 7000
+        path: /
+  tls:
+  - hosts:
+    - booksapp.linkerd.local
+    secretName: booksapp-keys
