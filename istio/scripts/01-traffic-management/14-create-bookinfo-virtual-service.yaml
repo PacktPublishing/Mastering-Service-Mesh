@@ -1,0 +1,28 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: bookinfo.istio.io
+spec:
+  hosts:
+  - "bookinfo.istio.io"
+  gateways:
+  - mygateway
+  http:
+  - match:
+    - uri:
+        exact: /
+    - uri:
+        exact: /productpage
+    - uri:
+        prefix: /static
+    - uri:
+        exact: /login
+    - uri:
+        exact: /logout
+    - uri:
+        prefix: /api/v1/products
+    route:
+    - destination:
+        host: productpage.istio-lab.svc.cluster.local
+        port:
+          number: 9080

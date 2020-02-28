@@ -1,0 +1,25 @@
+apiVersion: config.istio.io/v1alpha2
+kind: handler
+metadata:
+  name: mongohandler
+spec:
+  compiledAdapter: prometheus
+  params:
+    metrics:
+    - name: mongo_sent_bytes # Prometheus metric name
+      # Mixer instance name (fully-qualified)
+      instance_name: mongosentbytes.instance.istio-system
+      kind: COUNTER
+      label_names:
+      - source_service
+      - source_version
+      - destination_version
+      # Prometheus metric name
+    - name: mongo_received_bytes 
+      # Mixer instance name (fully-qualified)
+      instance_name: mongoreceivedbytes.instance.istio-system
+      kind: COUNTER
+      label_names:
+      - source_service
+      - source_version
+      - destination_version

@@ -1,0 +1,8 @@
+apiVersion: "rbac.istio.io/v1alpha1"
+kind: ServiceRole
+metadata:
+  name: ratings-viewer
+spec:
+  rules:
+  - services: ["ratings.istio-lab.svc.cluster.local"]
+    methods: ["GET"]

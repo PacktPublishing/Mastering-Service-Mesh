@@ -1,0 +1,10 @@
+apiVersion: "rbac.istio.io/v1alpha1"
+kind: ServiceRole
+metadata:
+  name: mongodb-viewer
+spec:
+  rules:
+  - services: ["mongodb.istio-lab.svc.cluster.local"]
+    constraints:
+    - key: "destination.port"
+      values: ["27017"]

@@ -1,0 +1,27 @@
+apiVersion: config.istio.io/v1alpha2
+kind: instance
+metadata:
+  name: mongosentbytes
+spec:
+  compiledTemplate: metric
+  params:
+    value: connection.sent.bytes | 0 # uses a TCP-specific attribute
+    dimensions:
+      source_service: source.workload.name | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+    monitoredResourceType: '"UNSPECIFIED"'
+---
+apiVersion: config.istio.io/v1alpha2
+kind: instance
+metadata:
+  name: mongoreceivedbytes
+spec:
+  compiledTemplate: metric
+  params:
+    value: connection.received.bytes | 0 # uses a TCP-specific attribute
+    dimensions:
+      source_service: source.workload.name | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+    monitoredResourceType: '"UNSPECIFIED"'

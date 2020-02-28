@@ -1,0 +1,8 @@
+apiVersion: "rbac.istio.io/v1alpha1"
+kind: ServiceRole
+metadata:
+  name: productpage-viewer
+spec:
+  rules:
+  - services: [productpage.istio-lab.svc.cluster.local]
+    methods: ["*"]

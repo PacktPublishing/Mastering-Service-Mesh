@@ -1,0 +1,12 @@
+apiVersion: "rbac.istio.io/v1alpha1"
+kind: ServiceRoleBinding
+metadata:
+  name: bind-details-reviews-viewer
+spec:
+  subjects:
+  - user: "cluster.local/ns/istio-lab/sa/bookinfo-productpage"
+  - properties:
+      source.namespace: "istio-lab"
+  roleRef:
+    kind: ServiceRole
+    name: "details-reviews-viewer"

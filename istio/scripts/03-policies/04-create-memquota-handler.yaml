@@ -1,0 +1,20 @@
+apiVersion: config.istio.io/v1alpha2
+kind: handler
+metadata:
+  name: quotahandler
+spec:
+  compiledAdapter: memquota
+  params:
+    quotas:
+    - name: requestcountquota.instance.istio-system
+      maxAmount: 500
+      validDuration: 1s
+      overrides:
+      - dimensions:
+          destination: reviews
+        maxAmount: 1
+        validDuration: 5s
+      - dimensions:
+          destination: productpage
+        maxAmount: 5
+        validDuration: 1s

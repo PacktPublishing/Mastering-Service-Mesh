@@ -1,0 +1,6 @@
+apiVersion: "config.istio.io/v1alpha2"
+kind: instance
+metadata:
+  name: denyreviewsv3request
+spec:
+  compiledTemplate: checknothing

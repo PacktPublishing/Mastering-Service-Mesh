@@ -1,0 +1,11 @@
+apiVersion: config.istio.io/v1alpha2
+kind: QuotaSpecBinding
+metadata:
+  name: requestcount
+spec:
+  quotaSpecs:
+  - name: requestcount
+    namespace: istio-system
+  services:
+  - name: productpage
+    namespace: istio-lab

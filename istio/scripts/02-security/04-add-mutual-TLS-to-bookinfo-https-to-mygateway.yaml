@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: mygateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+  - port:
+      number: 443
+      name: bookinfo
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: bookinfo-keys 
+    hosts:
+    - bookinfo.istio.io
+  - port:
+      number: 443
+      name: httpbin
+      protocol: HTTPS
+    tls:
+      mode: MUTUAL
+      credentialName: httpbin-keys
+    hosts:
+    - httpbin.istio.io

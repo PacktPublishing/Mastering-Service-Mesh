@@ -1,0 +1,21 @@
+apiVersion: "rbac.istio.io/v1alpha1"
+kind: ServiceRole
+metadata:
+  name: httpbin
+spec:
+  rules:
+  - services: [httpbin.istio-lab.svc.cluster.local]
+    methods: ["*"]
+---
+apiVersion: "rbac.istio.io/v1alpha1"
+kind: ServiceRoleBinding
+metadata:
+  name: bind-httpbin
+spec:
+  subjects:
+  - user: "*"
+  - properties:
+      source.namespace: "istio-lab"
+  roleRef:
+    kind: ServiceRole
+    name: "httpbin"

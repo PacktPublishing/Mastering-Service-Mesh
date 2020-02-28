@@ -1,0 +1,13 @@
+apiVersion: "rbac.istio.io/v1alpha1"
+kind: ServiceRoleBinding
+metadata:
+  name: bind-service-viewer
+spec:
+  subjects:
+  - properties:
+      source.namespace: "istio-system"
+  - properties:
+      source.namespace: "istio-lab"
+  roleRef:
+    kind: ServiceRole
+    name: "service-viewer"
