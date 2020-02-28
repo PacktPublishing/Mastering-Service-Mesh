@@ -1,0 +1,60 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: {{ template "service-loadbalancer.fullname" . }}-cloud-provider
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    app: {{ template "service-loadbalancer.fullname" . }}-cloud-provider
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ template "service-loadbalancer.fullname" . }}-cloud-provider
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        scheduler.alpha.kubernetes.io/critical-pod: ""
+        scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
+      labels:
+        app: {{ template "service-loadbalancer.fullname" . }}-cloud-provider
+    spec:
+      serviceAccountName: kube-keepalived-vip
+      containers:
+      - name: keepalived-cloud-provider
+        image: "{{ .Values.keepalivedCloudProvider.image.repository }}:{{ .Values.keepalivedCloudProvider.image.tag }}"
+        imagePullPolicy: {{ .Values.imagePullPolicy }}
+        resources:
+{{ toYaml .Values.keepalivedCloudProvider.resources | indent 10 }}
+        env:
+        - name: KEEPALIVED_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        - name: KEEPALIVED_CONFIG_MAP
+          value: vip-configmap
+        - name: KEEPALIVED_SERVICE_CIDR
+          value: {{ .Values.keepalivedCloudProvider.serviceIPRange }}
+        volumeMounts:
+        - name: certs
+          mountPath: /etc/ssl/certs
+    {{- if .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml .Values.nodeSelector | indent 8 }}
+    {{- end }}
+    {{- if .Values.tolerations }}
+      tolerations:
+{{ toYaml .Values.tolerations | indent 6 }}
+    {{- end }}
+    {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+{{ toYaml .Values.imagePullSecrets | indent 6 }}
+    {{- end }}
+      volumes:
+      - name: certs
+        hostPath:
+          path: /etc/ssl/certs

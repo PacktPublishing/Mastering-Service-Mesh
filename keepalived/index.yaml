@@ -1,0 +1,17 @@
+apiVersion: v1
+entries:
+  keepalived:
+  - apiVersion: v1
+    created: "2019-08-12T15:09:10.054217649-04:00"
+    description: Cloud Proivder of Keepalived to support LoadBalancer type of service
+    digest: 4deff5c1c42e36c390caf1b10afd1969a841c9cd5e63ac91204cb0f400f25632
+    maintainers:
+    - name: IBM Cloud Private
+    name: keepalived
+    sources:
+    - https://github.com/IBM/charts/tree/master/stable
+    tillerVersion: '>=2.4.0'
+    urls:
+    - https://vikramkhatri.github.io/helm-chart/keepalived-0.1.0.tgz
+    version: 0.1.0
+generated: "2019-08-12T15:09:10.053272705-04:00"

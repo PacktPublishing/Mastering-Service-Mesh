@@ -1,0 +1,72 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: {{ template "service-loadbalancer.fullname" . }}-vip-manager
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    app: {{ template "service-loadbalancer.fullname" . }}-vip-manager
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  minReadySeconds: 0
+  revisionHistoryLimit: 10
+  updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: {{ template "service-loadbalancer.fullname" . }}-vip-manager
+    spec:
+      serviceAccountName: kube-keepalived-vip
+      hostNetwork: true
+      containers:
+        - image: "{{ .Values.keepalivedVIPManager.image.repository }}:{{ .Values.keepalivedVIPManager.image.tag }}"
+          name: keepalived-vip-manager
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          resources:
+{{ toYaml .Values.keepalivedCloudProvider.resources | indent 12 }}
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - mountPath: /lib/modules
+              name: modules
+              readOnly: true
+            - mountPath: /dev
+              name: dev
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          args:
+          - --services-configmap={{ .Release.Namespace }}/vip-configmap
+          - --v=4
+          - --vrid={{ .Values.keepalivedVIPManager.vrid }}
+          # unicast uses the ip of the nodes instead of multicast
+          # this is useful if running in cloud providers (like AWS)
+          #- --use-unicast=true
+      volumes:
+        - name: modules
+          hostPath:
+            path: /lib/modules
+        - name: dev
+          hostPath:
+            path: /dev
+    {{- if .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml .Values.nodeSelector | indent 8 }}
+    {{- end }}
+    {{- if .Values.tolerations }}
+      tolerations:
+{{ toYaml .Values.tolerations | indent 6 }}
+    {{- end }}
+    {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+{{ toYaml .Values.imagePullSecrets | indent 6 }}
+    {{- end }}

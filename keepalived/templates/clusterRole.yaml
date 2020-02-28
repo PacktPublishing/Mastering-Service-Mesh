@@ -1,0 +1,25 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kube-keepalived-vip
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - events
+  - nodes
+  - pods
+  - endpoints
+  - services
+  - services/status
+  - configmaps
+  verbs:
+  - '*'
+- apiGroups:
+  - extensions
+  resourceNames:
+  - kube-keepalived-vip
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
