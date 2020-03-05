@@ -1,0 +1,698 @@
+{
+  "version": 1,
+  "width": 174,
+  "height": 40,
+  "duration": 100.0,
+  "command": "/bin/bash -l",
+  "title": "Install Bookinfo Application",
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.100112,
+      "\u001b]0;user@osc01:~/asciinema\u0007\u001b[?1034h[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# Create a separ"
+    ],
+    [
+      0.014035,
+      "ate name space w"
+    ],
+    [
+      0.014328,
+      "hich will be use"
+    ],
+    [
+      0.015917,
+      "d to deploy the "
+    ],
+    [
+      0.000253,
+      "application"
+    ],
+    [
+      1.01327,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "kubectl create namespace istio-l"
+    ],
+    [
+      0.013484,
+      "ab"
+    ],
+    [
+      0.665551,
+      "\r\n"
+    ],
+    [
+      0.152993,
+      "namespace/istio-lab created\r\n"
+    ],
+    [
+      0.001232,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# grant Cluster "
+    ],
+    [
+      0.015486,
+      "Admin role to th"
+    ],
+    [
+      0.002451,
+      "e default servic"
+    ],
+    [
+      0.014688,
+      "e account in ist"
+    ],
+    [
+      0.014035,
+      "io-lab namespace"
+    ],
+    [
+      0.534254,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "kubectl create c"
+    ],
+    [
+      0.013571,
+      "lusterrolebindin"
+    ],
+    [
+      0.014634,
+      "g istio-lab-clus"
+    ],
+    [
+      0.013911,
+      "ter-role-binding"
+    ],
+    [
+      0.001368,
+      " --cluster"
+    ],
+    [
+      0.000285,
+      "role=c"
+    ],
+    [
+      0.01274,
+      "luster-admin --s"
+    ],
+    [
+      0.016528,
+      "erviceaccount="
+    ],
+    [
+      0.000252,
+      "is"
+    ],
+    [
+      0.007248,
+      "tio-lab:default"
+    ],
+    [
+      0.864869,
+      "\r\n"
+    ],
+    [
+      0.051996,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-lab-cluster-role-binding created\r\n"
+    ],
+    [
+      0.000699,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      5.624176,
+      "# download booki"
+    ],
+    [
+      0.014626,
+      "nfo demo applica"
+    ],
+    [
+      0.014072,
+      "tion YAML"
+    ],
+    [
+      1.125356,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      6.519325,
+      "mkdir -p ~/servi"
+    ],
+    [
+      0.00447,
+      "cemesh\r\n"
+    ],
+    [
+      0.001318,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ curl -L h"
+    ],
+    [
+      0.01479,
+      "ttps://raw.githu"
+    ],
+    [
+      0.015794,
+      "busercontent.com"
+    ],
+    [
+      0.000372,
+      "/istio/istio/mas"
+    ],
+    [
+      0.013766,
+      "ter/samples/book"
+    ],
+    [
+      0.015469,
+      "info/platform/ku"
+    ],
+    [
+      0.002306,
+      "be/bookinfo.yaml"
+    ],
+    [
+      0.013765,
+      " -o ~/servicemes"
+    ],
+    [
+      0.013903,
+      "h/bookinfo.yaml"
+    ],
+    [
+      1.516998,
+      "\r\n"
+    ],
+    [
+      0.004356,
+      "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\r\n                                 Dload  Upload   Total   Spent    Left  Speed\r\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+    ],
+    [
+      0.35469,
+      "\r100  5675  100  5675    0     0  16052      0 --:--:-- --:--:-- --:--:-- 16076\r\n"
+    ],
+    [
+      0.000166,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# deploy the boo"
+    ],
+    [
+      0.014274,
+      "kinfo applicatio"
+    ],
+    [
+      0.016571,
+      "n"
+    ],
+    [
+      0.767895,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio"
+    ],
+    [
+      0.013496,
+      "-lab apply -f ~/"
+    ],
+    [
+      0.002149,
+      "servicemesh/book"
+    ],
+    [
+      0.013804,
+      "info.yaml"
+    ],
+    [
+      0.83909,
+      "\r\n"
+    ],
+    [
+      0.25805,
+      "service/details created\r\n"
+    ],
+    [
+      0.005461,
+      "serviceaccount/bookinfo-details created\r\n"
+    ],
+    [
+      0.008858,
+      "deployment.apps/details-v1 created\r\n"
+    ],
+    [
+      0.016885,
+      "service/ratings created\r\n"
+    ],
+    [
+      0.013449,
+      "serviceaccount/bookinfo-ratings created\r\n"
+    ],
+    [
+      0.007615,
+      "deployment.apps/ratings-v1 created\r\n"
+    ],
+    [
+      0.049373,
+      "service/reviews created\r\n"
+    ],
+    [
+      0.008932,
+      "serviceaccount/bookinfo-reviews created\r\n"
+    ],
+    [
+      0.009913,
+      "deployment.apps/reviews-v1 created\r\n"
+    ],
+    [
+      0.007763,
+      "deployment.apps/reviews-v2 created\r\n"
+    ],
+    [
+      0.010895,
+      "deployment.apps/reviews-v3 created\r\n"
+    ],
+    [
+      0.038455,
+      "service/productpage created\r\n"
+    ],
+    [
+      0.007101,
+      "serviceaccount/bookinfo-productpage created\r\n"
+    ],
+    [
+      0.005085,
+      "deployment.apps/productpage-v1 created\r\n"
+    ],
+    [
+      0.001979,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# Check if Kuber"
+    ],
+    [
+      0.011867,
+      "netes services n"
+    ],
+    [
+      0.001683,
+      "ames are resolva"
+    ],
+    [
+      0.013261,
+      "ble"
+    ],
+    [
+      0.632853,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "dig +search +noa"
+    ],
+    [
+      0.013461,
+      "ll +answer kuber"
+    ],
+    [
+      0.012011,
+      "netes.default.sv"
+    ],
+    [
+      0.001306,
+      "c.cluster.local"
+    ],
+    [
+      0.634321,
+      "\r\n"
+    ],
+    [
+      1.007575,
+      "kubernetes.default.svc.cluster.local. 30 IN A\t10.96.0.1\r\n"
+    ],
+    [
+      0.001327,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "#  Check the sta"
+    ],
+    [
+      0.01342,
+      "tus of the booki"
+    ],
+    [
+      0.012089,
+      "nfo application"
+    ],
+    [
+      0.55633,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio"
+    ],
+    [
+      0.011865,
+      "-lab get pods"
+    ],
+    [
+      0.650351,
+      "\r\n"
+    ],
+    [
+      0.220698,
+      "NAME"
+    ],
+    [
+      0.000578,
+      "                              READY   STATUS              RESTARTS   AGE\r\ndetails-v1-74f858558f-pwk9n       0/1     ContainerCreating   0          29s\r\nproductpage-v1-8554d58bff-csj56   0/1     ContainerCreating   0          28s\r\nratings-v1-7855f5bcb9-gc766       0/1     ContainerCreating   0          28s\r\nreviews-v1-59fd8b965b-74kjc       0/1     ContainerCreating   0          28s\r\nreviews-v2-d6cfdb7d6-tkppf        0/1     ContainerCreating   0          28s\r\nreviews-v3-75699b5cfb-59b4l       0/1     ContainerCreating   0          28s\r\n"
+    ],
+    [
+      0.001406,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# Look at the Ku"
+    ],
+    [
+      0.001246,
+      "bernetes service"
+    ],
+    [
+      0.013271,
+      " descriptions fo"
+    ],
+    [
+      0.012403,
+      "r Bookinfo appli"
+    ],
+    [
+      0.012846,
+      "cation"
+    ],
+    [
+      1.243643,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio"
+    ],
+    [
+      0.001981,
+      "-lab get svc"
+    ],
+    [
+      0.993391,
+      "\r\n"
+    ],
+    [
+      0.18592,
+      "NAME          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE\r\ndetails       ClusterIP   10.96.174.242    <none>        9080/TCP   50s\r\nproductpage   ClusterIP   10.105.117.94    <none>        9080/TCP   49s\r\nratings       ClusterIP   10.109.228.28    <none>        9080/TCP   50s\r\nreviews       ClusterIP   10.104.204.204   <none>        9080/TCP   49s\r\n"
+    ],
+    [
+      0.001029,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "#  Check the sta"
+    ],
+    [
+      0.01429,
+      "tus of the booki"
+    ],
+    [
+      0.013524,
+      "nfo application"
+    ],
+    [
+      0.70302,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      5.8244,
+      "kubectl -n istio"
+    ],
+    [
+      0.014199,
+      "-lab get pods"
+    ],
+    [
+      0.658426,
+      "\r\n"
+    ],
+    [
+      0.049703,
+      "NAME                              READY   STATUS    RESTARTS   AGE\r\ndetails-v1-74f858558f-pwk9n       1/1     Running   0          96s\r\nproductpage-v1-8554d58bff-csj56   1/1     Running   0          95s\r\nratings-v1-7855f5bcb9-gc766       1/1     Running   0          95s\r\nreviews-v1-59fd8b965b-74kjc       1/1     Running   0          95s\r\nreviews-v2-d6cfdb7d6-tkppf        1/1     Running   0          95s\r\nreviews-v3-75699b5cfb-59b4l       1/1     Running   0          95s\r\n"
+    ],
+    [
+      0.00074,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      9.590284,
+      "# Check the serv"
+    ],
+    [
+      0.001705,
+      "ice description "
+    ],
+    [
+      0.014083,
+      "of the product p"
+    ],
+    [
+      0.014154,
+      "age"
+    ],
+    [
+      0.911614,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      5.076527,
+      "kubectl -n istio"
+    ],
+    [
+      0.000427,
+      "-lab describe sv"
+    ],
+    [
+      0.01375,
+      "c productpage"
+    ],
+    [
+      0.641505,
+      "\r\n"
+    ],
+    [
+      0.055635,
+      "Name:              productpage\r\nNamespace:         istio-lab\r\nLabels:            app=productpage\r\n                   service=productpage\r\nAnnotations:       kubectl.kubernetes.io/last-applied-configuration:\r\n                     {\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"productpage\",\"service\":\"productpage\"},\"name\":\"productpag...\r\nSelector:          app=productpage\r\nType:              ClusterIP\r\nIP:                10.105.117.94\r\nPort:              http  9080/TCP\r\nTargetPort:        9080/TCP\r\nEndpoints:         192.168.230.201:9080\r\nSession Affinity:  None\r\nEvents:            <none>\r\n"
+    ],
+    [
+      0.001207,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      7.904206,
+      "# Expand on all "
+    ],
+    [
+      0.000294,
+      "the running pods"
+    ],
+    [
+      0.013547,
+      " to get a closer"
+    ],
+    [
+      0.014213,
+      " look at the IP "
+    ],
+    [
+      0.013858,
+      "addresses and th"
+    ],
+    [
+      0.002268,
+      "e node names"
+    ],
+    [
+      0.674923,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio"
+    ],
+    [
+      0.014191,
+      "-lab get pods -o"
+    ],
+    [
+      0.002025,
+      " wide"
+    ],
+    [
+      0.723633,
+      "\r\n"
+    ],
+    [
+      0.051244,
+      "NAME                              READY   STATUS    RESTARTS   AGE    IP                NODE                      NOMINATED NODE   READINESS GATES\r\ndetails-v1-74f858558f-pwk9n       1/1     Running   0          2m7s   192.168.230.203   osc01.servicemesh.local   <none>           <none>\r\nproductpage-v1-8554d58bff-csj56   1/1     Running   0          2m6s   192.168.230.201   osc01.servicemesh.local   <none>           <none>\r\nratings-v1-7855f5bcb9-gc766       1/1     Running   0          2m6s   192.168.230.204   osc01.servicemesh.local   <none>           <none>\r\nreviews-v1-59fd8b965b-74kjc       1/1     Running   0          2m6s   192.168.230.202   osc01.servicemesh.local   <none>           <none>\r\nreviews-v2-d6cfdb7d6-tkppf        1/1     Running   0          2m6s   192.168.230.200   osc01.servicemesh.local   <none>           <none>\r\nreviews-v3-75699b5cfb-59b4l       1/1     Running   0          2m6s   192.168.230.199   osc01.servicemesh.local   <none>           <none>\r\n"
+    ],
+    [
+      0.000925,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# Get POD addres"
+    ],
+    [
+      0.016358,
+      "s and run curl c"
+    ],
+    [
+      0.003149,
+      "ommand to get 20"
+    ],
+    [
+      0.014445,
+      "0 status code"
+    ],
+    [
+      1.188592,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "PRODUCTPAGE_IP=$"
+    ],
+    [
+      0.013027,
+      "(kubectl -n isti"
+    ],
+    [
+      0.013205,
+      "o-lab get pods -"
+    ],
+    [
+      0.012991,
+      "l app=productpag"
+    ],
+    [
+      0.001619,
+      "e -o jsonpath={."
+    ],
+    [
+      0.01329,
+      "items..status.po"
+    ],
+    [
+      0.012964,
+      "dIP}) ; echo $PR"
+    ],
+    [
+      0.004047,
+      "ODUCTPAGE_IP"
+    ],
+    [
+      1.090762,
+      "\r\n"
+    ],
+    [
+      0.054506,
+      "192.168.230.201\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "curl -o /dev/nul"
+    ],
+    [
+      0.000677,
+      "l -s -w \"%{http_"
+    ],
+    [
+      0.015128,
+      "code}\\n\" http://"
+    ],
+    [
+      0.014016,
+      "$PRODUCTPAGE_IP:"
+    ],
+    [
+      0.013407,
+      "9080"
+    ],
+    [
+      1.689017,
+      "\r\n"
+    ],
+    [
+      0.016334,
+      "200\r\n"
+    ],
+    [
+      0.000254,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# This concludes"
+    ],
+    [
+      0.002336,
+      " installin"
+    ],
+    [
+      0.000199,
+      "g book"
+    ],
+    [
+      0.014408,
+      "info applic"
+    ],
+    [
+      0.000199,
+      "ation"
+    ],
+    [
+      0.013999,
+      " for learning Is"
+    ],
+    [
+      0.014911,
+      "tio"
+    ],
+    [
+      1.255735,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ]
+  ]
+}

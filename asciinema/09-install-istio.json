@@ -1,0 +1,4526 @@
+{
+  "version": 1,
+  "width": 174,
+  "height": 40,
+  "duration": 200,
+  "command": "/bin/bash -l",
+  "title": "Install Istio",
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.090683,
+      "\u001b]0;user@osc01:~/asciinema\u0007\u001b[?1034h[user@osc01 asciinema]$ "
+    ],
+    [
+      1.854639,
+      "## Find out all "
+    ],
+    [
+      0.01473,
+      "previous release"
+    ],
+    [
+      0.003657,
+      "s of Istio"
+    ],
+    [
+      0.886974,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.036448,
+      "curl -L -s https"
+    ],
+    [
+      0.013528,
+      "://api.github.co"
+    ],
+    [
+      0.014573,
+      "m/repos/istio/is"
+    ],
+    [
+      0.004263,
+      "tio/releases | g"
+    ],
+    [
+      0.01445,
+      "rep tag_name"
+    ],
+    [
+      0.837328,
+      "\r\n"
+    ],
+    [
+      0.402609,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.3.1\",\r\n"
+    ],
+    [
+      0.024847,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.6\",\r\n"
+    ],
+    [
+      0.001514,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.15\",\r\n"
+    ],
+    [
+      0.028269,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.3.0\",\r\n"
+    ],
+    [
+      0.00032,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.3.0-rc.3\",\r\n"
+    ],
+    [
+      0.001352,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.3.0-rc.2\",\r\n"
+    ],
+    [
+      0.001508,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.3.0-rc.1\",\r\n"
+    ],
+    [
+      0.026151,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.5\",\r\n"
+    ],
+    [
+      0.00186,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.14\",\r\n"
+    ],
+    [
+      0.00134,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.3.0-rc.0\",\r\n"
+    ],
+    [
+      0.000807,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.4\",\r\n"
+    ],
+    [
+      0.001422,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.13\",\r\n"
+    ],
+    [
+      0.001595,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.3\",\r\n"
+    ],
+    [
+      0.001115,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.12\",\r\n"
+    ],
+    [
+      0.001408,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.11\",\r\n"
+    ],
+    [
+      0.019954,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.2\",\r\n"
+    ],
+    [
+      0.000468,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.0.9\",\r\n"
+    ],
+    [
+      0.00169,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.10\",\r\n"
+    ],
+    [
+      0.001351,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.1\",\r\n"
+    ],
+    [
+      0.001045,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.0\",\r\n"
+    ],
+    [
+      0.002126,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.0-rc.3\",\r\n"
+    ],
+    [
+      0.0019,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.0-rc.2\",\r\n    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.9\",\r\n"
+    ],
+    [
+      0.001661,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.0-rc.1\",\r\n"
+    ],
+    [
+      0.002123,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.0.8\",\r\n"
+    ],
+    [
+      0.001289,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.8\",\r\n"
+    ],
+    [
+      0.001962,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.2.0-rc.0\",\r\n"
+    ],
+    [
+      0.001569,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.7\",\r\n    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.6\",\r\n"
+    ],
+    [
+      0.002429,
+      "    \"\u001b[01;31m\u001b[Ktag_name\u001b[m\u001b[K\": \"1.1.5\",\r\n"
+    ],
+    [
+      0.002429,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      1.95362,
+      "# find out the l"
+    ],
+    [
+      0.002571,
+      "atest version"
+    ],
+    [
+      0.681974,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      6.842979,
+      "export ISTIO_VER"
+    ],
+    [
+      0.012779,
+      "SION=$(curl -L -"
+    ],
+    [
+      0.014166,
+      "s https://api.gi"
+    ],
+    [
+      0.014074,
+      "thub.com/repos/i"
+    ],
+    [
+      0.013622,
+      "stio/istio/rel"
+    ],
+    [
+      0.000157,
+      "ea"
+    ],
+    [
+      0.001975,
+      "ses/latest | gre"
+    ],
+    [
+      0.014502,
+      "p tag_name | sed"
+    ],
+    [
+      0.014596,
+      " \"s/ *\\\"tag_name"
+    ],
+    [
+      0.00192,
+      "\\\": *\\\"\\\\(.*\\\\)\\"
+    ],
+    [
+      0.013626,
+      "\",*/\\\\ \r1/\")"
+    ],
+    [
+      0.744777,
+      "\r\n"
+    ],
+    [
+      0.345387,
+      "\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      1.885754,
+      "echo $ISTIO_VERS"
+    ],
+    [
+      0.014896,
+      "ION"
+    ],
+    [
+      0.664305,
+      "\r\n1.3.1\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      6.919367,
+      "# Download versi"
+    ],
+    [
+      0.014536,
+      "on 1.3.1 to stay"
+    ],
+    [
+      0.003211,
+      " consistent with"
+    ],
+    [
+      0.014067,
+      " the hands-on ex"
+    ],
+    [
+      0.013762,
+      "ercises for th"
+    ],
+    [
+      0.000267,
+      "is"
+    ],
+    [
+      0.013648,
+      " book"
+    ],
+    [
+      1.068269,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      5.296872,
+      "cd ## Switch to "
+    ],
+    [
+      0.015767,
+      "your home direct"
+    ],
+    [
+      0.000688,
+      "ory"
+    ],
+    [
+      0.624774,
+      "\r\n\u001b]0;user@osc01:~\u0007[user@osc01 ~]$ "
+    ],
+    [
+      5.956759,
+      "export ISTIO_VER"
+    ],
+    [
+      0.000326,
+      "SION=1.3.1"
+    ],
+    [
+      0.747044,
+      "\r\n\u001b]0;user@osc01:~\u0007[user@osc01 ~]$ "
+    ],
+    [
+      5.815037,
+      "curl -L https://"
+    ],
+    [
+      0.014068,
+      "git.io/getLatest"
+    ],
+    [
+      0.014368,
+      "Istio | sh -"
+    ],
+    [
+      0.649123,
+      "\r\n"
+    ],
+    [
+      0.00428,
+      "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\r\n                                 Dload  Upload   Total   Spent    Left  Speed\r\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+    ],
+    [
+      0.304995,
+      "\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r\n"
+    ],
+    [
+      0.16445,
+      "\r100  2802  100  2802    0     0   5986      0 --:--:-- --:--:-- --:--:--  5986\r\n"
+    ],
+    [
+      0.001691,
+      "Downloading istio-1.3.1 from https://github.com/istio/istio/releases/download/1.3.1/istio-1.3.1-linux.tar.gz ..."
+    ],
+    [
+      0.003787,
+      "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\r\n                                 Dload  Upload   Total   Spent    Left  Speed\r\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+    ],
+    [
+      0.29152,
+      "\r100   614    0   614    0     0   2104      0 --:--:-- --:--:-- --:--:--  2109\r\n"
+    ],
+    [
+      0.125699,
+      "\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0"
+    ],
+    [
+      0.982713,
+      "\r 17 36.3M   17 6581k    0     0  4700k      0  0:00:07  0:00:01  0:00:06 6695k"
+    ],
+    [
+      1.000024,
+      "\r 40 36.3M   40 14.8M    0     0  6334k      0  0:00:05  0:00:02  0:00:03 7667k"
+    ],
+    [
+      1.000073,
+      "\r 64 36.3M   64 23.2M    0     0  7012k      0  0:00:05  0:00:03  0:00:02 7993k"
+    ],
+    [
+      1.000084,
+      "\r 87 36.3M   87 31.7M    0     0  7378k      0  0:00:05  0:00:04  0:00:01 8151k"
+    ],
+    [
+      0.551639,
+      "\r100 36.3M  100 36.3M    0     0  7521k      0  0:00:04  0:00:04 --:--:-- 8215k\r\n"
+    ],
+    [
+      0.0015,
+      "Istio 1.3.1 Download Complete!\r\n\r\nIstio has been successfully downloaded into the istio-1.3.1 folder on your system.\r\n\r\n"
+    ],
+    [
+      0.00117,
+      "Next Steps:\r\nSee https://istio.io/docs/setup/kubernetes/install/ to add Istio to your Kubernetes cluster.\r\n\r\nTo configure the istioctl client tool for your workstation,\r\nadd the /home/user/istio-1.3.1/bin directory to your environment path variable with:\r\n\t export PATH=\"$PATH:/home/user/istio-1.3.1/bin\"\r\n\r\nBegin the Istio pre-installation verification check by running:\r\n\t istioctl verify-install \r\n\r\nNeed more information? Visit https://istio.io/docs/setup/kubernetes/install/ \r\n"
+    ],
+    [
+      0.00017,
+      "\u001b]0;user@osc01:~\u0007[user@osc01 ~]$ "
+    ],
+    [
+      1.343621,
+      "cd istio-$ISTIO_"
+    ],
+    [
+      0.017034,
+      "VERSION"
+    ],
+    [
+      1.374365,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      5.898148,
+      "vi ~/.bashrc"
+    ],
+    [
+      0.796807,
+      "\r\n"
+    ],
+    [
+      0.03936,
+      "\u001b[?1049h\u001b[?1h\u001b=\u001b[2;1H▽\u001b[6n\u001b[1;1H  \u001b[1;1H"
+    ],
+    [
+      0.00122,
+      "\u001b[1;58r\u001b[?12;25h\u001b[?12l\u001b[?25h\u001b[27m\u001b[m\u001b[H\u001b[2J\u001b[?25l\u001b[58;1H\"~/.bashrc\" 11L, 231C"
+    ],
+    [
+      0.00748,
+      "\u001b[>c\u001b[1;1H\u001b[34m# .bashrc\r\n\r\n# Source global definitions\u001b[m\r\n\u001b[38;5;130mif [\u001b[m \u001b[38;5;130m-f\u001b[m /etc/bashrc \u001b[38;5;130m]\u001b[m; \u001b[38;5;130mthen\r\n        . \u001b[m/etc/bashrc\r\n\u001b[38;5;130mfi\u001b[m\r\n\r\n\u001b[34m# Uncomment the following line if you don't like systemctl's auto-paging feature:\r\n# export SYSTEMD_PAGER=\r\n\r\n# User specific aliases and functions\u001b[m\r\n\u001b[94m~                                                                                                                                                                             \u001b[13;1H~                                                                                                                                                                             \u001b[14;1H~                                                                                                                                                                             \u001b[15;1H~                                                                                                                                  "
+    ],
+    [
+      0.000237,
+      "                                           \u001b[16;1H~                                                                                                                                                                             \u001b[17;1H~                                                                                                                                                                             \u001b[18;1H~                                                                                                                                                                             \u001b[19;1H~                                                                                                                                                                             \u001b[20;1H~                                                                                                                                                                             \u001b[21;1H~                                                                    "
+    ],
+    [
+      0.000127,
+      "                                                                                                         \u001b[22;1H~                                                                                                                                                                             \u001b[23;1H~                                                                                                                                                                             \u001b[24;1H~                                                                                                                                                                             \u001b[25;1H~                                                                                                                                                                             \u001b[26;1H~                                                                                                                                                                             \u001b[27;1H~      "
+    ],
+    [
+      0.000133,
+      "                                                                                                                                                                       \u001b[28;1H~                                                                                                                                                                             \u001b[29;1H~                                                                                                                                                                             \u001b[30;1H~                                                                                                                                                                             \u001b[31;1H~                                                                                                                                                                             \u001b[32;1H~                                                                                                                             "
+    ],
+    [
+      5.2e-05,
+      "                                                \u001b[33;1H~                                                                                                                                                                             \u001b[34;1H~                                                                                                                                                                             \u001b[35;1H~                                                                                                                                                                             \u001b[36;1H~                                                                                                                                                                             \u001b[37;1H~                                                                                                                                                                             \u001b[38;1H~                                                               "
+    ],
+    [
+      3.8e-05,
+      "                                                                                                              \u001b[39;1H~                                                                                                                                                                             \u001b[40;1H~                                                                                                                                                                             \u001b[41;1H~                                                                                                                                                                             \u001b[42;1H~                                                                                                                                                                             \u001b[43;1H~                                                                                                                                                                             \u001b[44;1H~ "
+    ],
+    [
+      1.1e-05,
+      "                                                                                                                                                                            \u001b[45;1H~                                                                                                                                                                             \u001b[46;1H~                                                                                                                                                                             \u001b[47;1H~                                                                                                                                                                             \u001b[48;1H~                                                                                                                                                                             \u001b[49;1H~                                                                                                                        "
+    ],
+    [
+      1e-05,
+      "                                                     \u001b[50;1H~                                                                                                                                                                             \u001b[51;1H~                                                                                                                                                                             \u001b[52;1H~                                                                                                                                                                             \u001b[53;1H~                                                                                                                                                                             \u001b[54;1H~                                                                                                                                                                             \u001b[55;1H~                                                          "
+    ],
+    [
+      1.5e-05,
+      "                                                                                                                   \u001b[56;1H~                                                                                                                                                                             \u001b[57;1H~                                                                                                                                                                             \u001b[m\u001b[58;157H1,1\u001b[11CAll\u001b[1;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.063939,
+      "\u001b[?25l\u001b[58;157H2,0-1\u001b[2;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.503779,
+      "\u001b[?25l\u001b[58;157H3,1  \u001b[3;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.025581,
+      "\u001b[?25l\u001b[58;157H4\u001b[4;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.038067,
+      "\u001b[?25l\u001b[58;157H5,1-8\u001b[5;8H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.025353,
+      "\u001b[?25l\u001b[58;157H6,1  \u001b[6;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.037347,
+      "\u001b[?25l\u001b[58;157H7,0-1\u001b[7;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.025658,
+      "\u001b[?25l\u001b[58;157H8,1  \u001b[8;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.037863,
+      "\u001b[?25l\u001b[58;157H9\u001b[9;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.039059,
+      "\u001b[?25l\u001b[58;157H10,0-1\u001b[10;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.028055,
+      "\u001b[?25l\u001b[58;158H1,1  \u001b[11;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.03998,
+      "\u0007"
+    ],
+    [
+      0.027776,
+      "\u0007"
+    ],
+    [
+      0.038474,
+      "\u0007"
+    ],
+    [
+      0.967956,
+      "\u001b[?25l\u001b[58;1H\u001b[1m-- INSERT --\u001b[m\u001b[58;13H\u001b[K\u001b[58;157H11,1\u001b[10CAll\u001b[11;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.837641,
+      "\u001b[58;1H\u001b[K\u001b[11;1H"
+    ],
+    [
+      0.469446,
+      "\u001b[?25l\u001b[58;157H11,1\u001b[10CAll\u001b[11;1H\u001b[?12l\u001b[?25h\u001b[?25l\u001b[58;1H\u001b[1m-- INSERT --\u001b[m\u001b[58;157H\u001b[K\u001b[58;157H12,1\u001b[10CAll\u001b[12;1H\u001b[K\u001b[12;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.800488,
+      "\u001b[?25l\u001b[38;5;130mexport\u001b[m\u001b[36m ISTIO_VER\u001b[m\u001b[58;161H7\u001b[12;17H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.013663,
+      "\u001b[?25l\u001b[36mSION=\u001b[m1.3.1\r\n\u001b[38;5;130mif [\u001b[m \u001b[13;6H\u001b[K\u001b[58;158H3,6 \u001b[13;6H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.015342,
+      "\u001b[?25l\u001b[38;5;130m-d\u001b[m ~/istio-\u001b[35m${IST\u001b[m\u001b[58;160H22\u001b[13;22H\u001b[?12l\u001b[?25h\u001b[?25l\u001b[35mIO_VERSION}\u001b[m/bin\u001b[58;160H38\u001b[13;38H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.014817,
+      "\u001b[?25l\u001b[38;5;130m]\u001b[m ; \u001b[38;5;130mthen\u001b[m\r\n    exp\u001b[14;8H\u001b[K\u001b[58;158H4,8 \u001b[14;8H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.014584,
+      "\u001b[?25l\b\b\b\u001b[38;5;130mexport\u001b[m\u001b[36m PATH=\u001b[m\u001b[38;5;130m\"\u001b[m\u001b[31m~/isti\u001b[m\u001b[58;160H24\u001b[14;24H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.003277,
+      "\u001b[?25l\u001b[31mo-\u001b[m\u001b[35m${ISTIO_VERSIO\u001b[m\u001b[58;160H40\u001b[14;40H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.014929,
+      "\u001b[?25l\u001b[35mN}\u001b[m\u001b[31m/bin:\u001b[m\u001b[35m$PATH\u001b[m\u001b[38;5;130m\"\r\nfi\u001b[m\u001b[15;3H\u001b[K\u001b[58;158H5,3 \u001b[15;3H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.557425,
+      "\u001b[58;1H\u001b[K\u001b[15;2H"
+    ],
+    [
+      0.548309,
+      "\u001b[?25l\u001b[58;157H15,2\u001b[10CAll\u001b[15;2H\u001b[?12l\u001b[?25h\u001b[?25l\u001b[58;157H\u001b[K\u001b[58;1H:\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.259495,
+      "w\u001b[?25l\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.195436,
+      "q\u001b[?25l\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.495939,
+      "\r\u001b[?25l\"~/.bashrc\""
+    ],
+    [
+      0.001335,
+      " 15L, 360C written\r\r\r\n\u001b[?1l\u001b>\u001b[?12l\u001b[?25h\u001b[?1049l"
+    ],
+    [
+      0.000231,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      8.772598,
+      "# Source .bashrc"
+    ],
+    [
+      0.015905,
+      " to make changes to the system p"
+    ],
+    [
+      0.01428,
+      "ath"
+    ],
+    [
+      0.784643,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.357742,
+      "source ~/.bashrc"
+    ],
+    [
+      0.787314,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.800808,
+      "# Check if the c"
+    ],
+    [
+      0.013766,
+      "urrent Kubernet"
+    ],
+    [
+      0.000123,
+      "e"
+    ],
+    [
+      0.001944,
+      "s environment is"
+    ],
+    [
+      0.014226,
+      " ready for the i"
+    ],
+    [
+      0.013945,
+      "nstall of chosen"
+    ],
+    [
+      0.013833,
+      " Istio version"
+    ],
+    [
+      0.804469,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      0.000263,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.606762,
+      "source ~/.bashrc"
+    ],
+    [
+      0.718879,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      6.192818,
+      "istioctl verify-"
+    ],
+    [
+      0.001745,
+      "install"
+    ],
+    [
+      0.703394,
+      "\r\n"
+    ],
+    [
+      0.030595,
+      "\r\nChecking the cluster to make sure it is ready for Istio installation...\r\n\r\n#1. Kubernetes-api\r\n-----------------------\r\nCan initialize the Kubernetes client.\r\n"
+    ],
+    [
+      0.004737,
+      "Can query the Kubernetes API Server.\r\n\r\n#2. Kubernetes-version\r\n-----------------------\r\nIstio is compatible with Kubernetes: v1.15.4.\r\n\r\n#3. Istio-existence\r\n-----------------------\r\n"
+    ],
+    [
+      0.001591,
+      "Istio will be installed in the istio-system namespace.\r\n\r\n#4. Kubernetes-setup\r\n-----------------------\r\n"
+    ],
+    [
+      0.006813,
+      "Can create necessary Kubernetes configurations: Namespace,ClusterRole,ClusterRoleBinding,CustomResourceDefinition,Role,ServiceAccount,Service,Deployments,ConfigMap. \r\n\r\n#5. Sidecar-Injector\r\n-----------------------\r\n"
+    ],
+    [
+      0.001775,
+      "This Kubernetes cluster supports automatic sidecar injection. To enable automatic sidecar injection see https://istio.io/docs/setup/kubernetes/additional-setup/sidecar-injection/#deploying-an-app\r\n\r\n-----------------------\r\nInstall Pre-Check passed! The cluster is ready for Istio installation.\r\n\r\n"
+    ],
+    [
+      0.001038,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      6.396468,
+      "helm reset --for"
+    ],
+    [
+      0.000131,
+      "ce"
+    ],
+    [
+      0.742847,
+      "\r\n"
+    ],
+    [
+      0.219497,
+      "Tiller (the Helm server-side component) has been uninstalled from your Kubernetes Cluster.\r\n"
+    ],
+    [
+      0.000961,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      9.6383,
+      "# Create istio-s"
+    ],
+    [
+      0.014627,
+      "ystem namespace "
+    ],
+    [
+      0.012952,
+      "which will be us"
+    ],
+    [
+      0.013242,
+      "ed by Istio"
+    ],
+    [
+      0.743697,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.628774,
+      "kubectl create n"
+    ],
+    [
+      0.014709,
+      "amespace istio-s"
+    ],
+    [
+      0.004237,
+      "ystem"
+    ],
+    [
+      0.619459,
+      "\r\n"
+    ],
+    [
+      0.107949,
+      "namespace/istio-system created\r\n"
+    ],
+    [
+      0.001521,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      4.917612,
+      "# Grant cluster-"
+    ],
+    [
+      0.014665,
+      "admin role to th"
+    ],
+    [
+      0.015776,
+      "e default servic"
+    ],
+    [
+      0.001464,
+      "e account for th"
+    ],
+    [
+      0.01287,
+      "e namespace isti"
+    ],
+    [
+      0.014211,
+      "o-system"
+    ],
+    [
+      0.488089,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.285822,
+      "kubectl create c"
+    ],
+    [
+      0.002176,
+      "lusterrolebindin"
+    ],
+    [
+      0.01374,
+      "g istio-system-c"
+    ],
+    [
+      0.013837,
+      "luster-role"
+    ],
+    [
+      0.000212,
+      "-bind"
+    ],
+    [
+      0.014276,
+      "ing --clusterrol"
+    ],
+    [
+      0.0016,
+      "e=cluster-admin "
+    ],
+    [
+      0.014408,
+      "--serviceaccount"
+    ],
+    [
+      0.014612,
+      "=istio-system:de"
+    ],
+    [
+      0.013822,
+      "fault"
+    ],
+    [
+      0.53224,
+      "\r\n"
+    ],
+    [
+      0.050508,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-system-cluster-role-binding created\r\n"
+    ],
+    [
+      0.001208,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.867086,
+      "# Install the Is"
+    ],
+    [
+      0.013809,
+      "tio CRDs and re-"
+    ],
+    [
+      0.014968,
+      "initialize tille"
+    ],
+    [
+      0.00048,
+      "r to include ist"
+    ],
+    [
+      0.013068,
+      "io-system namesp"
+    ],
+    [
+      0.013407,
+      "ace"
+    ],
+    [
+      0.591257,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.296614,
+      "cd ~/istio-$ISTI"
+    ],
+    [
+      0.013963,
+      "O_VERSION/instal"
+    ],
+    [
+      0.015976,
+      "l/kubernetes/hel"
+    ],
+    [
+      0.000497,
+      "m/istio-init/fil"
+    ],
+    [
+      0.014011,
+      "es"
+    ],
+    [
+      0.647467,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm/istio-init/files\u0007[user@osc01 files]$ "
+    ],
+    [
+      5.734221,
+      "for i in ./crd*y"
+    ],
+    [
+      0.014483,
+      "aml; do kubectl "
+    ],
+    [
+      0.000507,
+      "apply -f $i; don"
+    ],
+    [
+      0.014293,
+      "e"
+    ],
+    [
+      0.608351,
+      "\r\n"
+    ],
+    [
+      0.227695,
+      "customresourcedefinition.apiextensions.k8s.io/virtualservices.networking.istio.io created\r\n"
+    ],
+    [
+      0.006799,
+      "customresourcedefinition.apiextensions.k8s.io/destinationrules.networking.istio.io created\r\n"
+    ],
+    [
+      0.004157,
+      "customresourcedefinition.apiextensions.k8s.io/serviceentries.networking.istio.io created\r\n"
+    ],
+    [
+      0.006095,
+      "customresourcedefinition.apiextensions.k8s.io/gateways.networking.istio.io created\r\n"
+    ],
+    [
+      0.006043,
+      "customresourcedefinition.apiextensions.k8s.io/envoyfilters.networking.istio.io created\r\n"
+    ],
+    [
+      0.004078,
+      "customresourcedefinition.apiextensions.k8s.io/clusterrbacconfigs.rbac.istio.io created\r\n"
+    ],
+    [
+      0.006272,
+      "customresourcedefinition.apiextensions.k8s.io/policies.authentication.istio.io created\r\n"
+    ],
+    [
+      0.004561,
+      "customresourcedefinition.apiextensions.k8s.io/meshpolicies.authentication.istio.io created\r\n"
+    ],
+    [
+      0.004269,
+      "customresourcedefinition.apiextensions.k8s.io/httpapispecbindings.config.istio.io created\r\n"
+    ],
+    [
+      0.00489,
+      "customresourcedefinition.apiextensions.k8s.io/httpapispecs.config.istio.io created\r\n"
+    ],
+    [
+      0.004432,
+      "customresourcedefinition.apiextensions.k8s.io/quotaspecbindings.config.istio.io created\r\n"
+    ],
+    [
+      0.005931,
+      "customresourcedefinition.apiextensions.k8s.io/quotaspecs.config.istio.io created\r\n"
+    ],
+    [
+      0.006968,
+      "customresourcedefinition.apiextensions.k8s.io/rules.config.istio.io created\r\n"
+    ],
+    [
+      0.00726,
+      "customresourcedefinition.apiextensions.k8s.io/attributemanifests.config.istio.io created\r\n"
+    ],
+    [
+      0.004647,
+      "customresourcedefinition.apiextensions.k8s.io/rbacconfigs.rbac.istio.io created\r\n"
+    ],
+    [
+      0.047271,
+      "customresourcedefinition.apiextensions.k8s.io/serviceroles.rbac.istio.io created\r\n"
+    ],
+    [
+      0.00392,
+      "customresourcedefinition.apiextensions.k8s.io/servicerolebindings.rbac.istio.io created\r\n"
+    ],
+    [
+      0.004365,
+      "customresourcedefinition.apiextensions.k8s.io/adapters.config.istio.io created\r\n"
+    ],
+    [
+      0.003753,
+      "customresourcedefinition.apiextensions.k8s.io/instances.config.istio.io created\r\n"
+    ],
+    [
+      0.004208,
+      "customresourcedefinition.apiextensions.k8s.io/templates.config.istio.io created\r\n"
+    ],
+    [
+      0.003652,
+      "customresourcedefinition.apiextensions.k8s.io/handlers.config.istio.io created\r\n"
+    ],
+    [
+      0.248028,
+      "customresourcedefinition.apiextensions.k8s.io/sidecars.networking.istio.io created\r\n"
+    ],
+    [
+      0.303895,
+      "customresourcedefinition.apiextensions.k8s.io/authorizationpolicies.rbac.istio.io created\r\n"
+    ],
+    [
+      0.121452,
+      "customresourcedefinition.apiextensions.k8s.io/clusterissuers.certmanager.k8s.io created\r\n"
+    ],
+    [
+      0.005867,
+      "customresourcedefinition.apiextensions.k8s.io/issuers.certmanager.k8s.io created\r\n"
+    ],
+    [
+      0.005947,
+      "customresourcedefinition.apiextensions.k8s.io/certificates.certmanager.k8s.io created\r\n"
+    ],
+    [
+      0.163557,
+      "customresourcedefinition.apiextensions.k8s.io/orders.certmanager.k8s.io created\r\n"
+    ],
+    [
+      0.038262,
+      "customresourcedefinition.apiextensions.k8s.io/challenges.certmanager.k8s.io created\r\n"
+    ],
+    [
+      0.003395,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm/istio-init/files\u0007[user@osc01 files]$ "
+    ],
+    [
+      6.129573,
+      "# Change directo"
+    ],
+    [
+      0.014306,
+      "ry to Istio helm"
+    ],
+    [
+      0.01443,
+      " charts, create "
+    ],
+    [
+      0.00153,
+      "a tiller service"
+    ],
+    [
+      0.013837,
+      " account and re-"
+    ],
+    [
+      0.013866,
+      "initialize the s"
+    ],
+    [
+      0.01323,
+      "ervice"
+    ],
+    [
+      0.906281,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm/istio-init/files\u0007[user@osc01 files]$ "
+    ],
+    [
+      5.415272,
+      "cd ~/istio-$ISTI"
+    ],
+    [
+      0.014042,
+      "O_VERSION/instal"
+    ],
+    [
+      0.014457,
+      "l/kubernetes/hel"
+    ],
+    [
+      0.000235,
+      "m"
+    ],
+    [
+      0.547231,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      5.304899,
+      "kubectl apply -f"
+    ],
+    [
+      0.000652,
+      " helm-service-ac"
+    ],
+    [
+      0.013376,
+      "count.yaml"
+    ],
+    [
+      0.796285,
+      "\r\n"
+    ],
+    [
+      0.492415,
+      "Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply\r\n"
+    ],
+    [
+      0.003165,
+      "serviceaccount/tiller configured\r\n"
+    ],
+    [
+      0.002755,
+      "Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply\r\n"
+    ],
+    [
+      0.00386,
+      "clusterrolebinding.rbac.authorization.k8s.io/tiller configured\r\n"
+    ],
+    [
+      0.002671,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.737363,
+      "helm init --serv"
+    ],
+    [
+      0.003801,
+      "ice-account till"
+    ],
+    [
+      0.013147,
+      "er"
+    ],
+    [
+      0.591769,
+      "\r\n"
+    ],
+    [
+      0.037617,
+      "$HELM_HOME has been configured at /home/user/.helm.\r\n"
+    ],
+    [
+      0.032063,
+      "\r\nTiller (the Helm server-side component) has been installed into your Kubernetes Cluster.\r\n\r\nPlease note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.\r\nTo prevent this, run `helm init` with the --tiller-tls-verify flag.\r\nFor more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation\r\n"
+    ],
+    [
+      0.001858,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.941018,
+      "kubectl get pods"
+    ],
+    [
+      0.015831,
+      " -n kube-system "
+    ],
+    [
+      0.000293,
+      "| grep tiller"
+    ],
+    [
+      0.689419,
+      "\r\n"
+    ],
+    [
+      0.054516,
+      "\u001b[01;31m\u001b[Ktiller\u001b[m\u001b[K-deploy-8557598fbc-mpzql                    1/1     Running   0          21s\r\n"
+    ],
+    [
+      0.001292,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      7.201544,
+      "# Run the follow"
+    ],
+    [
+      0.001719,
+      "ing helm templat"
+    ],
+    [
+      0.013849,
+      "e command to gen"
+    ],
+    [
+      0.01434,
+      "erate the yaml f"
+    ],
+    [
+      0.013308,
+      "ile "
+    ],
+    [
+      0.937801,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      5.166676,
+      "cd ~/istio-$ISTI"
+    ],
+    [
+      0.012907,
+      "O_VERSION"
+    ],
+    [
+      0.62077,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      5.918353,
+      "helm template in"
+    ],
+    [
+      0.013775,
+      "stall/kubernetes"
+    ],
+    [
+      0.014189,
+      "/helm/istio --na"
+    ],
+    [
+      0.000461,
+      "me istio \\\r\n>  --na"
+    ],
+    [
+      0.014251,
+      "mespace istio-sy"
+    ],
+    [
+      0.014518,
+      "stem \\\r\n>  --values"
+    ],
+    [
+      0.013856,
+      " install/kuberne"
+    ],
+    [
+      0.001871,
+      "tes/helm/istio/v"
+    ],
+    [
+      0.013211,
+      "alues-istio-demo"
+    ],
+    [
+      0.014195,
+      ".yaml | \\\r\n>  kubec"
+    ],
+    [
+      0.013186,
+      "tl apply -f -"
+    ],
+    [
+      1.496541,
+      "\r\n"
+    ],
+    [
+      0.369102,
+      "poddisruptionbudget.policy/istio-galley created\r\n"
+    ],
+    [
+      0.006203,
+      "poddisruptionbudget.policy/istio-egressgateway created\r\n"
+    ],
+    [
+      0.006817,
+      "poddisruptionbudget.policy/istio-ingressgateway created\r\n"
+    ],
+    [
+      0.005955,
+      "poddisruptionbudget.policy/istio-policy created\r\n"
+    ],
+    [
+      0.007129,
+      "poddisruptionbudget.policy/istio-telemetry created\r\n"
+    ],
+    [
+      0.006956,
+      "poddisruptionbudget.policy/istio-pilot created\r\n"
+    ],
+    [
+      0.006845,
+      "poddisruptionbudget.policy/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.006321,
+      "secret/kiali created\r\n"
+    ],
+    [
+      0.00663,
+      "configmap/istio-galley-configuration created\r\n"
+    ],
+    [
+      0.015282,
+      "configmap/istio-grafana-custom-resources created\r\n"
+    ],
+    [
+      0.013891,
+      "configmap/istio-grafana-configuration-dashboards-citadel-dashboard created\r\n"
+    ],
+    [
+      0.01401,
+      "configmap/istio-grafana-configuration-dashboards-galley-dashboard created\r\n"
+    ],
+    [
+      0.014719,
+      "configmap/istio-grafana-configuration-dashboards-istio-mesh-dashboard created\r\n"
+    ],
+    [
+      0.026297,
+      "configmap/istio-grafana-configuration-dashboards-istio-performance-dashboard created\r\n"
+    ],
+    [
+      0.02121,
+      "configmap/istio-grafana-configuration-dashboards-istio-service-dashboard created\r\n"
+    ],
+    [
+      0.020433,
+      "configmap/istio-grafana-configuration-dashboards-istio-workload-dashboard created\r\n"
+    ],
+    [
+      0.018,
+      "configmap/istio-grafana-configuration-dashboards-mixer-dashboard created\r\n"
+    ],
+    [
+      0.01932,
+      "configmap/istio-grafana-configuration-dashboards-pilot-dashboard created\r\n"
+    ],
+    [
+      0.006569,
+      "configmap/istio-grafana created\r\n"
+    ],
+    [
+      0.007674,
+      "configmap/kiali created\r\n"
+    ],
+    [
+      0.007665,
+      "configmap/prometheus created\r\n"
+    ],
+    [
+      0.008315,
+      "configmap/istio-security-custom-resources created\r\n"
+    ],
+    [
+      0.007731,
+      "configmap/istio created\r\n"
+    ],
+    [
+      0.020109,
+      "configmap/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.006289,
+      "serviceaccount/istio-galley-service-account created\r\n"
+    ],
+    [
+      0.005618,
+      "serviceaccount/istio-egressgateway-service-account created\r\n"
+    ],
+    [
+      0.00706,
+      "serviceaccount/istio-ingressgateway-service-account created\r\n"
+    ],
+    [
+      0.008359,
+      "serviceaccount/istio-grafana-post-install-account created\r\n"
+    ],
+    [
+      0.009307,
+      "clusterrole.rbac.authorization.k8s.io/istio-grafana-post-install-istio-system created\r\n"
+    ],
+    [
+      0.007429,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-grafana-post-install-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.012391,
+      "job.batch/istio-grafana-post-install-1.3.1 created\r\n"
+    ],
+    [
+      0.00686,
+      "serviceaccount/kiali-service-account created\r\n"
+    ],
+    [
+      0.013799,
+      "serviceaccount/istio-mixer-service-account created\r\n"
+    ],
+    [
+      0.006682,
+      "serviceaccount/istio-pilot-service-account created\r\n"
+    ],
+    [
+      0.007409,
+      "serviceaccount/prometheus created\r\n"
+    ],
+    [
+      0.007221,
+      "serviceaccount/istio-security-post-install-account created\r\n"
+    ],
+    [
+      0.006873,
+      "clusterrole.rbac.authorization.k8s.io/istio-security-post-install-istio-system created\r\n"
+    ],
+    [
+      0.005075,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-security-post-install-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.009546,
+      "job.batch/istio-security-post-install-1.3.1 created\r\n"
+    ],
+    [
+      0.010193,
+      "serviceaccount/istio-citadel-service-account created\r\n"
+    ],
+    [
+      0.012432,
+      "serviceaccount/istio-sidecar-injector-service-account created\r\n"
+    ],
+    [
+      0.006242,
+      "serviceaccount/istio-multi created\r\n"
+    ],
+    [
+      0.005829,
+      "clusterrole.rbac.authorization.k8s.io/istio-galley-istio-system created\r\n"
+    ],
+    [
+      0.007651,
+      "clusterrole.rbac.authorization.k8s.io/kiali created\r\n"
+    ],
+    [
+      0.005166,
+      "clusterrole.rbac.authorization.k8s.io/kiali-viewer created\r\n"
+    ],
+    [
+      0.005415,
+      "clusterrole.rbac.authorization.k8s.io/istio-mixer-istio-system created\r\n"
+    ],
+    [
+      0.004026,
+      "clusterrole.rbac.authorization.k8s.io/istio-pilot-istio-system created\r\n"
+    ],
+    [
+      0.003766,
+      "clusterrole.rbac.authorization.k8s.io/prometheus-istio-system created\r\n"
+    ],
+    [
+      0.005586,
+      "clusterrole.rbac.authorization.k8s.io/istio-citadel-istio-system created\r\n"
+    ],
+    [
+      0.00457,
+      "clusterrole.rbac.authorization.k8s.io/istio-sidecar-injector-istio-system created\r\n"
+    ],
+    [
+      0.005267,
+      "clusterrole.rbac.authorization.k8s.io/istio-reader created\r\n"
+    ],
+    [
+      0.004358,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-galley-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.00377,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-kiali-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.005499,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-mixer-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.004444,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-pilot-istio-system created\r\n"
+    ],
+    [
+      0.00413,
+      "clusterrolebinding.rbac.authorization.k8s.io/prometheus-istio-system created\r\n"
+    ],
+    [
+      0.003813,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-citadel-istio-system created\r\n"
+    ],
+    [
+      0.003152,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-sidecar-injector-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.003065,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-multi created\r\n"
+    ],
+    [
+      0.00651,
+      "role.rbac.authorization.k8s.io/istio-ingressgateway-sds created\r\n"
+    ],
+    [
+      0.006212,
+      "rolebinding.rbac.authorization.k8s.io/istio-ingressgateway-sds created\r\n"
+    ],
+    [
+      0.009639,
+      "service/istio-galley created\r\n"
+    ],
+    [
+      0.010518,
+      "service/istio-egressgateway created\r\n"
+    ],
+    [
+      0.025996,
+      "service/istio-ingressgateway created\r\n"
+    ],
+    [
+      0.010698,
+      "service/grafana created\r\n"
+    ],
+    [
+      0.011655,
+      "service/kiali created\r\n"
+    ],
+    [
+      0.011565,
+      "service/istio-policy created\r\n"
+    ],
+    [
+      0.01352,
+      "service/istio-telemetry created\r\n"
+    ],
+    [
+      0.017462,
+      "service/istio-pilot created\r\n"
+    ],
+    [
+      0.012915,
+      "service/prometheus created\r\n"
+    ],
+    [
+      0.012085,
+      "service/istio-citadel created\r\n"
+    ],
+    [
+      0.018742,
+      "service/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.012845,
+      "deployment.apps/istio-galley created\r\n"
+    ],
+    [
+      0.018648,
+      "deployment.apps/istio-egressgateway created\r\n"
+    ],
+    [
+      0.021802,
+      "deployment.apps/istio-ingressgateway created\r\n"
+    ],
+    [
+      0.015393,
+      "deployment.apps/grafana created\r\n"
+    ],
+    [
+      0.027557,
+      "deployment.apps/kiali created\r\n"
+    ],
+    [
+      0.016544,
+      "deployment.apps/istio-policy created\r\n"
+    ],
+    [
+      0.026435,
+      "deployment.apps/istio-telemetry created\r\n"
+    ],
+    [
+      0.024397,
+      "deployment.apps/istio-pilot created\r\n"
+    ],
+    [
+      0.011654,
+      "deployment.apps/prometheus created\r\n"
+    ],
+    [
+      0.006491,
+      "deployment.apps/istio-citadel created\r\n"
+    ],
+    [
+      0.009016,
+      "deployment.apps/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.005694,
+      "deployment.apps/istio-tracing created\r\n"
+    ],
+    [
+      0.008877,
+      "service/jaeger-query created\r\n"
+    ],
+    [
+      0.012747,
+      "service/jaeger-collector created\r\n"
+    ],
+    [
+      0.011367,
+      "service/jaeger-agent created\r\n"
+    ],
+    [
+      0.012972,
+      "service/zipkin created\r\n"
+    ],
+    [
+      0.013856,
+      "service/tracing created\r\n"
+    ],
+    [
+      0.01584,
+      "mutatingwebhookconfiguration.admissionregistration.k8s.io/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.071812,
+      "attributemanifest.config.istio.io/istioproxy created\r\n"
+    ],
+    [
+      0.005317,
+      "attributemanifest.config.istio.io/kubernetes created\r\n"
+    ],
+    [
+      0.007521,
+      "handler.config.istio.io/stdio created\r\n"
+    ],
+    [
+      0.011278,
+      "instance.config.istio.io/accesslog created\r\n"
+    ],
+    [
+      0.014602,
+      "instance.config.istio.io/tcpaccesslog created\r\n"
+    ],
+    [
+      0.008353,
+      "rule.config.istio.io/stdio created\r\n"
+    ],
+    [
+      0.00611,
+      "rule.config.istio.io/stdiotcp created\r\n"
+    ],
+    [
+      0.006304,
+      "instance.config.istio.io/requestcount created\r\n"
+    ],
+    [
+      0.006457,
+      "instance.config.istio.io/requestduration created\r\n"
+    ],
+    [
+      0.010293,
+      "instance.config.istio.io/requestsize created\r\n"
+    ],
+    [
+      0.008588,
+      "instance.config.istio.io/responsesize created\r\n"
+    ],
+    [
+      0.006908,
+      "instance.config.istio.io/tcpbytesent created\r\n"
+    ],
+    [
+      0.007996,
+      "instance.config.istio.io/tcpbytereceived created\r\n"
+    ],
+    [
+      0.007475,
+      "instance.config.istio.io/tcpconnectionsopened created\r\n"
+    ],
+    [
+      0.00768,
+      "instance.config.istio.io/tcpconnectionsclosed created\r\n"
+    ],
+    [
+      0.009152,
+      "handler.config.istio.io/prometheus created\r\n"
+    ],
+    [
+      0.006212,
+      "rule.config.istio.io/promhttp created\r\n"
+    ],
+    [
+      0.006765,
+      "rule.config.istio.io/promtcp created\r\n"
+    ],
+    [
+      0.006275,
+      "rule.config.istio.io/promtcpconnectionopen created\r\n"
+    ],
+    [
+      0.006356,
+      "rule.config.istio.io/promtcpconnectionclosed created\r\n"
+    ],
+    [
+      0.00582,
+      "handler.config.istio.io/kubernetesenv created\r\n"
+    ],
+    [
+      0.010118,
+      "rule.config.istio.io/kubeattrgenrulerule created\r\n"
+    ],
+    [
+      0.019789,
+      "rule.config.istio.io/tcpkubeattrgenrulerule created\r\n"
+    ],
+    [
+      0.008029,
+      "instance.config.istio.io/attributes created\r\n"
+    ],
+    [
+      0.006697,
+      "destinationrule.networking.istio.io/istio-policy created\r\n"
+    ],
+    [
+      0.006395,
+      "destinationrule.networking.istio.io/istio-telemetry created\r\n"
+    ],
+    [
+      0.005753,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.425341,
+      "# Check pods in "
+    ],
+    [
+      0.014041,
+      "istio-system and"
+    ],
+    [
+      0.01365,
+      " wait until all"
+    ],
+    [
+      0.000341,
+      " are ready"
+    ],
+    [
+      0.870498,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.368991,
+      "kubectl get pods"
+    ],
+    [
+      0.01411,
+      " -n istio-system"
+    ],
+    [
+      0.643325,
+      "\r\n"
+    ],
+    [
+      0.061334,
+      "NAME                                      READY   STATUS      RESTARTS   AGE\r\ngrafana-59d57c5c56-j5dlf                  1/1     Running     0          4m35s\r\nistio-citadel-7f658f677d-n5lg2            1/1     Running     0          4m34s\r\nistio-egressgateway-65b958766b-vhgts      1/1     Running     0          4m35s\r\nistio-galley-8f5fcd88b-7xxh6              1/1     Running     0          4m35s\r\nistio-grafana-post-install-1.3.1-46khj    0/1     Completed   0          4m35s\r\nistio-ingressgateway-8576676d7f-2nq2p     1/1     Running     0          4m35s\r\nistio-pilot-66d9655cb5-t4d7j              2/2     Running     0          4m34s\r\nistio-policy-77488b8574-pcbdn             2/2     Running     5          4m34s\r\nistio-security-post-install-1.3.1-vxw5w   0/1     Completed   0          4m35s\r\nistio-sidecar-injector-857959c99-4bqqn    1/1     Running     0          4m34s\r\nistio-telemetry-5c567cdb5d-nvvpn          2/2     Running     4          4m34s\r\nistio-tracing-6bbdc67d6c-8hqr4            1/1     Running     0   "
+    ],
+    [
+      1.0,
+      "       4m33s\r\nkiali-8c9d6fbf6-2w8ck                     1/1     Running     0          4m35s\r\nprometheus-7d7b9f7844-qzqs6               1/1     Running     0          4m34s\r\n"
+    ],
+    [
+      0.00137,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.23438,
+      "# Delete previou"
+    ],
+    [
+      0.002427,
+      "s installation"
+    ],
+    [
+      0.72596,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.195479,
+      "cd ~/istio-$ISTI"
+    ],
+    [
+      0.013825,
+      "O_VERSION"
+    ],
+    [
+      0.777616,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.355357,
+      "helm template in"
+    ],
+    [
+      0.001765,
+      "stall/kubernetes"
+    ],
+    [
+      0.013899,
+      "/helm/istio --na"
+    ],
+    [
+      0.014192,
+      "me istio \\\r\n>  --na"
+    ],
+    [
+      0.002798,
+      "mespace istio-sy"
+    ],
+    [
+      0.014115,
+      "stem \\\r\n>  --values"
+    ],
+    [
+      0.013617,
+      " install/kuberne"
+    ],
+    [
+      0.013954,
+      "tes/helm/istio/v"
+    ],
+    [
+      0.0003,
+      "alues-istio-demo"
+    ],
+    [
+      0.01341,
+      ".yaml |\\\r\n>  kubect"
+    ],
+    [
+      0.014044,
+      "l delete -f -"
+    ],
+    [
+      0.976114,
+      "\r\n"
+    ],
+    [
+      0.149482,
+      "poddisruptionbudget.policy \"istio-galley\" deleted\r\n"
+    ],
+    [
+      0.005264,
+      "poddisruptionbudget.policy \"istio-egressgateway\" deleted\r\n"
+    ],
+    [
+      0.003636,
+      "poddisruptionbudget.policy \"istio-ingressgateway\" deleted\r\n"
+    ],
+    [
+      0.003764,
+      "poddisruptionbudget.policy \"istio-policy\" deleted\r\n"
+    ],
+    [
+      0.004469,
+      "poddisruptionbudget.policy \"istio-telemetry\" deleted\r\n"
+    ],
+    [
+      0.003798,
+      "poddisruptionbudget.policy \"istio-pilot\" deleted\r\n"
+    ],
+    [
+      0.003818,
+      "poddisruptionbudget.policy \"istio-sidecar-injector\" deleted\r\n"
+    ],
+    [
+      0.003955,
+      "secret \"kiali\" deleted\r\n"
+    ],
+    [
+      0.003428,
+      "configmap \"istio-galley-configuration\" deleted\r\n"
+    ],
+    [
+      0.003839,
+      "configmap \"istio-grafana-custom-resources\" deleted\r\n"
+    ],
+    [
+      0.004384,
+      "configmap \"istio-grafana-configuration-dashboards-citadel-dashboard\" deleted\r\n"
+    ],
+    [
+      0.009629,
+      "configmap \"istio-grafana-configuration-dashboards-galley-dashboard\" deleted\r\n"
+    ],
+    [
+      0.005853,
+      "configmap \"istio-grafana-configuration-dashboards-istio-mesh-dashboard\" deleted\r\n"
+    ],
+    [
+      0.011424,
+      "configmap \"istio-grafana-configuration-dashboards-istio-performance-dashboard\" deleted\r\n"
+    ],
+    [
+      0.008835,
+      "configmap \"istio-grafana-configuration-dashboards-istio-service-dashboard\" deleted\r\n"
+    ],
+    [
+      0.015649,
+      "configmap \"istio-grafana-configuration-dashboards-istio-workload-dashboard\" deleted\r\n"
+    ],
+    [
+      0.006617,
+      "configmap \"istio-grafana-configuration-dashboards-mixer-dashboard\" deleted\r\n"
+    ],
+    [
+      0.003299,
+      "configmap \"istio-grafana-configuration-dashboards-pilot-dashboard\" deleted\r\n"
+    ],
+    [
+      0.003087,
+      "configmap \"istio-grafana\" deleted\r\n"
+    ],
+    [
+      0.004675,
+      "configmap \"kiali\" deleted\r\n"
+    ],
+    [
+      0.002925,
+      "configmap \"prometheus\" deleted\r\n"
+    ],
+    [
+      0.003816,
+      "configmap \"istio-security-custom-resources\" deleted\r\n"
+    ],
+    [
+      0.005686,
+      "configmap \"istio\" deleted\r\n"
+    ],
+    [
+      0.008806,
+      "configmap \"istio-sidecar-injector\" deleted\r\n"
+    ],
+    [
+      0.003944,
+      "serviceaccount \"istio-galley-service-account\" deleted\r\n"
+    ],
+    [
+      0.009275,
+      "serviceaccount \"istio-egressgateway-service-account\" deleted\r\n"
+    ],
+    [
+      0.004803,
+      "serviceaccount \"istio-ingressgateway-service-account\" deleted\r\n"
+    ],
+    [
+      0.007315,
+      "serviceaccount \"istio-grafana-post-install-account\" deleted\r\n"
+    ],
+    [
+      0.007887,
+      "clusterrole.rbac.authorization.k8s.io \"istio-grafana-post-install-istio-system\" deleted\r\n"
+    ],
+    [
+      0.005067,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-grafana-post-install-role-binding-istio-system\" deleted\r\n"
+    ],
+    [
+      0.004158,
+      "job.batch \"istio-grafana-post-install-1.3.1\" deleted\r\n"
+    ],
+    [
+      0.004478,
+      "serviceaccount \"kiali-service-account\" deleted\r\n"
+    ],
+    [
+      0.007105,
+      "serviceaccount \"istio-mixer-service-account\" deleted\r\n"
+    ],
+    [
+      0.007386,
+      "serviceaccount \"istio-pilot-service-account\" deleted\r\n"
+    ],
+    [
+      0.006292,
+      "serviceaccount \"prometheus\" deleted\r\n"
+    ],
+    [
+      0.007696,
+      "serviceaccount \"istio-security-post-install-account\" deleted\r\n"
+    ],
+    [
+      0.004597,
+      "clusterrole.rbac.authorization.k8s.io \"istio-security-post-install-istio-system\" deleted\r\n"
+    ],
+    [
+      0.008118,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-security-post-install-role-binding-istio-system\" deleted\r\n"
+    ],
+    [
+      0.00421,
+      "job.batch \"istio-security-post-install-1.3.1\" deleted\r\n"
+    ],
+    [
+      0.007709,
+      "serviceaccount \"istio-citadel-service-account\" deleted\r\n"
+    ],
+    [
+      0.010543,
+      "serviceaccount \"istio-sidecar-injector-service-account\" deleted\r\n"
+    ],
+    [
+      0.012326,
+      "serviceaccount \"istio-multi\" deleted\r\n"
+    ],
+    [
+      0.008255,
+      "clusterrole.rbac.authorization.k8s.io \"istio-galley-istio-system\" deleted\r\n"
+    ],
+    [
+      0.005972,
+      "clusterrole.rbac.authorization.k8s.io \"kiali\" deleted\r\n"
+    ],
+    [
+      0.004753,
+      "clusterrole.rbac.authorization.k8s.io \"kiali-viewer\" deleted\r\n"
+    ],
+    [
+      0.006602,
+      "clusterrole.rbac.authorization.k8s.io \"istio-mixer-istio-system\" deleted\r\n"
+    ],
+    [
+      0.005551,
+      "clusterrole.rbac.authorization.k8s.io \"istio-pilot-istio-system\" deleted\r\n"
+    ],
+    [
+      0.009243,
+      "clusterrole.rbac.authorization.k8s.io \"prometheus-istio-system\" deleted\r\n"
+    ],
+    [
+      0.004991,
+      "clusterrole.rbac.authorization.k8s.io \"istio-citadel-istio-system\" deleted\r\n"
+    ],
+    [
+      0.004241,
+      "clusterrole.rbac.authorization.k8s.io \"istio-sidecar-injector-istio-system\" deleted\r\n"
+    ],
+    [
+      0.003083,
+      "clusterrole.rbac.authorization.k8s.io \"istio-reader\" deleted\r\n"
+    ],
+    [
+      0.003041,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-galley-admin-role-binding-istio-system\" deleted\r\n"
+    ],
+    [
+      0.003582,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-kiali-admin-role-binding-istio-system\" deleted\r\n"
+    ],
+    [
+      0.003793,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-mixer-admin-role-binding-istio-system\" deleted\r\n"
+    ],
+    [
+      0.004176,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-pilot-istio-system\" deleted\r\n"
+    ],
+    [
+      0.004656,
+      "clusterrolebinding.rbac.authorization.k8s.io \"prometheus-istio-system\" deleted\r\n"
+    ],
+    [
+      0.00322,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-citadel-istio-system\" deleted\r\n"
+    ],
+    [
+      0.003306,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-sidecar-injector-admin-role-binding-istio-system\" deleted\r\n"
+    ],
+    [
+      0.003285,
+      "clusterrolebinding.rbac.authorization.k8s.io \"istio-multi\" deleted\r\n"
+    ],
+    [
+      0.004014,
+      "role.rbac.authorization.k8s.io \"istio-ingressgateway-sds\" deleted\r\n"
+    ],
+    [
+      0.003471,
+      "rolebinding.rbac.authorization.k8s.io \"istio-ingressgateway-sds\" deleted\r\n"
+    ],
+    [
+      0.011953,
+      "service \"istio-galley\" deleted\r\n"
+    ],
+    [
+      0.017057,
+      "service \"istio-egressgateway\" deleted\r\n"
+    ],
+    [
+      0.030836,
+      "service \"istio-ingressgateway\" deleted\r\n"
+    ],
+    [
+      0.012604,
+      "service \"grafana\" deleted\r\n"
+    ],
+    [
+      0.014106,
+      "service \"kiali\" deleted\r\n"
+    ],
+    [
+      0.024055,
+      "service \"istio-policy\" deleted\r\n"
+    ],
+    [
+      0.012548,
+      "service \"istio-telemetry\" deleted\r\n"
+    ],
+    [
+      0.017076,
+      "service \"istio-pilot\" deleted\r\n"
+    ],
+    [
+      0.030512,
+      "service \"prometheus\" deleted\r\n"
+    ],
+    [
+      0.015026,
+      "service \"istio-citadel\" deleted\r\n"
+    ],
+    [
+      0.019721,
+      "service \"istio-sidecar-injector\" deleted\r\n"
+    ],
+    [
+      0.00867,
+      "deployment.apps \"istio-galley\" deleted\r\n"
+    ],
+    [
+      0.007271,
+      "deployment.apps \"istio-egressgateway\" deleted\r\n"
+    ],
+    [
+      0.007682,
+      "deployment.apps \"istio-ingressgateway\" deleted\r\n"
+    ],
+    [
+      0.005581,
+      "deployment.apps \"grafana\" deleted\r\n"
+    ],
+    [
+      0.004973,
+      "deployment.apps \"kiali\" deleted\r\n"
+    ],
+    [
+      0.006233,
+      "deployment.apps \"istio-policy\" deleted\r\n"
+    ],
+    [
+      0.005176,
+      "deployment.apps \"istio-telemetry\" deleted\r\n"
+    ],
+    [
+      0.004513,
+      "deployment.apps \"istio-pilot\" deleted\r\n"
+    ],
+    [
+      0.005588,
+      "deployment.apps \"prometheus\" deleted\r\n"
+    ],
+    [
+      0.005535,
+      "deployment.apps \"istio-citadel\" deleted\r\n"
+    ],
+    [
+      0.006414,
+      "deployment.apps \"istio-sidecar-injector\" deleted\r\n"
+    ],
+    [
+      0.003934,
+      "deployment.apps \"istio-tracing\" deleted\r\n"
+    ],
+    [
+      0.010657,
+      "service \"jaeger-query\" deleted\r\n"
+    ],
+    [
+      0.011968,
+      "service \"jaeger-collector\" deleted\r\n"
+    ],
+    [
+      0.008921,
+      "service \"jaeger-agent\" deleted\r\n"
+    ],
+    [
+      0.010861,
+      "service \"zipkin\" deleted\r\n"
+    ],
+    [
+      0.011741,
+      "service \"tracing\" deleted\r\n"
+    ],
+    [
+      0.006825,
+      "mutatingwebhookconfiguration.admissionregistration.k8s.io \"istio-sidecar-injector\" deleted\r\n"
+    ],
+    [
+      0.008979,
+      "attributemanifest.config.istio.io \"istioproxy\" deleted\r\n"
+    ],
+    [
+      0.025615,
+      "attributemanifest.config.istio.io \"kubernetes\" deleted\r\n"
+    ],
+    [
+      0.009351,
+      "handler.config.istio.io \"stdio\" deleted\r\n"
+    ],
+    [
+      0.025977,
+      "instance.config.istio.io \"accesslog\" deleted\r\n"
+    ],
+    [
+      0.004952,
+      "instance.config.istio.io \"tcpaccesslog\" deleted\r\n"
+    ],
+    [
+      0.003758,
+      "rule.config.istio.io \"stdio\" deleted\r\n"
+    ],
+    [
+      0.004754,
+      "rule.config.istio.io \"stdiotcp\" deleted\r\n"
+    ],
+    [
+      0.007818,
+      "instance.config.istio.io \"requestcount\" deleted\r\n"
+    ],
+    [
+      0.006217,
+      "instance.config.istio.io \"requestduration\" deleted\r\n"
+    ],
+    [
+      0.005537,
+      "instance.config.istio.io \"requestsize\" deleted\r\n"
+    ],
+    [
+      0.004815,
+      "instance.config.istio.io \"responsesize\" deleted\r\n"
+    ],
+    [
+      0.004616,
+      "instance.config.istio.io \"tcpbytesent\" deleted\r\n"
+    ],
+    [
+      0.003864,
+      "instance.config.istio.io \"tcpbytereceived\" deleted\r\n"
+    ],
+    [
+      0.003792,
+      "instance.config.istio.io \"tcpconnectionsopened\" deleted\r\n"
+    ],
+    [
+      0.005371,
+      "instance.config.istio.io \"tcpconnectionsclosed\" deleted\r\n"
+    ],
+    [
+      0.00438,
+      "handler.config.istio.io \"prometheus\" deleted\r\n"
+    ],
+    [
+      0.005498,
+      "rule.config.istio.io \"promhttp\" deleted\r\n"
+    ],
+    [
+      0.006498,
+      "rule.config.istio.io \"promtcp\" deleted\r\n"
+    ],
+    [
+      0.003675,
+      "rule.config.istio.io \"promtcpconnectionopen\" deleted\r\n"
+    ],
+    [
+      0.003589,
+      "rule.config.istio.io \"promtcpconnectionclosed\" deleted\r\n"
+    ],
+    [
+      0.004879,
+      "handler.config.istio.io \"kubernetesenv\" deleted\r\n"
+    ],
+    [
+      0.004037,
+      "rule.config.istio.io \"kubeattrgenrulerule\" deleted\r\n"
+    ],
+    [
+      0.004333,
+      "rule.config.istio.io \"tcpkubeattrgenrulerule\" deleted\r\n"
+    ],
+    [
+      0.004099,
+      "instance.config.istio.io \"attributes\" deleted\r\n"
+    ],
+    [
+      0.003205,
+      "destinationrule.networking.istio.io \"istio-policy\" deleted\r\n"
+    ],
+    [
+      0.004992,
+      "destinationrule.networking.istio.io \"istio-telemetry\" deleted\r\n"
+    ],
+    [
+      1.204536,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.287916,
+      "# First, create "
+    ],
+    [
+      0.013739,
+      "the custom resou"
+    ],
+    [
+      0.004047,
+      "rce definitions "
+    ],
+    [
+      0.013484,
+      "required by Isti"
+    ],
+    [
+      0.00357,
+      "o"
+    ],
+    [
+      1.138416,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      5.269844,
+      "cd ~/istio-$ISTI"
+    ],
+    [
+      0.014536,
+      "O_VERSION/instal"
+    ],
+    [
+      0.003933,
+      "l/kubernetes/hel"
+    ],
+    [
+      0.013673,
+      "m"
+    ],
+    [
+      0.673322,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      7.03751,
+      "helm install ./i"
+    ],
+    [
+      0.002589,
+      "stio-init --name"
+    ],
+    [
+      0.015862,
+      " istio-init --na"
+    ],
+    [
+      0.013999,
+      "mespace istio-sy"
+    ],
+    [
+      0.003746,
+      "stem"
+    ],
+    [
+      3.840963,
+      "\r\n"
+    ],
+    [
+      0.18898,
+      "NAME:   istio-init\r\n"
+    ],
+    [
+      0.051657,
+      "LAST DEPLOYED: Tue Oct  1 17:05:51 2019\r\nNAMESPACE: istio-system\r\nSTATUS: DEPLOYED\r\n\r\nRESOURCES:\r\n==> v1/ClusterRole\r\nNAME                     AGE\r\nistio-init-istio-system  1s\r\n\r\n==> v1/ClusterRoleBinding\r\nNAME                                        AGE\r\nistio-init-admin-role-binding-istio-system  1s\r\n\r\n==> v1/ConfigMap\r\nNAME          DATA  AGE\r\nistio-crd-10  1     1s\r\nistio-crd-11  1     1s\r\nistio-crd-12  1     1s\r\n\r\n==> v1/Job\r\nNAME                     COMPLETIONS  DURATION  AGE\r\nistio-init-crd-10-1.3.1  0/1          1s        1s\r\nistio-init-crd-11-1.3.1  0/1          1s        1s\r\nistio-init-crd-12-1.3.1  0/1          1s        1s\r\n\r\n==> v1/Pod(related)\r\nNAME                           READY  STATUS             RESTARTS  AGE\r\nistio-init-crd-10-1.3.1-4wmh9  0/1    ContainerCreating  0         1s\r\nistio-init-crd-11-1.3.1-5h4xb  0/1    ContainerCreating  0         1s\r\nistio-init-crd-12-1.3.1-wgqtw  0/1    Pending            0         1s\r\n\r\n==> v1/ServiceAccount\r\nNAME                        SECRETS  AGE\r\nistio-"
+    ],
+    [
+      2.1e-05,
+      "init-service-account  1        1s\r\n\r\n\r\n"
+    ],
+    [
+      0.001041,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      16.632558,
+      "# Next, run the "
+    ],
+    [
+      0.002115,
+      "helm install com"
+    ],
+    [
+      0.011875,
+      "mand to install "
+    ],
+    [
+      0.012338,
+      "istio-demo (perm"
+    ],
+    [
+      0.01219,
+      "issive mutual TL"
+    ],
+    [
+      0.012241,
+      "S)"
+    ],
+    [
+      1.527132,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      6.466864,
+      "helm install ./i"
+    ],
+    [
+      0.015031,
+      "stio -f istio/va"
+    ],
+    [
+      0.000294,
+      "lues-istio-demo."
+    ],
+    [
+      0.01321,
+      "yaml \\\r\n> --name is"
+    ],
+    [
+      0.014174,
+      "tio --namespace "
+    ],
+    [
+      0.015307,
+      "istio-system"
+    ],
+    [
+      1.557273,
+      "\r\n"
+    ],
+    [
+      1.814833,
+      "NAME:   istio\r\n"
+    ],
+    [
+      0.295478,
+      "LAST DEPLOYED: Tue Oct  1 17:06:18 2019\r\nNAMESPACE: istio-system\r\nSTATUS: DEPLOYED\r\n\r\nRESOURCES:\r\n==> v1/ClusterRole\r\nNAME                                     AGE\r\nistio-citadel-istio-system               28s\r\nistio-galley-istio-system                28s\r\nistio-grafana-post-install-istio-system  28s\r\nistio-mixer-istio-system                 28s\r\nistio-pilot-istio-system                 28s\r\nistio-reader                             28s\r\nistio-sidecar-injector-istio-system      28s\r\nkiali                                    28s\r\nkiali-viewer                             28s\r\nprometheus-istio-system                  28s\r\n\r\n==> v1/ClusterRoleBinding\r\nNAME                                                    AGE\r\nistio-citadel-istio-system                              28s\r\nistio-galley-admin-role-binding-istio-system            28s\r\nistio-grafana-post-install-role-binding-istio-system    28s\r\nistio-kiali-admin-role-binding-istio-system             28s\r\nistio-mixer-admin-role-binding-istio-system             28s\r\nistio"
+    ],
+    [
+      0.001673,
+      "-multi                                             28s\r\nistio-pilot-istio-system                                28s\r\nistio-sidecar-injector-admin-role-binding-istio-system  28s\r\nprometheus-istio-system                                 28s\r\n\r\n==> v1/ConfigMap\r\nNAME                                                                DATA  AGE\r\nistio                                                               2     28s\r\nistio-galley-configuration                                          1     28s\r\nistio-grafana                                                       2     28s\r\nistio-grafana-configuration-dashboards-citadel-dashboard            1     28s\r\nistio-grafana-configuration-dashboards-galley-dashboard             1     28s\r\nistio-grafana-configuration-dashboards-istio-mesh-dashboard         1     28s\r\nistio-grafana-configuration-dashboards-istio-performance-dashboard  1     28s\r\nistio-grafana-configuration-dashboards-istio-service-dashboard      1     28s\r\nistio-grafana-configuration-dashboards-istio-workload-"
+    ],
+    [
+      1.0,
+      "dashboard     1     28s\r\nistio-grafana-configuration-dashboards-mixer-dashboard              1     28s\r\nistio-grafana-configuration-dashboards-pilot-dashboard              1     28s\r\nistio-grafana-custom-resources                                      2     28s\r\nistio-security-custom-resources                                     2     28s\r\nistio-sidecar-injector                                              2     28s\r\nkiali                                                               1     28s\r\nprometheus                                                          1     28s\r\n\r\n==> v1/Deployment\r\nNAME                    READY  UP-TO-DATE  AVAILABLE  AGE\r\ngrafana                 1/1    1           1          27s\r\nistio-citadel           1/1    1           1          27s\r\nistio-egressgateway     0/1    1           0          27s\r\nistio-galley            0/1    1           0          27s\r\nistio-ingressgateway    0/1    1           0          27s\r\nistio-pilot             0/1    1           0          27s\r\nistio-policy"
+    ],
+    [
+      1.0,
+      "            1/1    1           1          27s\r\nistio-sidecar-injector  1/1    1           1          27s\r\nistio-telemetry         1/1    1           1          27s\r\nistio-tracing           1/1    1           1          27s\r\nkiali                   1/1    1           1          27s\r\nprometheus              1/1    1           1          27s\r\n\r\n==> v1/Pod(related)\r\nNAME                                    READY  STATUS             RESTARTS  AGE\r\ngrafana-59d57c5c56-5fxcb                1/1    Running            0         27s\r\nistio-citadel-7f658f677d-9b7hb          1/1    Running            0         27s\r\nistio-egressgateway-65b958766b-hl8xq    0/1    Running            0         27s\r\nistio-galley-8f5fcd88b-fsv42            0/1    ContainerCreating  0         27s\r\nistio-ingressgateway-8576676d7f-bgckj   0/1    Running            0         27s\r\nistio-pilot-66d9655cb5-j72rc            1/2    Running            0         27s\r\nistio-policy-77488b8574-dzrlz           2/2    Running            1         27s\r\nistio-sidec"
+    ],
+    [
+      0.000376,
+      "ar-injector-857959c99-5n2xc  1/1    Running            0         26s\r\nistio-telemetry-5c567cdb5d-q7rkm        2/2    Running            1         27s\r\nistio-tracing-6bbdc67d6c-xqpx8          1/1    Running            0         26s\r\nkiali-8c9d6fbf6-chqfw                   1/1    Running            0         27s\r\nprometheus-7d7b9f7844-fmtkp             1/1    Running            0         27s\r\n\r\n==> v1/Role\r\nNAME                      AGE\r\nistio-ingressgateway-sds  28s\r\n\r\n==> v1/RoleBinding\r\nNAME                      AGE\r\nistio-ingressgateway-sds  28s\r\n\r\n==> v1/Secret\r\nNAME   TYPE    DATA  AGE\r\nkiali  Opaque  2     28s\r\n\r\n==> v1/Service\r\nNAME                    TYPE          CLUSTER-IP      EXTERNAL-IP  PORT(S)                                                                                                                                     AGE\r\ngrafana                 ClusterIP     10.99.201.16    <none>       3000/TCP                                                                                               "
+    ],
+    [
+      1.0,
+      "                                     28s\r\nistio-citadel           ClusterIP     10.106.248.145  <none>       8060/TCP,15014/TCP                                                                                                                          27s\r\nistio-egressgateway     ClusterIP     10.107.238.91   <none>       80/TCP,443/TCP,15443/TCP                                                                                                                    28s\r\nistio-galley            ClusterIP     10.108.186.196  <none>       443/TCP,15014/TCP,9901/TCP                                                                                                                  28s\r\nistio-ingressgateway    LoadBalancer  10.103.164.64   <pending>    15020:31006/TCP,80:31380/TCP,443:31390/TCP,31400:31400/TCP,15029:30319/TCP,15030:32540/TCP,15031:30389/TCP,15032:31158/TCP,15443:30419/TCP  28s\r\nistio-pilot             ClusterIP     10.108.213.162  <none>       15010/TCP,15011/TCP,8080/TCP,15014/TCP                             "
+    ],
+    [
+      0.000138,
+      "                                                                         28s\r\nistio-policy            ClusterIP     10.100.234.30   <none>       9091/TCP,15004/TCP,15014/TCP                                                                                                                28s\r\nistio-sidecar-injector  ClusterIP     10.110.28.252   <none>       443/TCP,15014/TCP                                                                                                                           27s\r\nistio-telemetry         ClusterIP     10.108.179.67   <none>       9091/TCP,15004/TCP,15014/TCP,42422/TCP                                                                                                      28s\r\njaeger-agent            ClusterIP     None            <none>       5775/UDP,6831/UDP,6832/UDP                                                                                                                  27s\r\njaeger-collector        ClusterIP     10.98.216.166   <none>       14267/TCP,14268/TCP            "
+    ],
+    [
+      8.4e-05,
+      "                                                                                                             27s\r\njaeger-query            ClusterIP     10.110.73.200   <none>       16686/TCP                                                                                                                                   27s\r\nkiali                   ClusterIP     10.106.29.46    <none>       20001/TCP                                                                                                                                   28s\r\nprometheus              ClusterIP     10.103.242.166  <none>       9090/TCP                                                                                                                                    28s\r\ntracing                 ClusterIP     10.98.198.66    <none>       80/TCP                                                                                                                                      27s\r\nzipkin                  ClusterIP     10.96.13.171    <none>  "
+    ],
+    [
+      0.000103,
+      "     9411/TCP                                                                                                                                    27s\r\n\r\n==> v1/ServiceAccount\r\nNAME                                    SECRETS  AGE\r\nistio-citadel-service-account           1        28s\r\nistio-egressgateway-service-account     1        28s\r\nistio-galley-service-account            1        28s\r\nistio-grafana-post-install-account      1        28s\r\nistio-ingressgateway-service-account    1        28s\r\nistio-mixer-service-account             1        28s\r\nistio-multi                             1        28s\r\nistio-pilot-service-account             1        28s\r\nistio-security-post-install-account     1        28s\r\nistio-sidecar-injector-service-account  1        28s\r\nkiali-service-account                   1        28s\r\nprometheus                              1        28s\r\n\r\n==> v1alpha2/attributemanifest\r\nNAME        AGE\r\nistioproxy  27s\r\nkubernetes  27s\r\n\r\n==> v1alpha2/handler\r\nNAME           AGE\r\nkubernetesenv  27s"
+    ],
+    [
+      0.000142,
+      "\r\nprometheus     27s\r\nstdio          27s\r\n\r\n==> v1alpha2/instance\r\nNAME                  AGE\r\naccesslog             27s\r\nattributes            27s\r\nrequestcount          27s\r\nrequestduration       27s\r\nrequestsize           27s\r\nresponsesize          27s\r\ntcpaccesslog          27s\r\ntcpbytereceived       27s\r\ntcpbytesent           27s\r\ntcpconnectionsclosed  27s\r\ntcpconnectionsopened  27s\r\n\r\n==> v1alpha2/rule\r\nNAME                     AGE\r\nkubeattrgenrulerule      27s\r\npromhttp                 27s\r\npromtcp                  27s\r\npromtcpconnectionclosed  27s\r\npromtcpconnectionopen    27s\r\nstdio                    27s\r\nstdiotcp                 27s\r\ntcpkubeattrgenrulerule   27s\r\n\r\n==> v1alpha3/DestinationRule\r\nNAME             AGE\r\nistio-policy     27s\r\nistio-telemetry  27s\r\n\r\n==> v1beta1/ClusterRole\r\nNAME                                      AGE\r\nistio-security-post-install-istio-system  28s\r\n\r\n==> v1beta1/ClusterRoleBinding\r\nNAME                                                   AGE\r\nistio-security-post-install-r"
+    ],
+    [
+      3.9e-05,
+      "ole-binding-istio-system  28s\r\n\r\n==> v1beta1/MutatingWebhookConfiguration\r\nNAME                    AGE\r\nistio-sidecar-injector  27s\r\n\r\n==> v1beta1/PodDisruptionBudget\r\nNAME                    MIN AVAILABLE  MAX UNAVAILABLE  ALLOWED DISRUPTIONS  AGE\r\nistio-egressgateway     1              N/A              0                    28s\r\nistio-galley            1              N/A              0                    28s\r\nistio-ingressgateway    1              N/A              0                    28s\r\nistio-pilot             1              N/A              0                    28s\r\nistio-policy            1              N/A              0                    28s\r\nistio-sidecar-injector  1              N/A              0                    28s\r\nistio-telemetry         1              N/A              0                    28s\r\n\r\n\r\nNOTES:\r\nThank you for installing Istio.\r\n\r\nYour release is named Istio.\r\n\r\nTo get started running application with Istio, execute the following steps:\r\n1. Label namespace that application object w"
+    ],
+    [
+      2.9e-05,
+      "ill be deployed to by the following command (take default namespace as an example)\r\n\r\n$ kubectl label namespace default istio-injection=enabled\r\n$ kubectl get namespace -L istio-injection\r\n\r\n2. Deploy your applications\r\n\r\n$ kubectl apply -f <your-application>.yaml\r\n\r\nFor more information on running Istio, visit:\r\nhttps://istio.io/\r\n\r\n"
+    ],
+    [
+      0.000122,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.308098,
+      "# Check deployme"
+    ],
+    [
+      0.000398,
+      "nt resources in "
+    ],
+    [
+      0.012189,
+      "istio-system"
+    ],
+    [
+      0.753275,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.350562,
+      "kubectl -n istio"
+    ],
+    [
+      0.01329,
+      "-system get depl"
+    ],
+    [
+      0.002859,
+      "oyment"
+    ],
+    [
+      0.868874,
+      "\r\n"
+    ],
+    [
+      0.057359,
+      "NAME                     READY   UP-TO-DATE   AVAILABLE   AGE\r\ngrafana                  1/1     1            1           41s\r\nistio-citadel            1/1     1            1           41s\r\nistio-egressgateway      0/1     1            0           41s\r\nistio-galley             0/1     1            0           41s\r\nistio-ingressgateway     0/1     1            0           41s\r\nistio-pilot              0/1     1            0           41s\r\nistio-policy             1/1     1            1           41s\r\nistio-sidecar-injector   1/1     1            1           41s\r\nistio-telemetry          1/1     1            1           41s\r\nistio-tracing            1/1     1            1           41s\r\nkiali                    1/1     1            1           41s\r\nprometheus               1/1     1            1           41s\r\n"
+    ],
+    [
+      0.001125,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.705043,
+      "# Check pods in "
+    ],
+    [
+      0.012663,
+      "istio-system and"
+    ],
+    [
+      0.001623,
+      " wait until all "
+    ],
+    [
+      0.013091,
+      "are read"
+    ],
+    [
+      0.817301,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.150917,
+      "kubectl get pods"
+    ],
+    [
+      0.014196,
+      " -n istio-system"
+    ],
+    [
+      0.946751,
+      "\r\n"
+    ],
+    [
+      0.053922,
+      "NAME                                     READY   STATUS      RESTARTS   AGE\r\ngrafana-59d57c5c56-5fxcb                 1/1     Running     0          2m12s\r\nistio-citadel-7f658f677d-9b7hb           1/1     Running     0          2m12s\r\nistio-egressgateway-65b958766b-hl8xq     1/1     Running     0          2m12s\r\nistio-galley-8f5fcd88b-fsv42             1/1     Running     0          2m12s\r\nistio-ingressgateway-8576676d7f-bgckj    1/1     Running     0          2m12s\r\nistio-init-crd-10-1.3.1-4wmh9            0/1     Completed   0          2m40s\r\nistio-init-crd-11-1.3.1-5h4xb            0/1     Completed   0          2m40s\r\nistio-init-crd-12-1.3.1-wgqtw            0/1     Completed   0          2m40s\r\nistio-pilot-66d9655cb5-j72rc             2/2     Running     0          2m12s\r\nistio-policy-77488b8574-dzrlz            2/2     Running     2          2m12s\r\nistio-sidecar-injector-857959c99-5n2xc   1/1     Running     0          2m11s\r\nistio-telemetry-5c567cdb5d-q7rkm         2/2     Running     2          2m12s\r"
+    ],
+    [
+      2.8e-05,
+      "\nistio-tracing-6bbdc67d6c-xqpx8           1/1     Running     0          2m11s\r\nkiali-8c9d6fbf6-chqfw                    1/1     Running     0          2m12s\r\nprometheus-7d7b9f7844-fmtkp              1/1     Running     0          2m12s\r\n"
+    ],
+    [
+      0.002004,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      8.542157,
+      "# Uninstall Isti"
+    ],
+    [
+      0.003187,
+      "o using helm and"
+    ],
+    [
+      0.013137,
+      " tiller"
+    ],
+    [
+      0.700202,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      5.817569,
+      "helm del --purge"
+    ],
+    [
+      0.002179,
+      " istio"
+    ],
+    [
+      0.636826,
+      "\r\n"
+    ],
+    [
+      1.300254,
+      "release \"istio\" deleted\r\n"
+    ],
+    [
+      0.003413,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      5.197098,
+      "helm del --purge"
+    ],
+    [
+      0.012894,
+      " istio-init"
+    ],
+    [
+      0.69224,
+      "\r\n"
+    ],
+    [
+      0.234812,
+      "release \"istio-init\" deleted\r\n"
+    ],
+    [
+      0.00181,
+      "\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.889847,
+      "# Install Istio "
+    ],
+    [
+      0.015169,
+      "using a demo pro"
+    ],
+    [
+      0.00241,
+      "file"
+    ],
+    [
+      1.673403,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1/install/kubernetes/helm\u0007[user@osc01 helm]$ "
+    ],
+    [
+      1.722161,
+      "cd ~/istio-$ISTI"
+    ],
+    [
+      0.001963,
+      "O_VERSI"
+    ],
+    [
+      0.000188,
+      "ON/"
+    ],
+    [
+      0.689105,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      5.42024,
+      "kubectl apply -f"
+    ],
+    [
+      0.014908,
+      " install/kubernetes/istio-demo.y"
+    ],
+    [
+      0.012885,
+      "aml"
+    ],
+    [
+      0.723398,
+      "\r\n"
+    ],
+    [
+      0.119539,
+      "Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply\r\n"
+    ],
+    [
+      0.002891,
+      "namespace/istio-system configured\r\n"
+    ],
+    [
+      0.00197,
+      "customresourcedefinition.apiextensions.k8s.io/virtualservices.networking.istio.io unchanged\r\n"
+    ],
+    [
+      0.001873,
+      "customresourcedefinition.apiextensions.k8s.io/destinationrules.networking.istio.io unchanged\r\n"
+    ],
+    [
+      0.00205,
+      "customresourcedefinition.apiextensions.k8s.io/serviceentries.networking.istio.io unchanged\r\n"
+    ],
+    [
+      0.001809,
+      "customresourcedefinition.apiextensions.k8s.io/gateways.networking.istio.io unchanged\r\n"
+    ],
+    [
+      0.001694,
+      "customresourcedefinition.apiextensions.k8s.io/envoyfilters.networking.istio.io unchanged\r\n"
+    ],
+    [
+      0.001653,
+      "customresourcedefinition.apiextensions.k8s.io/clusterrbacconfigs.rbac.istio.io unchanged\r\n"
+    ],
+    [
+      0.001658,
+      "customresourcedefinition.apiextensions.k8s.io/policies.authentication.istio.io unchanged\r\n"
+    ],
+    [
+      0.001801,
+      "customresourcedefinition.apiextensions.k8s.io/meshpolicies.authentication.istio.io unchanged\r\n"
+    ],
+    [
+      0.002012,
+      "customresourcedefinition.apiextensions.k8s.io/httpapispecbindings.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.001947,
+      "customresourcedefinition.apiextensions.k8s.io/httpapispecs.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.002019,
+      "customresourcedefinition.apiextensions.k8s.io/quotaspecbindings.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.001576,
+      "customresourcedefinition.apiextensions.k8s.io/quotaspecs.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.001729,
+      "customresourcedefinition.apiextensions.k8s.io/rules.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.001769,
+      "customresourcedefinition.apiextensions.k8s.io/attributemanifests.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.00206,
+      "customresourcedefinition.apiextensions.k8s.io/rbacconfigs.rbac.istio.io unchanged\r\n"
+    ],
+    [
+      0.001888,
+      "customresourcedefinition.apiextensions.k8s.io/serviceroles.rbac.istio.io unchanged\r\n"
+    ],
+    [
+      0.00194,
+      "customresourcedefinition.apiextensions.k8s.io/servicerolebindings.rbac.istio.io unchanged\r\n"
+    ],
+    [
+      0.00182,
+      "customresourcedefinition.apiextensions.k8s.io/adapters.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.001824,
+      "customresourcedefinition.apiextensions.k8s.io/instances.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.001952,
+      "customresourcedefinition.apiextensions.k8s.io/templates.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.001766,
+      "customresourcedefinition.apiextensions.k8s.io/handlers.config.istio.io unchanged\r\n"
+    ],
+    [
+      0.002273,
+      "customresourcedefinition.apiextensions.k8s.io/sidecars.networking.istio.io unchanged\r\n"
+    ],
+    [
+      0.001929,
+      "customresourcedefinition.apiextensions.k8s.io/authorizationpolicies.rbac.istio.io unchanged\r\n"
+    ],
+    [
+      0.001839,
+      "customresourcedefinition.apiextensions.k8s.io/clusterissuers.certmanager.k8s.io unchanged\r\n"
+    ],
+    [
+      0.002072,
+      "customresourcedefinition.apiextensions.k8s.io/issuers.certmanager.k8s.io unchanged\r\n"
+    ],
+    [
+      0.001964,
+      "customresourcedefinition.apiextensions.k8s.io/certificates.certmanager.k8s.io unchanged\r\n"
+    ],
+    [
+      0.002033,
+      "customresourcedefinition.apiextensions.k8s.io/orders.certmanager.k8s.io unchanged\r\n"
+    ],
+    [
+      0.001849,
+      "customresourcedefinition.apiextensions.k8s.io/challenges.certmanager.k8s.io unchanged\r\n"
+    ],
+    [
+      0.006134,
+      "secret/kiali created\r\n"
+    ],
+    [
+      0.005488,
+      "configmap/istio-galley-configuration created\r\n"
+    ],
+    [
+      0.010179,
+      "configmap/istio-grafana-custom-resources created\r\n"
+    ],
+    [
+      0.009972,
+      "configmap/istio-grafana-configuration-dashboards-citadel-dashboard created\r\n"
+    ],
+    [
+      0.013421,
+      "configmap/istio-grafana-configuration-dashboards-galley-dashboard created\r\n"
+    ],
+    [
+      0.008027,
+      "configmap/istio-grafana-configuration-dashboards-istio-mesh-dashboard created\r\n"
+    ],
+    [
+      0.023311,
+      "configmap/istio-grafana-configuration-dashboards-istio-performance-dashboard created\r\n"
+    ],
+    [
+      0.024388,
+      "configmap/istio-grafana-configuration-dashboards-istio-service-dashboard created\r\n"
+    ],
+    [
+      0.02875,
+      "configmap/istio-grafana-configuration-dashboards-istio-workload-dashboard created\r\n"
+    ],
+    [
+      0.013568,
+      "configmap/istio-grafana-configuration-dashboards-mixer-dashboard created\r\n"
+    ],
+    [
+      0.007198,
+      "configmap/istio-grafana-configuration-dashboards-pilot-dashboard created\r\n"
+    ],
+    [
+      0.004843,
+      "configmap/istio-grafana created\r\n"
+    ],
+    [
+      0.005689,
+      "configmap/kiali created\r\n"
+    ],
+    [
+      0.005054,
+      "configmap/prometheus created\r\n"
+    ],
+    [
+      0.006145,
+      "configmap/istio-security-custom-resources created\r\n"
+    ],
+    [
+      0.009927,
+      "configmap/istio created\r\n"
+    ],
+    [
+      0.011955,
+      "configmap/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.004683,
+      "serviceaccount/istio-galley-service-account created\r\n"
+    ],
+    [
+      0.005437,
+      "serviceaccount/istio-egressgateway-service-account created\r\n"
+    ],
+    [
+      0.00504,
+      "serviceaccount/istio-ingressgateway-service-account created\r\n"
+    ],
+    [
+      0.005581,
+      "serviceaccount/istio-grafana-post-install-account created\r\n"
+    ],
+    [
+      0.005216,
+      "clusterrole.rbac.authorization.k8s.io/istio-grafana-post-install-istio-system created\r\n"
+    ],
+    [
+      0.004316,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-grafana-post-install-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.005169,
+      "job.batch/istio-grafana-post-install-1.3.1 created\r\n"
+    ],
+    [
+      0.005434,
+      "serviceaccount/kiali-service-account created\r\n"
+    ],
+    [
+      0.009768,
+      "serviceaccount/istio-mixer-service-account created\r\n"
+    ],
+    [
+      0.006922,
+      "serviceaccount/istio-pilot-service-account created\r\n"
+    ],
+    [
+      0.007358,
+      "serviceaccount/prometheus created\r\n"
+    ],
+    [
+      0.003183,
+      "serviceaccount/istio-security-post-install-account created\r\n"
+    ],
+    [
+      0.005276,
+      "clusterrole.rbac.authorization.k8s.io/istio-security-post-install-istio-system created\r\n"
+    ],
+    [
+      0.005108,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-security-post-install-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.005287,
+      "job.batch/istio-security-post-install-1.3.1 created\r\n"
+    ],
+    [
+      0.009059,
+      "serviceaccount/istio-citadel-service-account created\r\n"
+    ],
+    [
+      0.008042,
+      "serviceaccount/istio-sidecar-injector-service-account created\r\n"
+    ],
+    [
+      0.004884,
+      "serviceaccount/istio-multi created\r\n"
+    ],
+    [
+      0.005092,
+      "clusterrole.rbac.authorization.k8s.io/istio-galley-istio-system created\r\n"
+    ],
+    [
+      0.004454,
+      "clusterrole.rbac.authorization.k8s.io/kiali created\r\n"
+    ],
+    [
+      0.004204,
+      "clusterrole.rbac.authorization.k8s.io/kiali-viewer created\r\n"
+    ],
+    [
+      0.00435,
+      "clusterrole.rbac.authorization.k8s.io/istio-mixer-istio-system created\r\n"
+    ],
+    [
+      0.003142,
+      "clusterrole.rbac.authorization.k8s.io/istio-pilot-istio-system created\r\n"
+    ],
+    [
+      0.004093,
+      "clusterrole.rbac.authorization.k8s.io/prometheus-istio-system created\r\n"
+    ],
+    [
+      0.003636,
+      "clusterrole.rbac.authorization.k8s.io/istio-citadel-istio-system created\r\n"
+    ],
+    [
+      0.00292,
+      "clusterrole.rbac.authorization.k8s.io/istio-sidecar-injector-istio-system created\r\n"
+    ],
+    [
+      0.003056,
+      "clusterrole.rbac.authorization.k8s.io/istio-reader created\r\n"
+    ],
+    [
+      0.003559,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-galley-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.004354,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-kiali-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.003554,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-mixer-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.003224,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-pilot-istio-system created\r\n"
+    ],
+    [
+      0.003237,
+      "clusterrolebinding.rbac.authorization.k8s.io/prometheus-istio-system created\r\n"
+    ],
+    [
+      0.003985,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-citadel-istio-system created\r\n"
+    ],
+    [
+      0.002825,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-sidecar-injector-admin-role-binding-istio-system created\r\n"
+    ],
+    [
+      0.003315,
+      "clusterrolebinding.rbac.authorization.k8s.io/istio-multi created\r\n"
+    ],
+    [
+      0.003846,
+      "role.rbac.authorization.k8s.io/istio-ingressgateway-sds created\r\n"
+    ],
+    [
+      0.00409,
+      "rolebinding.rbac.authorization.k8s.io/istio-ingressgateway-sds created\r\n"
+    ],
+    [
+      0.007987,
+      "service/istio-galley created\r\n"
+    ],
+    [
+      0.009352,
+      "service/istio-egressgateway created\r\n"
+    ],
+    [
+      0.020155,
+      "service/istio-ingressgateway created\r\n"
+    ],
+    [
+      0.008123,
+      "service/grafana created\r\n"
+    ],
+    [
+      0.010713,
+      "service/kiali created\r\n"
+    ],
+    [
+      0.009765,
+      "service/istio-policy created\r\n"
+    ],
+    [
+      0.010107,
+      "service/istio-telemetry created\r\n"
+    ],
+    [
+      0.010016,
+      "service/istio-pilot created\r\n"
+    ],
+    [
+      0.013728,
+      "service/prometheus created\r\n"
+    ],
+    [
+      0.009504,
+      "service/istio-citadel created\r\n"
+    ],
+    [
+      0.010294,
+      "service/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.008129,
+      "deployment.apps/istio-galley created\r\n"
+    ],
+    [
+      0.015301,
+      "deployment.apps/istio-egressgateway created\r\n"
+    ],
+    [
+      0.018658,
+      "deployment.apps/istio-ingressgateway created\r\n"
+    ],
+    [
+      0.023873,
+      "deployment.apps/grafana created\r\n"
+    ],
+    [
+      0.021459,
+      "deployment.apps/kiali created\r\n"
+    ],
+    [
+      0.021697,
+      "deployment.apps/istio-policy created\r\n"
+    ],
+    [
+      0.019405,
+      "deployment.apps/istio-telemetry created\r\n"
+    ],
+    [
+      0.012711,
+      "deployment.apps/istio-pilot created\r\n"
+    ],
+    [
+      0.012591,
+      "deployment.apps/prometheus created\r\n"
+    ],
+    [
+      0.012062,
+      "deployment.apps/istio-citadel created\r\n"
+    ],
+    [
+      0.010516,
+      "deployment.apps/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.01011,
+      "deployment.apps/istio-tracing created\r\n"
+    ],
+    [
+      0.010911,
+      "service/jaeger-query created\r\n"
+    ],
+    [
+      0.012685,
+      "service/jaeger-collector created\r\n"
+    ],
+    [
+      0.007518,
+      "service/jaeger-agent created\r\n"
+    ],
+    [
+      0.014223,
+      "service/zipkin created\r\n"
+    ],
+    [
+      0.014543,
+      "service/tracing created\r\n"
+    ],
+    [
+      0.005534,
+      "mutatingwebhookconfiguration.admissionregistration.k8s.io/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.006793,
+      "poddisruptionbudget.policy/istio-galley created\r\n"
+    ],
+    [
+      0.006712,
+      "poddisruptionbudget.policy/istio-egressgateway created\r\n"
+    ],
+    [
+      0.011595,
+      "poddisruptionbudget.policy/istio-ingressgateway created\r\n"
+    ],
+    [
+      0.006181,
+      "poddisruptionbudget.policy/istio-policy created\r\n"
+    ],
+    [
+      0.007691,
+      "poddisruptionbudget.policy/istio-telemetry created\r\n"
+    ],
+    [
+      0.010615,
+      "poddisruptionbudget.policy/istio-pilot created\r\n"
+    ],
+    [
+      0.008117,
+      "poddisruptionbudget.policy/istio-sidecar-injector created\r\n"
+    ],
+    [
+      0.012891,
+      "attributemanifest.config.istio.io/istioproxy created\r\n"
+    ],
+    [
+      0.008286,
+      "attributemanifest.config.istio.io/kubernetes created\r\n"
+    ],
+    [
+      0.008089,
+      "handler.config.istio.io/stdio created\r\n"
+    ],
+    [
+      0.008104,
+      "instance.config.istio.io/accesslog created\r\n"
+    ],
+    [
+      0.006546,
+      "instance.config.istio.io/tcpaccesslog created\r\n"
+    ],
+    [
+      0.012811,
+      "rule.config.istio.io/stdio created\r\n"
+    ],
+    [
+      0.011028,
+      "rule.config.istio.io/stdiotcp created\r\n"
+    ],
+    [
+      0.007396,
+      "instance.config.istio.io/requestcount created\r\n"
+    ],
+    [
+      0.006806,
+      "instance.config.istio.io/requestduration created\r\n"
+    ],
+    [
+      0.011833,
+      "instance.config.istio.io/requestsize created\r\n"
+    ],
+    [
+      0.020473,
+      "instance.config.istio.io/responsesize created\r\n"
+    ],
+    [
+      0.014748,
+      "instance.config.istio.io/tcpbytesent created\r\n"
+    ],
+    [
+      0.015597,
+      "instance.config.istio.io/tcpbytereceived created\r\n"
+    ],
+    [
+      0.014415,
+      "instance.config.istio.io/tcpconnectionsopened created\r\n"
+    ],
+    [
+      0.014821,
+      "instance.config.istio.io/tcpconnectionsclosed created\r\n"
+    ],
+    [
+      0.008922,
+      "handler.config.istio.io/prometheus created\r\n"
+    ],
+    [
+      0.006451,
+      "rule.config.istio.io/promhttp created\r\n"
+    ],
+    [
+      0.008962,
+      "rule.config.istio.io/promtcp created\r\n"
+    ],
+    [
+      0.006796,
+      "rule.config.istio.io/promtcpconnectionopen created\r\n"
+    ],
+    [
+      0.021375,
+      "rule.config.istio.io/promtcpconnectionclosed created\r\n"
+    ],
+    [
+      0.007735,
+      "handler.config.istio.io/kubernetesenv created\r\n"
+    ],
+    [
+      0.010121,
+      "rule.config.istio.io/kubeattrgenrulerule created\r\n"
+    ],
+    [
+      0.011773,
+      "rule.config.istio.io/tcpkubeattrgenrulerule created\r\n"
+    ],
+    [
+      0.009024,
+      "instance.config.istio.io/attributes created\r\n"
+    ],
+    [
+      0.008872,
+      "destinationrule.networking.istio.io/istio-policy created\r\n"
+    ],
+    [
+      0.005677,
+      "destinationrule.networking.istio.io/istio-telemetry created\r\n"
+    ],
+    [
+      0.005802,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.961752,
+      "# Check the vers"
+    ],
+    [
+      0.013844,
+      "ion of the istio"
+    ],
+    [
+      0.013373,
+      "ctl and different Istio modules"
+    ],
+    [
+      1.041529,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.85071,
+      "istioctl version"
+    ],
+    [
+      0.012867,
+      " --short"
+    ],
+    [
+      0.699834,
+      "\r\n"
+    ],
+    [
+      1.452899,
+      "client version: 1.3.1\r\ncontrol plane version: 1.3.1\r\n"
+    ],
+    [
+      0.001744,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.076498,
+      "# Installing a "
+    ],
+    [
+      0.000114,
+      "L"
+    ],
+    [
+      0.013268,
+      "oad Balancer"
+    ],
+    [
+      0.877472,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.232756,
+      "# Make sure that"
+    ],
+    [
+      0.013375,
+      " the ip_vs kerne"
+    ],
+    [
+      0.012875,
+      "l module is load"
+    ],
+    [
+      0.001569,
+      "ed"
+    ],
+    [
+      0.906158,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.207212,
+      "sudo lsmod | gre"
+    ],
+    [
+      0.013295,
+      "p ^ip_vs"
+    ],
+    [
+      0.993551,
+      "\r\n"
+    ],
+    [
+      0.01886,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.435135,
+      "sudo ipvsadm -ln"
+    ],
+    [
+      0.853017,
+      "\r\n"
+    ],
+    [
+      0.030324,
+      "IP Virtual Server version 1.2.1 (size=4096)\r\nProt LocalAddress:Port Scheduler Flags\r\n  -> RemoteAddress:Port           Forward Weight ActiveConn InActConn\r\n"
+    ],
+    [
+      0.001526,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.077843,
+      "sudo lsmod | gre"
+    ],
+    [
+      0.013728,
+      "p ^ip_vs"
+    ],
+    [
+      0.755047,
+      "\r\n"
+    ],
+    [
+      0.014485,
+      "\u001b[01;31m\u001b[Kip_vs\u001b[m\u001b[K                 145497  0 \r\n"
+    ],
+    [
+      0.001803,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.275133,
+      "# Add ip_vs to t"
+    ],
+    [
+      0.014053,
+      "he module list s"
+    ],
+    [
+      0.014863,
+      "o that it is loa"
+    ],
+    [
+      0.000649,
+      "ded automaticall"
+    ],
+    [
+      0.014461,
+      "y on reboot"
+    ],
+    [
+      0.958343,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.389179,
+      "echo \"ip_vs\" | s"
+    ],
+    [
+      0.013249,
+      "udo tee /etc/mod"
+    ],
+    [
+      0.001998,
+      "ules-load.d/ipvs"
+    ],
+    [
+      0.014268,
+      ".conf"
+    ],
+    [
+      1.057779,
+      "\r\n"
+    ],
+    [
+      0.013607,
+      "ip_vs\r\n"
+    ],
+    [
+      0.001439,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.141109,
+      "# Label node pro"
+    ],
+    [
+      0.013983,
+      "xy=true for keep"
+    ],
+    [
+      0.01393,
+      "alived"
+    ],
+    [
+      1.289114,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      7.280404,
+      "kubectl label no"
+    ],
+    [
+      0.013071,
+      "de osc01.service"
+    ],
+    [
+      0.001785,
+      "mesh.local proxy"
+    ],
+    [
+      0.012253,
+      "=true"
+    ],
+    [
+      0.694428,
+      "\r\n"
+    ],
+    [
+      0.105298,
+      "node/osc01.servicemesh.local labeled\r\n"
+    ],
+    [
+      0.001694,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.195849,
+      "# Install keepal"
+    ],
+    [
+      0.012302,
+      "ived through a h"
+    ],
+    [
+      0.002698,
+      "elm chart"
+    ],
+    [
+      1.432581,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.907755,
+      "helm repo add ka"
+    ],
+    [
+      0.002363,
+      "al https:"
+    ],
+    [
+      0.000306,
+      "//servi"
+    ],
+    [
+      0.012279,
+      "cemeshbook.githu"
+    ],
+    [
+      0.01327,
+      "b.io/keepalived"
+    ],
+    [
+      1.062883,
+      "\r\n"
+    ],
+    [
+      0.20464,
+      "\"kaal\" has been added to your repositories\r\n"
+    ],
+    [
+      0.000275,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      5.79026,
+      "helm repo update"
+    ],
+    [
+      0.6287,
+      "\r\n"
+    ],
+    [
+      0.040514,
+      "Hang tight while we grab the latest from your chart repositories...\r\n...Skip local chart repository\r\n"
+    ],
+    [
+      0.18745,
+      "...Successfully got an update from the \"kaal\" chart repository\r\n"
+    ],
+    [
+      1.618966,
+      "...Successfully got an update from the \"stable\" chart repository\r\nUpdate Complete.\r\n"
+    ],
+    [
+      0.004197,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.81851,
+      "# Grant cluster "
+    ],
+    [
+      0.012858,
+      "admin to the def"
+    ],
+    [
+      0.015991,
+      "ault service acc"
+    ],
+    [
+      0.003332,
+      "ount in keepaliv"
+    ],
+    [
+      0.01238,
+      "ed namespace "
+    ],
+    [
+      0.818727,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.656729,
+      "kubectl create c"
+    ],
+    [
+      0.013415,
+      "lusterrolebindin"
+    ],
+    [
+      0.013955,
+      "g keepalived-clu"
+    ],
+    [
+      0.001898,
+      "ster-role-bindin"
+    ],
+    [
+      0.012585,
+      "g \\\r\n> --clusterrol"
+    ],
+    [
+      0.012327,
+      "e=cluster-admin "
+    ],
+    [
+      0.012651,
+      "--serviceaccount"
+    ],
+    [
+      0.012683,
+      "=keepalived:defa"
+    ],
+    [
+      0.001494,
+      "ult"
+    ],
+    [
+      0.785989,
+      "\r\n"
+    ],
+    [
+      0.049601,
+      "clusterrolebinding.rbac.authorization.k8s.io/keepalived-cluster-role-binding created\r\n"
+    ],
+    [
+      0.001235,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.679193,
+      "helm install kaa"
+    ],
+    [
+      0.013347,
+      "l/keepalived --n"
+    ],
+    [
+      0.001532,
+      "ame keepalived -"
+    ],
+    [
+      0.014107,
+      "-namespace keepa"
+    ],
+    [
+      0.012367,
+      "lived \\\r\n> --set ke"
+    ],
+    [
+      0.013601,
+      "epalivedCloudPro"
+    ],
+    [
+      0.00158,
+      "vider.serviceIPR"
+    ],
+    [
+      0.013911,
+      "ange=\"192.168.14"
+    ],
+    [
+      0.012328,
+      "2.248/29\" \\\r\n> --se"
+    ],
+    [
+      0.013674,
+      "t nameOverride=\""
+    ],
+    [
+      0.001727,
+      "lb\""
+    ],
+    [
+      0.932492,
+      "\r\n"
+    ],
+    [
+      0.349832,
+      "NAME:   keepalived\r\n"
+    ],
+    [
+      0.08391,
+      "LAST DEPLOYED: Tue Oct  1 17:11:40 2019\r\nNAMESPACE: keepalived\r\nSTATUS: DEPLOYED\r\n\r\nRESOURCES:\r\n==> v1/ClusterRole\r\nNAME                 AGE\r\nkube-keepalived-vip  0s\r\n\r\n==> v1/ClusterRoleBinding\r\nNAME                 AGE\r\nkube-keepalived-vip  0s\r\n\r\n==> v1/ConfigMap\r\nNAME           DATA  AGE\r\nvip-configmap  0     0s\r\n\r\n==> v1/Pod(related)\r\nNAME                                          READY  STATUS             RESTARTS  AGE\r\nkeepalived-lb-cloud-provider-c68f7b6b5-x6sz7  0/1    ContainerCreating  0         0s\r\nkeepalived-lb-vip-manager-zdgp5               0/1    ContainerCreating  0         0s\r\n\r\n==> v1/ServiceAccount\r\nNAME                 SECRETS  AGE\r\nkube-keepalived-vip  1        0s\r\n\r\n==> v1beta1/DaemonSet\r\nNAME                       DESIRED  CURRENT  READY  UP-TO-DATE  AVAILABLE  NODE SELECTOR                             AGE\r\nkeepalived-lb-vip-manager  1        1        0      1           0          beta.kubernetes.io/arch=amd64,proxy=true  0s\r\n\r\n==> v1beta1/Deployment\r\nNAME                          READY "
+    ],
+    [
+      2.7e-05,
+      " UP-TO-DATE  AVAILABLE  AGE\r\nkeepalived-lb-cloud-provider  0/1    1           0          0s\r\n\r\n==> v1beta1/PodSecurityPolicy\r\nNAME                 PRIV  CAPS      SELINUX   RUNASUSER  FSGROUP   SUPGROUP  READONLYROOTFS  VOLUMES\r\nkube-keepalived-vip  true  RunAsAny  RunAsAny  RunAsAny   RunAsAny  false     *\r\n\r\n\r\n"
+    ],
+    [
+      0.001719,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      8.293819,
+      "# Test the readi"
+    ],
+    [
+      0.014023,
+      "ness and status "
+    ],
+    [
+      0.001637,
+      "of pods in keepa"
+    ],
+    [
+      0.012276,
+      "lived namespace"
+    ],
+    [
+      1.282671,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.395196,
+      "kubectl -n keepa"
+    ],
+    [
+      0.003276,
+      "lived get pods"
+    ],
+    [
+      0.667429,
+      "\r\n"
+    ],
+    [
+      0.059251,
+      "NAME                                           READY   STATUS    RESTARTS   AGE\r\nkeepalived-lb-cloud-provider-c68f7b6b5-x6sz7   1/1     Running   0          22s\r\nkeepalived-lb-vip-manager-zdgp5                1/1     Running   0          22s\r\n"
+    ],
+    [
+      0.001594,
+      "\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      6.756409,
+      "# Enable Istio f"
+    ],
+    [
+      0.003103,
+      "or existing appl"
+    ],
+    [
+      0.014623,
+      "ication"
+    ],
+    [
+      1.587344,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      6.573083,
+      "# Generate modif"
+    ],
+    [
+      0.012723,
+      "ied yaml with si"
+    ],
+    [
+      0.013116,
+      "decar proxy for "
+    ],
+    [
+      0.001922,
+      "the bookinfo app"
+    ],
+    [
+      0.023773,
+      "lication"
+    ],
+    [
+      1.377392,
+      "\r\n\u001b]0;user@osc01:~/istio-1.3.1\u0007[user@osc01 istio-1.3.1]$ "
+    ],
+    [
+      1.096359,
+      "cd ~/servicemesh"
+    ],
+    [
+      0.567866,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      1.14369,
+      "istioctl kube-in"
+    ],
+    [
+      0.001352,
+      "ject -f bookinfo"
+    ],
+    [
+      0.013326,
+      ".yaml > bookinfo"
+    ],
+    [
+      0.012318,
+      "_proxy.yaml"
+    ],
+    [
+      1.550576,
+      "\r\n"
+    ],
+    [
+      0.129733,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      1.828706,
+      "# Do a \"diff\" on"
+    ],
+    [
+      0.016375,
+      " original and mo"
+    ],
+    [
+      0.000431,
+      "dified file"
+    ],
+    [
+      1.962335,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      5.773513,
+      "diff -y bookinfo"
+    ],
+    [
+      0.014382,
+      ".yaml bookinfo_p"
+    ],
+    [
+      0.014013,
+      "roxy.yaml"
+    ],
+    [
+      0.941301,
+      "\r\n"
+    ],
+    [
+      0.002805,
+      "# Copyright 2017 Istio Authors\t\t\t\t\t# Copyright 2017 Istio Authors\r\n#\t\t\t\t\t\t\t\t#\r\n#   Licensed under the Apache License, Version 2.0 (the \"Lice\t#   Licensed under the Apache License, Version 2.0 (the \"Lice\r\n#   you may not use this file except in compliance with the L\t#   you may not use this file except in compliance with the L\r\n#   You may obtain a copy of the License at\t\t\t#   You may obtain a copy of the License at\r\n#\t\t\t\t\t\t\t\t#\r\n#       http://www.apache.org/licenses/LICENSE-2.0\t\t#       http://www.apache.org/licenses/LICENSE-2.0\r\n#\t\t\t\t\t\t\t\t#\r\n#   Unless required by applicable law or agreed to in writing\t#   Unless required by applicable law or agreed to in writing\r\n#   distributed under the License is distributed on an \"AS IS\t#   distributed under the License is distributed on an \"AS IS\r\n#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expr\t#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expr\r\n#   See the License for the specific language governing permi\t#   See the License for the specific la"
+    ],
+    [
+      7.8e-05,
+      "nguage governing permi\r\n#   limitations under the License.\t\t\t\t#   limitations under the License.\r\n\r\n#############################################################\t#############################################################\r\n# Details service\t\t\t\t\t\t# Details service\r\n#############################################################\t#############################################################\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: Service\t\t\t\t\t\t\tkind: Service\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: details\t\t\t\t\t\t\t  name: details\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: details\t\t\t\t\t\t    app: details\r\n    service: details\t\t\t\t\t\t    service: details\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  ports:\t\t\t\t\t\t\t  ports:\r\n  - port: 9080\t\t\t\t\t\t\t  - port: 9080\r\n    name: http\t\t\t\t\t\t\t    name: http\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    app: details\t\t\t\t\t\t    app: details\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: ServiceAccount\t\t\t\t\t\tkind: ServiceAccount\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: bookinfo-details\t\t\t\t\t  name: bookinfo-details\r\n---\t\t\t"
+    ],
+    [
+      6.3e-05,
+      "\t\t\t\t\t---\r\napiVersion: apps/v1\t\t\t\t\t\tapiVersion: apps/v1\r\nkind: Deployment\t\t\t\t\t\tkind: Deployment\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: details-v1\t\t\t\t\t      |\t  creationTimestamp: null\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: details\t\t\t\t\t\t    app: details\r\n    version: v1\t\t\t\t\t\t\t    version: v1\r\n\t\t\t\t\t\t\t      >\t  name: details-v1\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  replicas: 1\t\t\t\t\t\t\t  replicas: 1\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    matchLabels:\t\t\t\t\t\t    matchLabels:\r\n      app: details\t\t\t\t\t\t      app: details\r\n      version: v1\t\t\t\t\t\t      version: v1\r\n\t\t\t\t\t\t\t      >\t  strategy: {}\r\n  template:\t\t\t\t\t\t\t  template:\r\n    metadata:\t\t\t\t\t\t\t    metadata:\r\n\t\t\t\t\t\t\t      >\t      annotations:\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/interceptionMode: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/status: '{\"version\":\"2696c96840179bd\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/excludeInboundPorts: \"15020\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeInboundPorts: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeOu"
+    ],
+    [
+      8.2e-05,
+      "tboundIPRanges: '*'\r\n\t\t\t\t\t\t\t      >\t      creationTimestamp: null\r\n      labels:\t\t\t\t\t\t\t      labels:\r\n        app: details\t\t\t\t\t\t        app: details\r\n        version: v1\t\t\t\t\t\t        version: v1\r\n    spec:\t\t\t\t\t\t\t    spec:\r\n      serviceAccountName: bookinfo-details\t\t      <\r\n      containers:\t\t\t\t\t\t      containers:\r\n      - name: details\t\t\t\t\t      |\t      - image: docker.io/istio/examples-bookinfo-details-v1:1\r\n        image: docker.io/istio/examples-bookinfo-details-v1:1 <\r\n        imagePullPolicy: IfNotPresent\t\t\t\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: details\r\n        ports:\t\t\t\t\t\t\t        ports:\r\n        - containerPort: 9080\t\t\t\t\t        - containerPort: 9080\r\n\t\t\t\t\t\t\t      >\t        resources: {}\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - proxy\r\n\t\t\t\t\t\t\t      >\t        - sidecar\r\n\t\t\t\t\t\t\t      >\t        - --domain\r\n\t\t\t\t\t\t\t      >\t        - $(POD_NAMESPACE).svc.cluster.local\r\n\t\t\t\t\t\t\t      >\t        - --configPath\r\n\t\t\t\t\t\t\t      >\t        - /etc/istio/proxy\r\n\t\t\t\t\t\t\t     "
+    ],
+    [
+      2.1e-05,
+      " >\t        - --binaryPath\r\n\t\t\t\t\t\t\t      >\t        - /usr/local/bin/envoy\r\n\t\t\t\t\t\t\t      >\t        - --serviceCluster\r\n\t\t\t\t\t\t\t      >\t        - details.$(POD_NAMESPACE)\r\n\t\t\t\t\t\t\t      >\t        - --drainDuration\r\n\t\t\t\t\t\t\t      >\t        - 45s\r\n\t\t\t\t\t\t\t      >\t        - --parentShutdownDuration\r\n\t\t\t\t\t\t\t      >\t        - 1m0s\r\n\t\t\t\t\t\t\t      >\t        - --discoveryAddress\r\n\t\t\t\t\t\t\t      >\t        - istio-pilot.istio-system:15010\r\n\t\t\t\t\t\t\t      >\t        - --zipkinAddress\r\n\t\t\t\t\t\t\t      >\t        - zipkin.istio-system:9411\r\n\t\t\t\t\t\t\t      >\t        - --dnsRefreshRate\r\n\t\t\t\t\t\t\t      >\t        - 300s\r\n\t\t\t\t\t\t\t      >\t        - --connectTimeout\r\n\t\t\t\t\t\t\t      >\t        - 10s\r\n\t\t\t\t\t\t\t      >\t        - --proxyAdminPort\r\n\t\t\t\t\t\t\t      >\t        - \"15000\"\r\n\t\t\t\t\t\t\t      >\t        - --concurrency\r\n\t\t\t\t\t\t\t      >\t        - \"2\"\r\n\t\t\t\t\t\t\t      >\t        - --controlPlaneAuthPolicy\r\n\t\t\t\t\t\t\t      >\t        - NONE\r\n\t\t\t\t\t\t\t      >\t        - --statusPort\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        - --applicationPorts\r\n\t\t\t\t\t\t\t      "
+    ],
+    [
+      4.5e-05,
+      ">\t        - \"9080\"\r\n\t\t\t\t\t\t\t      >\t        env:\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: |-\r\n\t\t\t\t\t\t\t      >\t            [\r\n\t\t\t\t\t\t\t      >\t                {\"containerPort\":9080}\r\n\t\t\t\t\t\t\t      >\t            ]\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CLUSTER_ID\r\n\t\t\t\t\t\t\t      >\t          value: Kubernetes\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: INSTANCE_IP\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: status.podIP\r\n\t\t\t\t\t\t\t      >\t        - name: SERVICE_ACCOUNT\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t          "
+    ],
+    [
+      5.3e-05,
+      "    fieldPath: spec.serviceAccountName\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CONFIG_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: SDS_ENABLED\r\n\t\t\t\t\t\t\t      >\t          value: \"false\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INTERCEPTION_MODE\r\n\t\t\t\t\t\t\t      >\t          value: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INCLUDE_INBOUND_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_METAJSON_LABELS\r\n\t\t\t\t\t\t\t      >\t          value: |\r\n\t\t\t\t\t\t\t      >\t            {\"app\":\"details\",\"version\":\"v1\"}\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_WORKLOAD_NAME\r\n\t\t\t\t\t\t\t      >\t          value: details-v1\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_OWNER\r\n\t\t\t\t\t\t\t      >"
+    ],
+    [
+      6.2e-05,
+      "\t          value: kubernetes://api/apps/v1/namespaces/default/\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxyv2:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-proxy\r\n\t\t\t\t\t\t\t      >\t        ports:\r\n\t\t\t\t\t\t\t      >\t        - containerPort: 15090\r\n\t\t\t\t\t\t\t      >\t          name: http-envoy-prom\r\n\t\t\t\t\t\t\t      >\t          protocol: TCP\r\n\t\t\t\t\t\t\t      >\t        readinessProbe:\r\n\t\t\t\t\t\t\t      >\t          failureThreshold: 30\r\n\t\t\t\t\t\t\t      >\t          httpGet:\r\n\t\t\t\t\t\t\t      >\t            path: /healthz/ready\r\n\t\t\t\t\t\t\t      >\t            port: 15020\r\n\t\t\t\t\t\t\t      >\t          initialDelaySeconds: 1\r\n\t\t\t\t\t\t\t      >\t          periodSeconds: 2\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: \"2\"\r\n\t\t\t\t\t\t\t      >\t            memory: 1Gi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 40Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          readOnly"
+    ],
+    [
+      0.000226,
+      "RootFilesystem: true\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 1337\r\n\t\t\t\t\t\t\t      >\t        volumeMounts:\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t          name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/certs/\r\n\t\t\t\t\t\t\t      >\t          name: istio-certs\r\n\t\t\t\t\t\t\t      >\t          readOnly: true\r\n\t\t\t\t\t\t\t      >\t      initContainers:\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - -p\r\n\t\t\t\t\t\t\t      >\t        - \"15001\"\r\n\t\t\t\t\t\t\t      >\t        - -z\r\n\t\t\t\t\t\t\t      >\t        - \"15006\"\r\n\t\t\t\t\t\t\t      >\t        - -u\r\n\t\t\t\t\t\t\t      >\t        - \"1337\"\r\n\t\t\t\t\t\t\t      >\t        - -m\r\n\t\t\t\t\t\t\t      >\t        - REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - -i\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -x\r\n\t\t\t\t\t\t\t      >\t        - \"\"\r\n\t\t\t\t\t\t\t      >\t        - -b\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -d\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxy_init:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      "
+    ],
+    [
+      1.3e-05,
+      ">\t        name: istio-init\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: 100m\r\n\t\t\t\t\t\t\t      >\t            memory: 50Mi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 10Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          capabilities:\r\n\t\t\t\t\t\t\t      >\t            add:\r\n\t\t\t\t\t\t\t      >\t            - NET_ADMIN\r\n\t\t\t\t\t\t\t      >\t          runAsNonRoot: false\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 0\r\n\t\t\t\t\t\t\t      >\t      serviceAccountName: bookinfo-details\r\n\t\t\t\t\t\t\t      >\t      volumes:\r\n\t\t\t\t\t\t\t      >\t      - emptyDir:\r\n\t\t\t\t\t\t\t      >\t          medium: Memory\r\n\t\t\t\t\t\t\t      >\t        name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t      - name: istio-certs\r\n\t\t\t\t\t\t\t      >\t        secret:\r\n\t\t\t\t\t\t\t      >\t          optional: true\r\n\t\t\t\t\t\t\t      >\t          secretName: istio.bookinfo-details\r\n\t\t\t\t\t\t\t      >\tstatus: {}\r\n---\t\t\t\t\t\t\t\t---\r\n#############################################################\t#######"
+    ],
+    [
+      1e-05,
+      "######################################################\r\n# Ratings service\t\t\t\t\t\t# Ratings service\r\n#############################################################\t#############################################################\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: Service\t\t\t\t\t\t\tkind: Service\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: ratings\t\t\t\t\t\t\t  name: ratings\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: ratings\t\t\t\t\t\t    app: ratings\r\n    service: ratings\t\t\t\t\t\t    service: ratings\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  ports:\t\t\t\t\t\t\t  ports:\r\n  - port: 9080\t\t\t\t\t\t\t  - port: 9080\r\n    name: http\t\t\t\t\t\t\t    name: http\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    app: ratings\t\t\t\t\t\t    app: ratings\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: ServiceAccount\t\t\t\t\t\tkind: ServiceAccount\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: bookinfo-ratings\t\t\t\t\t  name: bookinfo-ratings\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: apps/v1\t\t\t\t\t\tapiVersion: apps/v1\r\nkind: Deployment\t\t\t\t\t\tkind: Deployment\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: ratings-v1\t\t\t\t\t      |\t  creationTimes"
+    ],
+    [
+      1e-05,
+      "tamp: null\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: ratings\t\t\t\t\t\t    app: ratings\r\n    version: v1\t\t\t\t\t\t\t    version: v1\r\n\t\t\t\t\t\t\t      >\t  name: ratings-v1\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  replicas: 1\t\t\t\t\t\t\t  replicas: 1\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    matchLabels:\t\t\t\t\t\t    matchLabels:\r\n      app: ratings\t\t\t\t\t\t      app: ratings\r\n      version: v1\t\t\t\t\t\t      version: v1\r\n\t\t\t\t\t\t\t      >\t  strategy: {}"
+    ],
+    [
+      0.000911,
+      "\r\n  template:\t\t\t\t\t\t\t  template:\r\n    metadata:\t\t\t\t\t\t\t    metadata:\r\n\t\t\t\t\t\t\t      >\t      annotations:\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/interceptionMode: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/status: '{\"version\":\"2696c96840179bd\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/excludeInboundPorts: \"15020\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeInboundPorts: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeOutboundIPRanges: '*'\r\n\t\t\t\t\t\t\t      >\t      creationTimestamp: null\r\n      labels:\t\t\t\t\t\t\t      labels:\r\n        app: ratings\t\t\t\t\t\t        app: ratings\r\n        version: v1\t\t\t\t\t\t        version: v1\r\n    spec:\t\t\t\t\t\t\t    spec:\r\n      serviceAccountName: bookinfo-ratings\t\t      <\r\n      containers:\t\t\t\t\t\t      containers:\r\n      - name: ratings\t\t\t\t\t      |\t      - image: docker.io/istio/examples-bookinfo-ratings-v1:1\r\n        image: docker.io/istio/examples-bookinfo-ratings-v1:1 <\r\n        imagePullPolicy: IfNotPresent\t\t\t\t        imagePullPolicy: IfNotPresent\r\n\t\t\t"
+    ],
+    [
+      0.00035,
+      "\t\t\t\t      >\t        name: ratings\r\n        ports:\t\t\t\t\t\t\t        ports:\r\n        - containerPort: 9080\t\t\t\t\t        - containerPort: 9080\r\n\t\t\t\t\t\t\t      >\t        resources: {}\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - proxy\r\n\t\t\t\t\t\t\t      >\t        - sidecar\r\n\t\t\t\t\t\t\t      >\t        - --domain\r\n\t\t\t\t\t\t\t      >\t        - $(POD_NAMESPACE).svc.cluster.local\r\n\t\t\t\t\t\t\t      >\t        - --configPath\r\n\t\t\t\t\t\t\t      >\t        - /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t        - --binaryPath\r\n\t\t\t\t\t\t\t      >\t        - /usr/local/bin/envoy\r\n\t\t\t\t\t\t\t      >\t        - --serviceCluster\r\n\t\t\t\t\t\t\t      >\t        - ratings.$(POD_NAMESPACE)\r\n\t\t\t\t\t\t\t      >\t        - --drainDuration\r\n\t\t\t\t\t\t\t      >\t        - 45s\r\n\t\t\t\t\t\t\t      >\t        - --parentShutdownDuration\r\n\t\t\t\t\t\t\t      >\t        - 1m0s\r\n\t\t\t\t\t\t\t      >\t        - --discoveryAddress\r\n\t\t\t\t\t\t\t      >\t        - istio-pilot.istio-system:15010\r\n\t\t\t\t\t\t\t      >\t        - --zipkinAddress\r\n\t\t\t\t\t\t\t      >\t        - zipkin.istio-system:9411\r\n\t\t\t\t\t\t\t      >\t        - --dnsRefreshRate\r\n\t\t\t"
+    ],
+    [
+      2.2e-05,
+      "\t\t\t\t      >\t        - 300s\r\n\t\t\t\t\t\t\t      >\t        - --connectTimeout\r\n\t\t\t\t\t\t\t      >\t        - 10s\r\n\t\t\t\t\t\t\t      >\t        - --proxyAdminPort\r\n\t\t\t\t\t\t\t      >\t        - \"15000\"\r\n\t\t\t\t\t\t\t      >\t        - --concurrency\r\n\t\t\t\t\t\t\t      >\t        - \"2\"\r\n\t\t\t\t\t\t\t      >\t        - --controlPlaneAuthPolicy\r\n\t\t\t\t\t\t\t      >\t        - NONE\r\n\t\t\t\t\t\t\t      >\t        - --statusPort\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        - --applicationPorts\r\n\t\t\t\t\t\t\t      >\t        - \"9080\"\r\n\t\t\t\t\t\t\t      >\t        env:\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: |-\r\n\t\t\t\t\t\t\t      >\t            [\r\n\t\t\t\t\t\t\t      >\t                {\"containerPort\":9080}\r\n\t\t\t\t\t\t\t      >\t            ]\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CLUSTER_ID\r\n\t\t\t\t\t\t\t      >\t          value: Kubernetes\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAMESP"
+    ],
+    [
+      1.3e-05,
+      "ACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: INSTANCE_IP\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: status.podIP\r\n\t\t\t\t\t\t\t      >\t        - name: SERVICE_ACCOUNT\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: spec.serviceAccountName\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CONFIG_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: SDS_ENABLED\r\n\t\t\t\t\t\t\t      >\t          value: \"false\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INTERCEPTION_MODE\r\n"
+    ],
+    [
+      1.1e-05,
+      "\t\t\t\t\t\t\t      >\t          value: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INCLUDE_INBOUND_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_METAJSON_LABELS\r\n\t\t\t\t\t\t\t      >\t          value: |\r\n\t\t\t\t\t\t\t      >\t            {\"app\":\"ratings\",\"version\":\"v1\"}\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_WORKLOAD_NAME\r\n\t\t\t\t\t\t\t      >\t          value: ratings-v1\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_OWNER\r\n\t\t\t\t\t\t\t      >\t          value: kubernetes://api/apps/v1/namespaces/default/\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxyv2:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-proxy\r\n\t\t\t\t\t\t\t      >\t        ports:\r\n\t\t\t\t\t\t\t      >\t        - containerPort: 15090\r\n\t\t\t\t\t\t\t      >\t          name: http-envoy-prom\r\n\t\t\t\t\t\t\t      >\t          protocol: TCP\r\n\t\t\t\t\t\t\t      >\t        readinessProbe:\r\n\t\t\t\t\t\t\t      >\t          failureThreshold: 30\r\n\t\t\t\t\t\t\t      >\t          httpGet:\r\n\t\t\t\t\t\t\t      >\t            path: /healthz/ready\r\n\t\t\t\t\t"
+    ],
+    [
+      1.5e-05,
+      "\t\t      >\t            port: 15020\r\n\t\t\t\t\t\t\t      >\t          initialDelaySeconds: 1\r\n\t\t\t\t\t\t\t      >\t          periodSeconds: 2\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: \"2\"\r\n\t\t\t\t\t\t\t      >\t            memory: 1Gi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 40Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          readOnlyRootFilesystem: true\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 1337\r\n\t\t\t\t\t\t\t      >\t        volumeMounts:\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t          name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/certs/\r\n\t\t\t\t\t\t\t      >\t          name: istio-certs\r\n\t\t\t\t\t\t\t      >\t          readOnly: true\r\n\t\t\t\t\t\t\t      >\t      initContainers:\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - -p\r\n\t\t\t\t\t\t\t      >\t        - \"15001\"\r\n\t\t\t\t\t\t\t      >\t        - -z\r\n\t\t\t\t\t\t\t      >\t        - \"15006\"\r\n\t\t\t\t\t\t\t      >\t        - -u\r\n\t\t\t\t\t\t"
+    ],
+    [
+      1.3e-05,
+      "\t      >\t        - \"1337\"\r\n\t\t\t\t\t\t\t      >\t        - -m\r\n\t\t\t\t\t\t\t      >\t        - REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - -i\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -x\r\n\t\t\t\t\t\t\t      >\t        - \"\"\r\n\t\t\t\t\t\t\t      >\t        - -b\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -d\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxy_init:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-init\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: 100m\r\n\t\t\t\t\t\t\t      >\t            memory: 50Mi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 10Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          capabilities:\r\n\t\t\t\t\t\t\t      >\t            add:\r\n\t\t\t\t\t\t\t      >\t            - NET_ADMIN\r\n\t\t\t\t\t\t\t      >\t          runAsNonRoot: false\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 0\r\n\t\t\t\t\t\t\t      >\t      serviceAccoun"
+    ],
+    [
+      1.2e-05,
+      "tName: bookinfo-ratings\r\n\t\t\t\t\t\t\t      >\t      volumes:\r\n\t\t\t\t\t\t\t      >\t      - emptyDir:\r\n\t\t\t\t\t\t\t      >\t          medium: Memory\r\n\t\t\t\t\t\t\t      >\t        name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t      - name: istio-certs\r\n\t\t\t\t\t\t\t      >\t        secret:\r\n\t\t\t\t\t\t\t      >\t          optional: true\r\n\t\t\t\t\t\t\t      >\t          secretName: istio.bookinfo-ratings\r\n\t\t\t\t\t\t\t      >\tstatus: {}\r\n---\t\t\t\t\t\t\t\t---\r\n#############################################################\t#############################################################\r\n# Reviews service\t\t\t\t\t\t# Reviews service\r\n#############################################################\t#############################################################\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: Service\t\t\t\t\t\t\tkind: Service\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: reviews\t\t\t\t\t\t\t  name: reviews\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: reviews\t\t\t\t\t\t    app: reviews\r\n    service: reviews\t\t\t\t\t\t    service: reviews\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  ports:\t\t\t\t\t\t\t  ports:\r\n  - port: 9080\t\t\t\t\t\t\t  - port: 9080\r\n    n"
+    ],
+    [
+      1e-05,
+      "ame: http\t\t\t\t\t\t\t    name: http\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    app: reviews\t\t\t\t\t\t    app: reviews\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: ServiceAccount\t\t\t\t\t\tkind: ServiceAccount\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: bookinfo-reviews\t\t\t\t\t  name: bookinfo-reviews\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: apps/v1\t\t\t\t\t\tapiVersion: apps/v1\r\nkind: Deployment\t\t\t\t\t\tkind: Deployment\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: reviews-v1\t\t\t\t\t      |\t  creationTimestamp: null\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: reviews\t\t\t\t\t\t    app: reviews\r\n    version: v1\t\t\t\t\t\t\t    version: v1\r\n\t\t\t\t\t\t\t      >\t  name: reviews-v1\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  replicas: 1\t\t\t\t\t\t\t  replicas: 1\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    matchLabels:\t\t\t\t\t\t    matchLabels:\r\n      app: reviews\t\t\t\t\t\t      app: reviews\r\n      version: v1\t\t\t\t\t\t      version: v1\r\n\t\t\t\t\t\t\t      >\t  strategy: {}\r\n  template:\t\t\t\t\t\t\t  template:\r\n    metadata:\t\t\t\t\t\t\t    metadata:\r\n\t\t\t\t\t\t\t      >\t      annotations:\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/interceptionMode: REDIRECT"
+    ],
+    [
+      7e-06,
+      "\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/status: '{\"version\":\"2696c96840179bd\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/excludeInboundPorts: \"15020\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeInboundPorts: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeOutboundIPRanges: '*'\r\n\t\t\t\t\t\t\t      >\t      creationTimestamp: null\r\n      labels:\t\t\t\t\t\t\t      labels:\r\n        app: reviews\t\t\t\t\t\t        app: reviews\r\n        version: v1\t\t\t\t\t\t        version: v1\r\n    spec:\t\t\t\t\t\t\t    spec:\r\n      serviceAccountName: bookinfo-reviews\t\t      <\r\n      containers:\t\t\t\t\t\t      containers:\r\n      - name: reviews\t\t\t\t\t      |\t      - image: docker.io/istio/examples-bookinfo-reviews-v1:1\r\n        image: docker.io/istio/examples-bookinfo-reviews-v1:1 <\r\n        imagePullPolicy: IfNotPresent\t\t\t\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: reviews\r\n        ports:\t\t\t\t\t\t\t        ports:\r\n        - containerPort: 9080\t\t\t\t\t        - containerPort: 9080\r\n\t\t\t\t\t\t\t      >\t        resources"
+    ],
+    [
+      1e-05,
+      ": {}\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - proxy\r\n\t\t\t\t\t\t\t      >\t        - sidecar\r\n\t\t\t\t\t\t\t      >\t        - --domain\r\n\t\t\t\t\t\t\t      >\t        - $(POD_NAMESPACE).svc.cluster.local\r\n\t\t\t\t\t\t\t      >\t        - --configPath\r\n\t\t\t\t\t\t\t      >\t        - /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t        - --binaryPath\r\n\t\t\t\t\t\t\t      >\t        - /usr/local/bin/envoy\r\n\t\t\t\t\t\t\t      >\t        - --serviceCluster\r\n\t\t\t\t\t\t\t      >\t        - reviews.$(POD_NAMESPACE)\r\n\t\t\t\t\t\t\t      >\t        - --drainDuration\r\n\t\t\t\t\t\t\t      >\t        - 45s\r\n\t\t\t\t\t\t\t      >\t        - --parentShutdownDuration\r\n\t\t\t\t\t\t\t      >\t        - 1m0s\r\n\t\t\t\t\t\t\t      >\t        - --discoveryAddress\r\n\t\t\t\t\t\t\t      >\t        - istio-pilot.istio-system:15010\r\n\t\t\t\t\t\t\t      >\t        - --zipkinAddress\r\n\t\t\t\t\t\t\t      >\t        - zipkin.istio-system:9411\r\n\t\t\t\t\t\t\t      >\t        - --dnsRefreshRate\r\n\t\t\t\t\t\t\t      >\t        - 300s\r\n\t\t\t\t\t\t\t      >\t        - --connectTimeout\r\n\t\t\t\t\t\t\t      >\t        - 10s\r\n\t\t\t\t\t\t\t      >\t        - --proxyAdminPort\r\n\t\t\t\t\t\t\t      >\t        - "
+    ],
+    [
+      3.2e-05,
+      "\"15000\"\r\n\t\t\t\t\t\t\t      >\t        - --concurrency\r\n\t\t\t\t\t\t\t      >\t        - \"2\"\r\n\t\t\t\t\t\t\t      >\t        - --controlPlaneAuthPolicy\r\n\t\t\t\t\t\t\t      >\t        - NONE\r\n\t\t\t\t\t\t\t      >\t        - --statusPort\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        - --applicationPorts\r\n\t\t\t\t\t\t\t      >\t        - \"9080\"\r\n\t\t\t\t\t\t\t      >\t        env:\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAME\r\n\t\t\t\t\t"
+    ],
+    [
+      0.001033,
+      "\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: |-\r\n\t\t\t\t\t\t\t      >\t            [\r\n\t\t\t\t\t\t\t      >\t                {\"containerPort\":9080}\r\n\t\t\t\t\t\t\t      >\t            ]\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CLUSTER_ID\r\n\t\t\t\t\t\t\t      >\t          value: Kubernetes\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: INSTANCE_IP\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: status.podIP\r\n\t\t\t\t\t\t\t      >\t        - name: SERVICE_ACCOUNT\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: spec.serviceAccountName\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_NAME\r\n\t\t\t"
+    ],
+    [
+      9.2e-05,
+      "\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CONFIG_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: SDS_ENABLED\r\n\t\t\t\t\t\t\t      >\t          value: \"false\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INTERCEPTION_MODE\r\n\t\t\t\t\t\t\t      >\t          value: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INCLUDE_INBOUND_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_METAJSON_LABELS\r\n\t\t\t\t\t\t\t      >\t          value: |\r\n\t\t\t\t\t\t\t      >\t            {\"app\":\"reviews\",\"version\":\"v1\"}\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_WORKLOAD_NAME\r\n\t\t\t\t\t\t\t      >\t          value: reviews-v1\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_OWNER\r\n\t\t\t\t\t\t\t      >\t          value: kubernetes://api/apps/v1/namespaces/default/\r\n\t\t\t\t\t\t\t      >\t        image: d"
+    ],
+    [
+      3.6e-05,
+      "ocker.io/istio/proxyv2:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-proxy\r\n\t\t\t\t\t\t\t      >\t        ports:\r\n\t\t\t\t\t\t\t      >\t        - containerPort: 15090\r\n\t\t\t\t\t\t\t      >\t          name: http-envoy-prom\r\n\t\t\t\t\t\t\t      >\t          protocol: TCP\r\n\t\t\t\t\t\t\t      >\t        readinessProbe:\r\n\t\t\t\t\t\t\t      >\t          failureThreshold: 30\r\n\t\t\t\t\t\t\t      >\t          httpGet:\r\n\t\t\t\t\t\t\t      >\t            path: /healthz/ready\r\n\t\t\t\t\t\t\t      >\t            port: 15020\r\n\t\t\t\t\t\t\t      >\t          initialDelaySeconds: 1\r\n\t\t\t\t\t\t\t      >\t          periodSeconds: 2\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: \"2\"\r\n\t\t\t\t\t\t\t      >\t            memory: 1Gi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 40Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          readOnlyRootFilesystem: true\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 1337\r\n\t\t\t\t\t\t\t      >\t        volumeMo"
+    ],
+    [
+      5.6e-05,
+      "unts:\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t          name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/certs/\r\n\t\t\t\t\t\t\t      >\t          name: istio-certs\r\n\t\t\t\t\t\t\t      >\t          readOnly: true\r\n\t\t\t\t\t\t\t      >\t      initContainers:\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - -p\r\n\t\t\t\t\t\t\t      >\t        - \"15001\"\r\n\t\t\t\t\t\t\t      >\t        - -z\r\n\t\t\t\t\t\t\t      >\t        - \"15006\"\r\n\t\t\t\t\t\t\t      >\t        - -u\r\n\t\t\t\t\t\t\t      >\t        - \"1337\"\r\n\t\t\t\t\t\t\t      >\t        - -m\r\n\t\t\t\t\t\t\t      >\t        - REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - -i\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -x\r\n\t\t\t\t\t\t\t      >\t        - \"\"\r\n\t\t\t\t\t\t\t      >\t        - -b\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -d\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxy_init:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-init\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:"
+    ],
+    [
+      5.5e-05,
+      "\r\n\t\t\t\t\t\t\t      >\t            cpu: 100m\r\n\t\t\t\t\t\t\t      >\t            memory: 50Mi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 10Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          capabilities:\r\n\t\t\t\t\t\t\t      >\t            add:\r\n\t\t\t\t\t\t\t      >\t            - NET_ADMIN\r\n\t\t\t\t\t\t\t      >\t          runAsNonRoot: false\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 0\r\n\t\t\t\t\t\t\t      >\t      serviceAccountName: bookinfo-reviews\r\n\t\t\t\t\t\t\t      >\t      volumes:\r\n\t\t\t\t\t\t\t      >\t      - emptyDir:\r\n\t\t\t\t\t\t\t      >\t          medium: Memory\r\n\t\t\t\t\t\t\t      >\t        name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t      - name: istio-certs\r\n\t\t\t\t\t\t\t      >\t        secret:\r\n\t\t\t\t\t\t\t      >\t          optional: true\r\n\t\t\t\t\t\t\t      >\t          secretName: istio.bookinfo-reviews\r\n\t\t\t\t\t\t\t      >\tstatus: {}\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: apps/v1\t\t\t\t\t\tapiVersion: apps/v1\r\nkind: Deployment\t\t\t\t\t\tkind: Deployment\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: reviews-v2\t\t\t\t\t      |\t  creationTimestamp:"
+    ],
+    [
+      7.6e-05,
+      " null\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: reviews\t\t\t\t\t\t    app: reviews\r\n    version: v2\t\t\t\t\t\t\t    version: v2\r\n\t\t\t\t\t\t\t      >\t  name: reviews-v2\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  replicas: 1\t\t\t\t\t\t\t  replicas: 1\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    matchLabels:\t\t\t\t\t\t    matchLabels:\r\n      app: reviews\t\t\t\t\t\t      app: reviews\r\n      version: v2\t\t\t\t\t\t      version: v2\r\n\t\t\t\t\t\t\t      >\t  strategy: {}\r\n  template:\t\t\t\t\t\t\t  template:\r\n    metadata:\t\t\t\t\t\t\t    metadata:\r\n\t\t\t\t\t\t\t      >\t      annotations:\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/interceptionMode: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/status: '{\"version\":\"2696c96840179bd\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/excludeInboundPorts: \"15020\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeInboundPorts: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeOutboundIPRanges: '*'\r\n\t\t\t\t\t\t\t      >\t      creationTimestamp: null\r\n      labels:\t\t\t\t\t\t\t      labels:\r\n        app: reviews\t\t\t\t\t\t        app: reviews\r\n        version: v2\t\t\t\t\t"
+    ],
+    [
+      6.5e-05,
+      "\t        version: v2\r\n    spec:\t\t\t\t\t\t\t    spec:\r\n      serviceAccountName: bookinfo-reviews\t\t      <\r\n      containers:\t\t\t\t\t\t      containers:\r\n      - name: reviews\t\t\t\t\t      |\t      - image: docker.io/istio/examples-bookinfo-reviews-v2:1\r\n        image: docker.io/istio/examples-bookinfo-reviews-v2:1 <\r\n        imagePullPolicy: IfNotPresent\t\t\t\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: reviews\r\n        ports:\t\t\t\t\t\t\t        ports:\r\n        - containerPort: 9080\t\t\t\t\t        - containerPort: 9080\r\n\t\t\t\t\t\t\t      >\t        resources: {}\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - proxy\r\n\t\t\t\t\t\t\t      >\t        - sidecar\r\n\t\t\t\t\t\t\t      >\t        - --domain\r\n\t\t\t\t\t\t\t      >\t        - $(POD_NAMESPACE).svc.cluster.local\r\n\t\t\t\t\t\t\t      >\t        - --configPath\r\n\t\t\t\t\t\t\t      >\t        - /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t        - --binaryPath\r\n\t\t\t\t\t\t\t      >\t        - /usr/local/bin/envoy\r\n\t\t\t\t\t\t\t      >\t        - --serviceCluster\r\n\t\t\t\t\t\t\t      >\t        - reviews.$(POD_NAMESPACE)\r\n\t\t\t\t\t\t"
+    ],
+    [
+      0.000196,
+      "\t      >\t        - --drainDuration\r\n\t\t\t\t\t\t\t      >\t        - 45s\r\n\t\t\t\t\t\t\t      >\t        - --parentShutdownDuration\r\n\t\t\t\t\t\t\t      >\t        - 1m0s\r\n\t\t\t\t\t\t\t      >\t        - --discoveryAddress\r\n\t\t\t\t\t\t\t      >\t        - istio-pilot.istio-system:15010\r\n\t\t\t\t\t\t\t      >\t        - --zipkinAddress\r\n\t\t\t\t\t\t\t      >\t        - zipkin.istio-system:9411\r\n\t\t\t\t\t\t\t      >\t        - --dnsRefreshRate\r\n\t\t\t\t\t\t\t      >\t        - 300s\r\n\t\t\t\t\t\t\t      >\t        - --connectTimeout\r\n\t\t\t\t\t\t\t      >\t        - 10s\r\n\t\t\t\t\t\t\t      >\t        - --proxyAdminPort\r\n\t\t\t\t\t\t\t      >\t        - \"15000\"\r\n\t\t\t\t\t\t\t      >\t        - --concurrency\r\n\t\t\t\t\t\t\t      >\t        - \"2\"\r\n\t\t\t\t\t\t\t      >\t        - --controlPlaneAuthPolicy\r\n\t\t\t\t\t\t\t      >\t        - NONE\r\n\t\t\t\t\t\t\t      >\t        - --statusPort\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        - --applicationPorts\r\n\t\t\t\t\t\t\t      >\t        - \"9080\"\r\n\t\t\t\t\t\t\t      >\t        env:\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t  "
+    ],
+    [
+      2.9e-05,
+      "    >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: |-\r\n\t\t\t\t\t\t\t      >\t            [\r\n\t\t\t\t\t\t\t      >\t                {\"containerPort\":9080}\r\n\t\t\t\t\t\t\t      >\t            ]\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CLUSTER_ID\r\n\t\t\t\t\t\t\t      >\t          value: Kubernetes\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: INSTANCE_IP\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: status.podIP\r\n\t\t\t\t\t\t\t      >\t        - name: SERVICE_ACCOUNT\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: spec.serviceAccountName\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t"
+    ],
+    [
+      1e-05,
+      "      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CONFIG_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: SDS_ENABLED\r\n\t\t\t\t\t\t\t      >\t          value: \"false\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INTERCEPTION_MODE\r\n\t\t\t\t\t\t\t      >\t          value: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INCLUDE_INBOUND_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_METAJSON_LABELS\r\n\t\t\t\t\t\t\t      >\t          value: |\r\n\t\t\t\t\t\t\t      >\t            {\"app\":\"reviews\",\"version\":\"v2\"}\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_WORKLOAD_NAME\r\n\t\t\t\t\t\t\t      >\t          value: reviews-v2\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_OWNER\r\n\t\t\t\t\t\t\t      >\t          value: kubernetes://api/apps/v1/namespaces/default/\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxyv2:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPres"
+    ],
+    [
+      1.5e-05,
+      "ent\r\n\t\t\t\t\t\t\t      >\t        name: istio-proxy\r\n\t\t\t\t\t\t\t      >\t        ports:\r\n\t\t\t\t\t\t\t      >\t        - containerPort: 15090\r\n\t\t\t\t\t\t\t      >\t          name: http-envoy-prom\r\n\t\t\t\t\t\t\t      >\t          protocol: TCP\r\n\t\t\t\t\t\t\t      >\t        readinessProbe:\r\n\t\t\t\t\t\t\t      >\t          failureThreshold: 30\r\n\t\t\t\t\t\t\t      >\t          httpGet:\r\n\t\t\t\t\t\t\t      >\t            path: /healthz/ready\r\n\t\t\t\t\t\t\t      >\t            port: 15020\r\n\t\t\t\t\t\t\t      >\t          initialDelaySeconds: 1\r\n\t\t\t\t\t\t\t      >\t          periodSeconds: 2\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: \"2\"\r\n\t\t\t\t\t\t\t      >\t            memory: 1Gi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 40Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          readOnlyRootFilesystem: true\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 1337\r\n\t\t\t\t\t\t\t      >\t        volumeMounts:\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t   "
+    ],
+    [
+      2.6e-05,
+      "       name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/certs/\r\n\t\t\t\t\t\t\t      >\t          name: istio-certs\r\n\t\t\t\t\t\t\t      >\t          readOnly: true\r\n\t\t\t\t\t\t\t      >\t      initContainers:\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - -p\r\n\t\t\t\t\t\t\t      >\t        - \"15001\"\r\n\t\t\t\t\t\t\t"
+    ],
+    [
+      0.001062,
+      "      >\t        - -z\r\n\t\t\t\t\t\t\t      >\t        - \"15006\"\r\n\t\t\t\t\t\t\t      >\t        - -u\r\n\t\t\t\t\t\t\t      >\t        - \"1337\"\r\n\t\t\t\t\t\t\t      >\t        - -m\r\n\t\t\t\t\t\t\t      >\t        - REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - -i\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -x\r\n\t\t\t\t\t\t\t      >\t        - \"\"\r\n\t\t\t\t\t\t\t      >\t        - -b\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -d\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxy_init:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-init\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: 100m\r\n\t\t\t\t\t\t\t      >\t            memory: 50Mi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 10Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          capabilities:\r\n\t\t\t\t\t\t\t      >\t            add:\r\n\t\t\t\t\t\t\t      >\t            - NET_ADMIN\r\n\t\t\t\t\t\t\t      >\t          run"
+    ],
+    [
+      6.4e-05,
+      "AsNonRoot: false\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 0\r\n\t\t\t\t\t\t\t      >\t      serviceAccountName: bookinfo-reviews\r\n\t\t\t\t\t\t\t      >\t      volumes:\r\n\t\t\t\t\t\t\t      >\t      - emptyDir:\r\n\t\t\t\t\t\t\t      >\t          medium: Memory\r\n\t\t\t\t\t\t\t      >\t        name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t      - name: istio-certs\r\n\t\t\t\t\t\t\t      >\t        secret:\r\n\t\t\t\t\t\t\t      >\t          optional: true\r\n\t\t\t\t\t\t\t      >\t          secretName: istio.bookinfo-reviews\r\n\t\t\t\t\t\t\t      >\tstatus: {}\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: apps/v1\t\t\t\t\t\tapiVersion: apps/v1\r\nkind: Deployment\t\t\t\t\t\tkind: Deployment\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: reviews-v3\t\t\t\t\t      |\t  creationTimestamp: null\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: reviews\t\t\t\t\t\t    app: reviews\r\n    version: v3\t\t\t\t\t\t\t    version: v3\r\n\t\t\t\t\t\t\t      >\t  name: reviews-v3\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  replicas: 1\t\t\t\t\t\t\t  replicas: 1\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    matchLabels:\t\t\t\t\t\t    matchLabels:\r\n      app: reviews\t\t\t\t\t\t      app: reviews\r\n      version: v3\t\t\t\t\t\t      version: v3\r\n\t\t\t\t\t\t\t      >\t  "
+    ],
+    [
+      6.2e-05,
+      "strategy: {}\r\n  template:\t\t\t\t\t\t\t  template:\r\n    metadata:\t\t\t\t\t\t\t    metadata:\r\n\t\t\t\t\t\t\t      >\t      annotations:\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/interceptionMode: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/status: '{\"version\":\"2696c96840179bd\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/excludeInboundPorts: \"15020\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeInboundPorts: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeOutboundIPRanges: '*'\r\n\t\t\t\t\t\t\t      >\t      creationTimestamp: null\r\n      labels:\t\t\t\t\t\t\t      labels:\r\n        app: reviews\t\t\t\t\t\t        app: reviews\r\n        version: v3\t\t\t\t\t\t        version: v3\r\n    spec:\t\t\t\t\t\t\t    spec:\r\n      serviceAccountName: bookinfo-reviews\t\t      <\r\n      containers:\t\t\t\t\t\t      containers:\r\n      - name: reviews\t\t\t\t\t      |\t      - image: docker.io/istio/examples-bookinfo-reviews-v3:1\r\n        image: docker.io/istio/examples-bookinfo-reviews-v3:1 <\r\n        imagePullPolicy: IfNotPresent\t\t\t\t        imagePullPolicy: IfNot"
+    ],
+    [
+      2e-05,
+      "Present\r\n\t\t\t\t\t\t\t      >\t        name: reviews\r\n        ports:\t\t\t\t\t\t\t        ports:\r\n        - containerPort: 9080\t\t\t\t\t        - containerPort: 9080\r\n\t\t\t\t\t\t\t      >\t        resources: {}\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - proxy\r\n\t\t\t\t\t\t\t      >\t        - sidecar\r\n\t\t\t\t\t\t\t      >\t        - --domain\r\n\t\t\t\t\t\t\t      >\t        - $(POD_NAMESPACE).svc.cluster.local\r\n\t\t\t\t\t\t\t      >\t        - --configPath\r\n\t\t\t\t\t\t\t      >\t        - /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t        - --binaryPath\r\n\t\t\t\t\t\t\t      >\t        - /usr/local/bin/envoy\r\n\t\t\t\t\t\t\t      >\t        - --serviceCluster\r\n\t\t\t\t\t\t\t      >\t        - reviews.$(POD_NAMESPACE)\r\n\t\t\t\t\t\t\t      >\t        - --drainDuration\r\n\t\t\t\t\t\t\t      >\t        - 45s\r\n\t\t\t\t\t\t\t      >\t        - --parentShutdownDuration\r\n\t\t\t\t\t\t\t      >\t        - 1m0s\r\n\t\t\t\t\t\t\t      >\t        - --discoveryAddress\r\n\t\t\t\t\t\t\t      >\t        - istio-pilot.istio-system:15010\r\n\t\t\t\t\t\t\t      >\t        - --zipkinAddress\r\n\t\t\t\t\t\t\t      >\t        - zipkin.istio-system:9411\r\n\t\t\t\t\t\t\t      >\t        - --dnsRefr"
+    ],
+    [
+      1.5e-05,
+      "eshRate\r\n\t\t\t\t\t\t\t      >\t        - 300s\r\n\t\t\t\t\t\t\t      >\t        - --connectTimeout\r\n\t\t\t\t\t\t\t      >\t        - 10s\r\n\t\t\t\t\t\t\t      >\t        - --proxyAdminPort\r\n\t\t\t\t\t\t\t      >\t        - \"15000\"\r\n\t\t\t\t\t\t\t      >\t        - --concurrency\r\n\t\t\t\t\t\t\t      >\t        - \"2\"\r\n\t\t\t\t\t\t\t      >\t        - --controlPlaneAuthPolicy\r\n\t\t\t\t\t\t\t      >\t        - NONE\r\n\t\t\t\t\t\t\t      >\t        - --statusPort\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        - --applicationPorts\r\n\t\t\t\t\t\t\t      >\t        - \"9080\"\r\n\t\t\t\t\t\t\t      >\t        env:\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: |-\r\n\t\t\t\t\t\t\t      >\t            [\r\n\t\t\t\t\t\t\t      >\t                {\"containerPort\":9080}\r\n\t\t\t\t\t\t\t      >\t            ]\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CLUSTER_ID\r\n\t\t\t\t\t\t\t      >\t          value: Kubernetes\r\n\t\t\t\t\t\t\t      >\t        - name"
+    ],
+    [
+      1.4e-05,
+      ": POD_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: INSTANCE_IP\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: status.podIP\r\n\t\t\t\t\t\t\t      >\t        - name: SERVICE_ACCOUNT\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: spec.serviceAccountName\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CONFIG_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: SDS_ENABLED\r\n\t\t\t\t\t\t\t      >\t          value: \"false\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INTERCE"
+    ],
+    [
+      1.8e-05,
+      "PTION_MODE\r\n\t\t\t\t\t\t\t      >\t          value: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INCLUDE_INBOUND_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_METAJSON_LABELS\r\n\t\t\t\t\t\t\t      >\t          value: |\r\n\t\t\t\t\t\t\t      >\t            {\"app\":\"reviews\",\"version\":\"v3\"}\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_WORKLOAD_NAME\r\n\t\t\t\t\t\t\t      >\t          value: reviews-v3\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_OWNER\r\n\t\t\t\t\t\t\t      >\t          value: kubernetes://api/apps/v1/namespaces/default/\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxyv2:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-proxy\r\n\t\t\t\t\t\t\t      >\t        ports:\r\n\t\t\t\t\t\t\t      >\t        - containerPort: 15090\r\n\t\t\t\t\t\t\t      >\t          name: http-envoy-prom\r\n\t\t\t\t\t\t\t      >\t          protocol: TCP\r\n\t\t\t\t\t\t\t      >\t        readinessProbe:\r\n\t\t\t\t\t\t\t      >\t          failureThreshold: 30\r\n\t\t\t\t\t\t\t      >\t          httpGet:\r\n\t\t\t\t\t\t\t      >\t            path: /healthz/"
+    ],
+    [
+      1.3e-05,
+      "ready\r\n\t\t\t\t\t\t\t      >\t            port: 15020\r\n\t\t\t\t\t\t\t      >\t          initialDelaySeconds: 1\r\n\t\t\t\t\t\t\t      >\t          periodSeconds: 2\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: \"2\"\r\n\t\t\t\t\t\t\t      >\t            memory: 1Gi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 40Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          readOnlyRootFilesystem: true\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 1337\r\n\t\t\t\t\t\t\t      >\t        volumeMounts:\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t          name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/certs/\r\n\t\t\t\t\t\t\t      >\t          name: istio-certs\r\n\t\t\t\t\t\t\t      >\t          readOnly: true\r\n\t\t\t\t\t\t\t      >\t      initContainers:\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - -p\r\n\t\t\t\t\t\t\t      >\t        - \"15001\"\r\n\t\t\t\t\t\t\t      >\t        - -z\r\n\t\t\t\t\t\t\t      >\t        - \"15006\"\r\n\t\t\t\t\t\t\t      >\t        "
+    ],
+    [
+      1.1e-05,
+      "- -u\r\n\t\t\t\t\t\t\t      >\t        - \"1337\"\r\n\t\t\t\t\t\t\t      >\t        - -m\r\n\t\t\t\t\t\t\t      >\t        - REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - -i\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -x\r\n\t\t\t\t\t\t\t      >\t        - \"\"\r\n\t\t\t\t\t\t\t      >\t        - -b\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -d\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxy_init:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-init\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: 100m\r\n\t\t\t\t\t\t\t      >\t            memory: 50Mi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 10Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          capabilities:\r\n\t\t\t\t\t\t\t      >\t            add:\r\n\t\t\t\t\t\t\t      >\t            - NET_ADMIN\r\n\t\t\t\t\t\t\t      >\t          runAsNonRoot: false\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 0\r\n\t\t\t\t\t\t\t      >\t      s"
+    ],
+    [
+      1e-05,
+      "erviceAccountName: bookinfo-reviews\r\n\t\t\t\t\t\t\t      >\t      volumes:\r\n\t\t\t\t\t\t\t      >\t      - emptyDir:\r\n\t\t\t\t\t\t\t      >\t          medium: Memory\r\n\t\t\t\t\t\t\t      >\t        name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t      - name: istio-certs\r\n\t\t\t\t\t\t\t      >\t        secret:\r\n\t\t\t\t\t\t\t      >\t          optional: true\r\n\t\t\t\t\t\t\t      >\t          secretName: istio.bookinfo-reviews\r\n\t\t\t\t\t\t\t      >\tstatus: {}\r\n---\t\t\t\t\t\t\t\t---\r\n#############################################################\t#############################################################\r\n# Productpage services\t\t\t\t\t\t# Productpage services\r\n#############################################################\t#############################################################\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: Service\t\t\t\t\t\t\tkind: Service\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: productpage\t\t\t\t\t\t  name: productpage\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: productpage\t\t\t\t\t\t    app: productpage\r\n    service: productpage\t\t\t\t\t    service: productpage\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  ports:\t\t\t\t\t\t\t  ports:"
+    ],
+    [
+      8e-06,
+      "\r\n  - port: 9080\t\t\t\t\t\t\t  - port: 9080\r\n    name: http\t\t\t\t\t\t\t    name: http\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    app: productpage\t\t\t\t\t\t    app: productpage\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: v1\t\t\t\t\t\t\tapiVersion: v1\r\nkind: ServiceAccount\t\t\t\t\t\tkind: ServiceAccount\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: bookinfo-productpage\t\t\t\t\t  name: bookinfo-productpage\r\n---\t\t\t\t\t\t\t\t---\r\napiVersion: apps/v1\t\t\t\t\t\tapiVersion: apps/v1\r\nkind: Deployment\t\t\t\t\t\tkind: Deployment\r\nmetadata:\t\t\t\t\t\t\tmetadata:\r\n  name: productpage-v1\t\t\t\t\t      |\t  creationTimestamp: null\r\n  labels:\t\t\t\t\t\t\t  labels:\r\n    app: productpage\t\t\t\t\t\t    app: productpage\r\n    version: v1\t\t\t\t\t\t\t    version: v1\r\n\t\t\t\t\t\t\t      >\t  name: productpage-v1\r\nspec:\t\t\t\t\t\t\t\tspec:\r\n  replicas: 1\t\t\t\t\t\t\t  replicas: 1\r\n  selector:\t\t\t\t\t\t\t  selector:\r\n    matchLabels:\t\t\t\t\t\t    matchLabels:\r\n      app: productpage\t\t\t\t\t\t      app: productpage\r\n      version: v1\t\t\t\t\t\t      version: v1\r\n\t\t\t\t\t\t\t      >\t  strategy: {}\r\n  template:\t\t\t\t\t\t\t  template:\r\n    metadata:\t\t\t\t\t\t\t    metadata:\r\n\t\t\t\t\t\t\t      >\t  "
+    ],
+    [
+      4.1e-05,
+      "    annotations:\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/interceptionMode: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        sidecar.istio.io/status: '{\"version\":\"2696c96840179bd\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/excludeInboundPorts: \"15020\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeInboundPorts: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        traffic.sidecar.istio.io/includeOutboundIPRanges: '*'"
+    ],
+    [
+      0.000829,
+      "\r\n\t\t\t\t\t\t\t      >\t      creationTimestamp: null\r\n      labels:\t\t\t\t\t\t\t      labels:\r\n        app: productpage\t\t\t\t\t        app: productpage\r\n        version: v1\t\t\t\t\t\t        version: v1\r\n    spec:\t\t\t\t\t\t\t    spec:\r\n      serviceAccountName: bookinfo-productpage\t\t      <\r\n      containers:\t\t\t\t\t\t      containers:\r\n      - name: productpage\t\t\t\t      |\t      - image: docker.io/istio/examples-bookinfo-productpage-\r\n        image: docker.io/istio/examples-bookinfo-productpage- <\r\n        imagePullPolicy: IfNotPresent\t\t\t\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: productpage\r\n        ports:\t\t\t\t\t\t\t        ports:\r\n        - containerPort: 9080\t\t\t\t\t        - containerPort: 9080\r\n\t\t\t\t\t\t\t      >\t        resources: {}\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - proxy\r\n\t\t\t\t\t\t\t      >\t        - sidecar\r\n\t\t\t\t\t\t\t      >\t        - --domain\r\n\t\t\t\t\t\t\t      >\t        - $(POD_NAMESPACE).svc.cluster.local\r\n\t\t\t\t\t\t\t      >\t        - --configPath\r\n\t\t\t\t\t\t\t      >\t        - /etc/istio/proxy\r\n\t\t\t\t\t\t\t      "
+    ],
+    [
+      2e-05,
+      ">\t        - --binaryPath\r\n\t\t\t\t\t\t\t      >\t        - /usr/local/bin/envoy\r\n\t\t\t\t\t\t\t      >\t        - --serviceCluster\r\n\t\t\t\t\t\t\t      >\t        - productpage.$(POD_NAMESPACE)\r\n\t\t\t\t\t\t\t      >\t        - --drainDuration\r\n\t\t\t\t\t\t\t      >\t        - 45s\r\n\t\t\t\t\t\t\t      >\t        - --parentShutdownDuration\r\n\t\t\t\t\t\t\t      >\t        - 1m0s\r\n\t\t\t\t\t\t\t      >\t        - --discoveryAddress\r\n\t\t\t\t\t\t\t      >\t        - istio-pilot.istio-system:15010\r\n\t\t\t\t\t\t\t      >\t        - --zipkinAddress\r\n\t\t\t\t\t\t\t      >\t        - zipkin.istio-system:9411\r\n\t\t\t\t\t\t\t      >\t        - --dnsRefreshRate\r\n\t\t\t\t\t\t\t      >\t        - 300s\r\n\t\t\t\t\t\t\t      >\t        - --connectTimeout\r\n\t\t\t\t\t\t\t      >\t        - 10s\r\n\t\t\t\t\t\t\t      >\t        - --proxyAdminPort\r\n\t\t\t\t\t\t\t      >\t        - \"15000\"\r\n\t\t\t\t\t\t\t      >\t        - --concurrency\r\n\t\t\t\t\t\t\t      >\t        - \"2\"\r\n\t\t\t\t\t\t\t      >\t        - --controlPlaneAuthPolicy\r\n\t\t\t\t\t\t\t      >\t        - NONE\r\n\t\t\t\t\t\t\t      >\t        - --statusPort\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        - --applicationPorts\r\n\t\t\t\t\t\t\t   "
+    ],
+    [
+      3.9e-05,
+      "   >\t        - \"9080\"\r\n\t\t\t\t\t\t\t      >\t        env:\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: |-\r\n\t\t\t\t\t\t\t      >\t            [\r\n\t\t\t\t\t\t\t      >\t                {\"containerPort\":9080}\r\n\t\t\t\t\t\t\t      >\t            ]\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CLUSTER_ID\r\n\t\t\t\t\t\t\t      >\t          value: Kubernetes\r\n\t\t\t\t\t\t\t      >\t        - name: POD_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: INSTANCE_IP\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: status.podIP\r\n\t\t\t\t\t\t\t      >\t        - name: SERVICE_ACCOUNT\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t       "
+    ],
+    [
+      4.3e-05,
+      "       fieldPath: spec.serviceAccountName\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_POD_NAME\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.name\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_CONFIG_NAMESPACE\r\n\t\t\t\t\t\t\t      >\t          valueFrom:\r\n\t\t\t\t\t\t\t      >\t            fieldRef:\r\n\t\t\t\t\t\t\t      >\t              fieldPath: metadata.namespace\r\n\t\t\t\t\t\t\t      >\t        - name: SDS_ENABLED\r\n\t\t\t\t\t\t\t      >\t          value: \"false\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INTERCEPTION_MODE\r\n\t\t\t\t\t\t\t      >\t          value: REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_INCLUDE_INBOUND_PORTS\r\n\t\t\t\t\t\t\t      >\t          value: \"9080\"\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_METAJSON_LABELS\r\n\t\t\t\t\t\t\t      >\t          value: |\r\n\t\t\t\t\t\t\t      >\t            {\"app\":\"productpage\",\"version\":\"v1\"}\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_WORKLOAD_NAME\r\n\t\t\t\t\t\t\t      >\t          value: productpage-v1\r\n\t\t\t\t\t\t\t      >\t        - name: ISTIO_META_OWNER\r\n\t\t\t"
+    ],
+    [
+      0.00025,
+      "\t\t\t\t      >\t          value: kubernetes://api/apps/v1/namespaces/default/\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxyv2:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t\t\t\t\t\t      >\t        name: istio-proxy\r\n\t\t\t\t\t\t\t      >\t        ports:\r\n\t\t\t\t\t\t\t      >\t        - containerPort: 15090\r\n\t\t\t\t\t\t\t      >\t          name: http-envoy-prom\r\n\t\t\t\t\t\t\t      >\t          protocol: TCP\r\n\t\t\t\t\t\t\t      >\t        readinessProbe:\r\n\t\t\t\t\t\t\t      >\t          failureThreshold: 30\r\n\t\t\t\t\t\t\t      >\t          httpGet:\r\n\t\t\t\t\t\t\t      >\t            path: /healthz/ready\r\n\t\t\t\t\t\t\t      >\t            port: 15020\r\n\t\t\t\t\t\t\t      >\t          initialDelaySeconds: 1\r\n\t\t\t\t\t\t\t      >\t          periodSeconds: 2\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: \"2\"\r\n\t\t\t\t\t\t\t      >\t            memory: 1Gi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 40Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t       "
+    ],
+    [
+      2.1e-05,
+      "   readOnlyRootFilesystem: true\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 1337\r\n\t\t\t\t\t\t\t      >\t        volumeMounts:\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/istio/proxy\r\n\t\t\t\t\t\t\t      >\t          name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t        - mountPath: /etc/certs/\r\n\t\t\t\t\t\t\t      >\t          name: istio-certs\r\n\t\t\t\t\t\t\t      >\t          readOnly: true\r\n\t\t\t\t\t\t\t      >\t      initContainers:\r\n\t\t\t\t\t\t\t      >\t      - args:\r\n\t\t\t\t\t\t\t      >\t        - -p\r\n\t\t\t\t\t\t\t      >\t        - \"15001\"\r\n\t\t\t\t\t\t\t      >\t        - -z\r\n\t\t\t\t\t\t\t      >\t        - \"15006\"\r\n\t\t\t\t\t\t\t      >\t        - -u\r\n\t\t\t\t\t\t\t      >\t        - \"1337\"\r\n\t\t\t\t\t\t\t      >\t        - -m\r\n\t\t\t\t\t\t\t      >\t        - REDIRECT\r\n\t\t\t\t\t\t\t      >\t        - -i\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -x\r\n\t\t\t\t\t\t\t      >\t        - \"\"\r\n\t\t\t\t\t\t\t      >\t        - -b\r\n\t\t\t\t\t\t\t      >\t        - '*'\r\n\t\t\t\t\t\t\t      >\t        - -d\r\n\t\t\t\t\t\t\t      >\t        - \"15020\"\r\n\t\t\t\t\t\t\t      >\t        image: docker.io/istio/proxy_init:1.3.1\r\n\t\t\t\t\t\t\t      >\t        imagePullPolicy: IfNotPresent\r\n\t\t"
+    ],
+    [
+      1.3e-05,
+      "\t\t\t\t\t      >\t        name: istio-init\r\n\t\t\t\t\t\t\t      >\t        resources:\r\n\t\t\t\t\t\t\t      >\t          limits:\r\n\t\t\t\t\t\t\t      >\t            cpu: 100m\r\n\t\t\t\t\t\t\t      >\t            memory: 50Mi\r\n\t\t\t\t\t\t\t      >\t          requests:\r\n\t\t\t\t\t\t\t      >\t            cpu: 10m\r\n\t\t\t\t\t\t\t      >\t            memory: 10Mi\r\n\t\t\t\t\t\t\t      >\t        securityContext:\r\n\t\t\t\t\t\t\t      >\t          capabilities:\r\n\t\t\t\t\t\t\t      >\t            add:\r\n\t\t\t\t\t\t\t      >\t            - NET_ADMIN\r\n\t\t\t\t\t\t\t      >\t          runAsNonRoot: false\r\n\t\t\t\t\t\t\t      >\t          runAsUser: 0\r\n\t\t\t\t\t\t\t      >\t      serviceAccountName: bookinfo-productpage\r\n\t\t\t\t\t\t\t      >\t      volumes:\r\n\t\t\t\t\t\t\t      >\t      - emptyDir:\r\n\t\t\t\t\t\t\t      >\t          medium: Memory\r\n\t\t\t\t\t\t\t      >\t        name: istio-envoy\r\n\t\t\t\t\t\t\t      >\t      - name: istio-certs\r\n\t\t\t\t\t\t\t      >\t        secret:\r\n\t\t\t\t\t\t\t      >\t          optional: true\r\n\t\t\t\t\t\t\t      >\t          secretName: istio.bookinfo-productpage\r\n\t\t\t\t\t\t\t      >\tstatus: {}\r\n---\t\t\t\t\t\t\t\t---\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 serviceme"
+    ],
+    [
+      9e-06,
+      "sh]$ "
+    ],
+    [
+      1.83682,
+      "# Deploy modifi"
+    ],
+    [
+      0.000226,
+      "e"
+    ],
+    [
+      0.015178,
+      "d bookinfo_proxy"
+    ],
+    [
+      0.014085,
+      ".yaml to inject "
+    ],
+    [
+      0.001723,
+      "a sidecar proxy "
+    ],
+    [
+      0.01322,
+      "to the existing "
+    ],
+    [
+      0.014923,
+      "bookinfo microse"
+    ],
+    [
+      0.002779,
+      "rvice"
+    ],
+    [
+      1.006341,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      7.723158,
+      "kubectl -n istio"
+    ],
+    [
+      0.013392,
+      "-lab apply -f bo"
+    ],
+    [
+      0.012955,
+      "okinfo_proxy.yam"
+    ],
+    [
+      0.013171,
+      "l"
+    ],
+    [
+      2.810918,
+      "\r\n"
+    ],
+    [
+      0.193423,
+      "service/details unchanged\r\n"
+    ],
+    [
+      0.002464,
+      "serviceaccount/bookinfo-details unchanged\r\n"
+    ],
+    [
+      0.007701,
+      "deployment.apps/details-v1 configured\r\n"
+    ],
+    [
+      0.001727,
+      "service/ratings unchanged\r\n"
+    ],
+    [
+      0.002838,
+      "serviceaccount/bookinfo-ratings unchanged\r\n"
+    ],
+    [
+      0.013768,
+      "deployment.apps/ratings-v1 configured\r\n"
+    ],
+    [
+      0.002676,
+      "service/reviews unchanged\r\n"
+    ],
+    [
+      0.006357,
+      "serviceaccount/bookinfo-reviews unchanged\r\n"
+    ],
+    [
+      0.019239,
+      "deployment.apps/reviews-v1 configured\r\n"
+    ],
+    [
+      0.031229,
+      "deployment.apps/reviews-v2 configured\r\n"
+    ],
+    [
+      0.008217,
+      "deployment.apps/reviews-v3 configured\r\n"
+    ],
+    [
+      0.003556,
+      "service/productpage unchanged\r\n"
+    ],
+    [
+      0.007265,
+      "serviceaccount/bookinfo-productpage unchanged\r\n"
+    ],
+    [
+      0.018425,
+      "deployment.apps/productpage-v1 configured\r\n"
+    ],
+    [
+      0.00289,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      7.17244,
+      "kubectl -n istio"
+    ],
+    [
+      0.004739,
+      "-lab get pods"
+    ],
+    [
+      1.379181,
+      "\r\n"
+    ],
+    [
+      0.097366,
+      "NAME                              READY   STATUS            RESTARTS   AGE\r\ndetails-v1-57946dd5b5-ppvjv       1/2     Running           0          9s\r\ndetails-v1-74f858558f-pwk9n       1/1     Running           1          5h\r\nproductpage-v1-587fbb59f7-47h9j   2/2     Running           0          9s\r\nproductpage-v1-8554d58bff-csj56   1/1     Terminating       1          5h\r\nratings-v1-74fdd79c4f-rb5dn       0/2     PodInitializing   0          9s\r\nratings-v1-7855f5bcb9-gc766       1/1     Running           1          5h\r\nreviews-v1-59fd8b965b-74kjc       1/1     Running           1          5h\r\nreviews-v1-7d6c5779d9-khvwr       0/2     PodInitializing   0          9s\r\nreviews-v2-57c446bdb6-z4png       0/2     PodInitializing   0          9s\r\nreviews-v2-d6cfdb7d6-tkppf        1/1     Running           1          5h\r\nreviews-v3-75699b5cfb-59b4l       1/1     Running           1          5h\r\nreviews-v3-db7d9c7c9-ng588        0/2     PodInitializing   0          9s\r\n"
+    ],
+    [
+      0.00139,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      26.263662,
+      "# Wait a few min"
+    ],
+    [
+      0.013252,
+      "utes for the exi"
+    ],
+    [
+      0.013174,
+      "sting pods to te"
+    ],
+    [
+      0.002286,
+      "rminate and for "
+    ],
+    [
+      0.013231,
+      "the new pods to "
+    ],
+    [
+      0.014946,
+      "be ready"
+    ],
+    [
+      0.920225,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      30.144146,
+      "kubectl -n istio"
+    ],
+    [
+      0.012992,
+      "-lab get pods"
+    ],
+    [
+      0.706719,
+      "\r\n"
+    ],
+    [
+      0.060135,
+      "NAME                              READY   STATUS    RESTARTS   AGE\r\ndetails-v1-57946dd5b5-ppvjv       2/2     Running   0          67s\r\nproductpage-v1-587fbb59f7-47h9j   2/2     Running   0          67s\r\nratings-v1-74fdd79c4f-rb5dn       2/2     Running   0          67s\r\nreviews-v1-7d6c5779d9-khvwr       2/2     Running   0          67s\r\nreviews-v2-57c446bdb6-z4png       2/2     Running   0          67s\r\nreviews-v3-db7d9c7c9-ng588        2/2     Running   0          67s\r\n"
+    ],
+    [
+      0.004979,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      5.723501,
+      "# Enable Istio f"
+    ],
+    [
+      0.00183,
+      "or new applicati"
+    ],
+    [
+      0.013244,
+      "ons"
+    ],
+    [
+      0.699609,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      4.847948,
+      "# First delete istio-lab namespa"
+    ],
+    [
+      0.012184,
+      "ce"
+    ],
+    [
+      0.72697,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      4.582261,
+      "kubectl delete n"
+    ],
+    [
+      0.013183,
+      "amespace istio-l"
+    ],
+    [
+      0.013543,
+      "ab"
+    ],
+    [
+      0.868134,
+      "\r\n"
+    ],
+    [
+      0.053371,
+      "namespace \"istio-lab\" deleted\r\n"
+    ],
+    [
+      44.920827,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      3.076472,
+      "# Create istio-l"
+    ],
+    [
+      0.014232,
+      "ab namespace aga"
+    ],
+    [
+      0.003026,
+      "in and label it "
+    ],
+    [
+      0.01375,
+      "using istio-inje"
+    ],
+    [
+      0.012305,
+      "ction=enabled"
+    ],
+    [
+      1.234849,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      6.481723,
+      "kubectl create n"
+    ],
+    [
+      0.014872,
+      "amespace istio-lab"
+    ],
+    [
+      0.978207,
+      "\r\n"
+    ],
+    [
+      0.050913,
+      "namespace/istio-lab created\r\n"
+    ],
+    [
+      0.001426,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      4.945002,
+      "kubectl label namespace istio-la"
+    ],
+    [
+      0.014397,
+      "b istio-injectio"
+    ],
+    [
+      0.013613,
+      "n=enabled"
+    ],
+    [
+      0.723574,
+      "\r\n"
+    ],
+    [
+      0.056705,
+      "namespace/istio-lab labeled\r\n"
+    ],
+    [
+      0.001257,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      1.625451,
+      "# Deploy the app"
+    ],
+    [
+      0.013691,
+      "lication again"
+    ],
+    [
+      0.753033,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      9.053421,
+      "kubectl -n istio"
+    ],
+    [
+      0.012767,
+      "-lab apply -f ~/"
+    ],
+    [
+      0.012908,
+      "servicemesh/book"
+    ],
+    [
+      0.012516,
+      "info.yaml"
+    ],
+    [
+      1.604431,
+      "\r\n"
+    ],
+    [
+      0.118494,
+      "service/details created\r\n"
+    ],
+    [
+      0.007524,
+      "serviceaccount/bookinfo-details created\r\n"
+    ],
+    [
+      0.011476,
+      "deployment.apps/details-v1 created\r\n"
+    ],
+    [
+      0.012157,
+      "service/ratings created\r\n"
+    ],
+    [
+      0.007655,
+      "serviceaccount/bookinfo-ratings created\r\n"
+    ],
+    [
+      0.014967,
+      "deployment.apps/ratings-v1 created\r\n"
+    ],
+    [
+      0.027786,
+      "service/reviews created\r\n"
+    ],
+    [
+      0.017714,
+      "serviceaccount/bookinfo-reviews created\r\n"
+    ],
+    [
+      0.012827,
+      "deployment.apps/reviews-v1 created\r\n"
+    ],
+    [
+      0.008028,
+      "deployment.apps/reviews-v2 created\r\n"
+    ],
+    [
+      0.022403,
+      "deployment.apps/reviews-v3 created\r\n"
+    ],
+    [
+      0.022418,
+      "service/productpage created\r\n"
+    ],
+    [
+      0.017369,
+      "serviceaccount/bookinfo-productpage created\r\n"
+    ],
+    [
+      0.033226,
+      "deployment.apps/productpage-v1 created\r\n"
+    ],
+    [
+      0.009104,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      5.658677,
+      "# Check pods"
+    ],
+    [
+      0.828884,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      13.421209,
+      "kubectl -n istio"
+    ],
+    [
+      0.001847,
+      "-lab get pods"
+    ],
+    [
+      0.684743,
+      "\r\n"
+    ],
+    [
+      0.054054,
+      "NAME                              READY   STATUS    RESTARTS   AGE\r\ndetails-v1-74f858558f-5g74w       2/2     Running   0          21s\r\nproductpage-v1-8554d58bff-2dszr   2/2     Running   0          21s\r\nratings-v1-7855f5bcb9-kpzsk       2/2     Running   0          21s\r\nreviews-v1-59fd8b965b-fpdqr       2/2     Running   0          21s\r\nreviews-v2-d6cfdb7d6-zvqqr        2/2     Running   0          21s\r\nreviews-v3-75699b5cfb-wp2jh       2/2     Running   0          21s\r\n"
+    ],
+    [
+      0.001468,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      6.372014,
+      "# Check the curr"
+    ],
+    [
+      0.01369,
+      "ent auto scaling"
+    ],
+    [
+      0.012482,
+      " for every Istio component"
+    ],
+    [
+      0.989746,
+      "\r\n\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      5.206364,
+      "kubectl -n istio"
+    ],
+    [
+      0.015797,
+      "-system get hpa"
+    ],
+    [
+      0.85412,
+      "\r\n"
+    ],
+    [
+      0.054041,
+      "No resources found.\r\n"
+    ],
+    [
+      0.001126,
+      "\u001b]0;user@osc01:~/servicemesh\u0007[user@osc01 servicemesh]$ "
+    ],
+    [
+      3.987402,
+      "e"
+    ],
+    [
+      0.182017,
+      "x"
+    ],
+    [
+      0.213378,
+      "i"
+    ],
+    [
+      0.261187,
+      "t"
+    ]
+  ]
+}

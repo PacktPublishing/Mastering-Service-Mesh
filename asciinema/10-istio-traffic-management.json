@@ -1,0 +1,2702 @@
+{
+  "version": 1,
+  "width": 182,
+  "height": 40,
+  "duration": 531.790819,
+  "command": "/bin/bash -l",
+  "title": "Istio Traffic Management",
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.101831,
+      "\u001b]0;user@osc01:~/asciinema\u0007\u001b[?1034h[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "\r\u001b[K[user@osc01 asciinema]$ "
+    ],
+    [
+      0.25151,
+      "\r\u001b[K[user@osc01 asciinema]$ "
+    ],
+    [
+      0.308409,
+      "\r\u001b[K[user@osc01 asciinema]$ "
+    ],
+    [
+      0.241252,
+      "\r\u001b[K[user@osc01 asciinema]$ "
+    ],
+    [
+      0.243057,
+      "\r\u001b[K[user@osc01 asciinema]$ "
+    ],
+    [
+      0.2524,
+      "\r\u001b[K[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# Traffic Management"
+    ],
+    [
+      1.235986,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "# Get scripts from github"
+    ],
+    [
+      1.165021,
+      "\r\n\u001b]0;user@osc01:~/asciinema\u0007[user@osc01 asciinema]$ "
+    ],
+    [
+      2.0,
+      "cd # Switch to home directory "
+    ],
+    [
+      0.782119,
+      "\r\n\u001b]0;user@osc01:~\u0007[user@osc01 ~]$ "
+    ],
+    [
+      2.0,
+      "git clone https://github.com/servicemeshbook/istio"
+    ],
+    [
+      0.917799,
+      "\r\n"
+    ],
+    [
+      0.007964,
+      "Cloning into 'istio'...\r\n"
+    ],
+    [
+      0.536146,
+      "remote: Enumerating objects: 137, done.\u001b[K\r\nremote: Counting objects:   0% (1/137)\u001b[K\rremote: Counting objects:   1% (2/137)\u001b[K\rremote: Counting objects:   2% (3/137)\u001b[K\rremote: Counting objects:   3% (5/137)\u001b[K\rremote: Counting objects:   4% (6/137)\u001b[K\rremote: Counting objects:   5% (7/137)\u001b[K\rremote: Counting objects:   6% (9/137)\u001b[K\rremote: Counting objects:   7% (10/137)\u001b[K\rremote: Counting objects:   8% (11/137)\u001b[K\rremote: Counting objects:   9% (13/137)\u001b[K\rremote: Counting objects:  10% (14/137)\u001b[K\rremote: Counting objects:  11% (16/137)\u001b[K\rremote: Counting objects:  12% (17/137)\u001b[K\rremote: Counting objects:  13% (18/137)\u001b[K\rremote: Counting objects:  14% (20/137)\u001b[K\rremote: Counting objects:  15% (21/137)\u001b[K\rremote: Counting objects:  16% (22/137)\u001b[K\rremote: Counting objects:  17% (24/137)\u001b[K\rremote: Counting objects:  18% (25/137)\u001b[K\rremote: Counting objects:  19% (27/137)\u001b[K\rremote: Counting objects:  20% (28/137)\u001b[K\rremote: Counting objects:  21% (29/137)\u001b[K\rremote: Counting objects:  22% (31/137)\u001b["
+    ],
+    [
+      3.9e-05,
+      "K\rremote: Counting objects:  23% (32/137)\u001b[K\rremote: Counting objects:  24% (33/137)\u001b[K\rremote: Counting objects:  25% (35/137)\u001b[K\rremote: Counting objects:  26% (36/137)\u001b[K\rremote: Counting objects:  27% (37/137)\u001b[K\rremote: Counting objects:  28% (39/137)\u001b[K\rremote: Counting objects:  29% (40/137)\u001b[K\rremote: Counting objects:  30% (42/137)\u001b[K\rremote: Counting objects:  31% (43/137)\u001b[K\rremote: Counting objects:  32% (44/137)\u001b[K\rremote: Counting objects:  33% (46/137)\u001b[K\rremote: Counting objects:  34% (47/137)\u001b[K\rremote: Counting objects:  35% (48/137)\u001b[K\rremote: Counting objects:  36% (50/137)\u001b[K\rremote: Counting objects:  37% (51/137)\u001b[K\rremote: Counting objects:  38% (53/137)\u001b[K\rremote: Counting objects:  39% (54/137)\u001b[K\rremote: Counting objects:  40% (55/137)\u001b[K\rremote: Counting objects:  41% (57/137)\u001b[K\rremote: Counting objects:  42% (58/137)\u001b[K\rremote: Counting objects:  43% (59/137)\u001b[K\rremote: Counting objects:  44% (61/137)\u001b[K\rremote: Counting objects:  45% (62/137)\u001b[K\rremote: Counting objects:  46% (6"
+    ],
+    [
+      1.8e-05,
+      "4/137)\u001b[K\rremote: Counting objects:  47% (65/137)\u001b[K\rremote: Counting objects:  48% (66/137)\u001b[K\rremote: Counting objects:  49% (68/137)\u001b[K\r"
+    ],
+    [
+      0.053061,
+      "remote: Counting objects:  50% (69/137)\u001b[K\rremote: Counting objects:  51% (70/137)\u001b[K\rremote: Counting objects:  52% (72/137)\u001b[K\rremote: Counting objects:  53% (73/137)\u001b[K\rremote: Counting objects:  54% (74/137)\u001b[K\rremote: Counting objects:  55% (76/137)\u001b[K\rremote: Counting objects:  56% (77/137)\u001b[K\rremote: Counting objects:  57% (79/137)\u001b[K\rremote: Counting objects:  58% (80/137)\u001b[K\rremote: Counting objects:  59% (81/137)\u001b[K\rremote: Counting objects:  60% (83/137)\u001b[K\rremote: Counting objects:  61% (84/137)\u001b[K\rremote: Counting objects:  62% (85/137)\u001b[K\rremote: Counting objects:  63% (87/137)\u001b[K\rremote: Counting objects:  64% (88/137)\u001b[K\rremote: Counting objects:  65% (90/137)\u001b[K\rremote: Counting objects:  66% (91/137)\u001b[K\rremote: Counting objects:  67% (92/137)\u001b[K\rremote: Counting objects:  68% (94/137)\u001b[K\rremote: Counting objects:  69% (95/137)\u001b[K\rremote: Counting objects:  70% (96/137)\u001b[K\rremote: Counting objects:  71% (98/137)\u001b[K\rremote: Counting objects:  72% (99/137)\u001b[K\rremote: Counting objects:  73% (101"
+    ],
+    [
+      5.3e-05,
+      "/137)\u001b[K\rremote: Counting objects:  74% (102/137)\u001b[K\rremote: Counting objects:  75% (103/137)\u001b[K\rremote: Counting objects:  76% (105/137)\u001b[K\rremote: Counting objects:  77% (106/137)\u001b[K\rremote: Counting objects:  78% (107/137)\u001b[K\rremote: Counting objects:  79% (109/137)\u001b[K\rremote: Counting objects:  80% (110/137)\u001b[K\rremote: Counting objects:  81% (111/137)\u001b[K\rremote: Counting objects:  82% (113/137)\u001b[K\rremote: Counting objects:  83% (114/137)\u001b[K\rremote: Counting objects:  84% (116/137)\u001b[K\rremote: Counting objects:  85% (117/137)\u001b[K\rremote: Counting objects:  86% (118/137)\u001b[K\rremote: Counting objects:  87% (120/137)\u001b[K\rremote: Counting objects:  88% (121/137)\u001b[K\rremote: Counting objects:  89% (122/137)\u001b[K\rremote: Counting objects:  90% (124/137)\u001b[K\rremote: Counting objects:  91% (125/137)\u001b[K\rremote: Counting objects:  92% (127/137)\u001b[K\rremote: Counting objects:  93% (128/137)\u001b[K\rremote: Counting objects:  94% (129/137)\u001b[K\rremote: Counting objects:  95% (131/137)\u001b[K\rremote: Counting objects:  96% (132/137)\u001b[K\rrem"
+    ],
+    [
+      2.4e-05,
+      "ote: Counting objects:  97% (133/137)\u001b[K\rremote: Counting objects:  98% (135/137)\u001b[K\rremote: Counting objects:  99% (136/137)\u001b[K\rremote: Counting objects: 100% (137/137)\u001b[K\rremote: Counting objects: 100% (137/137), done.\u001b[K\r\nremote: Compressing objects:   1% (1/91)\u001b[K\rremote: Compressing objects:   2% (2/91)\u001b[K\rremote: Compressing objects:   3% (3/91)\u001b[K\rremote: Compressing objects:   4% (4/91)\u001b[K\rremote: Compressing objects:   5% (5/91)\u001b[K\rremote: Compressing objects:   6% (6/91)\u001b[K\rremote: Compressing objects:   7% (7/91)\u001b[K\rremote: Compressing objects:   8% (8/91)\u001b[K\rremote: Compressing objects:   9% (9/91)\u001b[K\rremote: Compressing objects:  10% (10/91)\u001b[K\rremote: Compressing objects:  12% (11/91)\u001b[K\rremote: Compressing objects:  13% (12/91)\u001b[K\rremote: Compressing objects:  14% (13/91)\u001b[K\rremote: Compressing objects:  15% (14/91)\u001b[K\rremote: Compressing objects:  16% (15/91)\u001b[K\rremote: Compressing objects:  17% (16/91)\u001b[K\rremote: Compressing objects:  18% (17/91)\u001b[K\rremote: Compressing objects:  19% (18/91)\u001b["
+    ],
+    [
+      1.8e-05,
+      "K\rremote: Compressing objects:  20% (19/91)\u001b[K\rremote: Compressing objects:  21% (20/91)\u001b[K\rremote: Compressing objects:  23% (21/91)\u001b[K\rremote: Compressing objects:  24% (22/91)\u001b[K\rremote: Compressing objects:  25% (23/91)\u001b[K\rremote: Compressing objects:  26% (24/91)\u001b[K\rremote: Compressing objects:  27% (25/91)\u001b[K\rremote: Compressing objects:  28% (26/91)\u001b[K\rremote: Compressing objects:  29% (27/91)\u001b[K\rremote: Compressing objects:  30% (28/91)\u001b[K\rremote: Compressing objects:  31% (29/91)\u001b[K\rremote: Compressing objects:  32% (30/91)\u001b[K\rremote: Compressing objects:  34% (31/91)\u001b[K\rremote: Compressing objects:  35% (32/91)\u001b[K\rremote: Compressing objects:  36% (33/91)\u001b[K\rremote: Compressing objects:  37% (34/91)\u001b[K\rremote: Compressing objects:  38% (35/91)\u001b[K\rremote: Compressing objects:  39% (36/91)\u001b[K\rremote: Compressing objects:  40% (37/91)\u001b[K\rremote: Compressing objects:  41% (38/91)\u001b[K\rremote: Compressing objects:  42% (39/91)\u001b[K\rremote: Compressing objects:  43% (40/91)\u001b[K\rremote: Compressing objects:  45"
+    ],
+    [
+      1.6e-05,
+      "% (41/91)\u001b[K\rremote: Compressing objects:  46% (42/91)\u001b[K\rremote: Compressing objects:  47% (43/91)\u001b[K\rremote: Compressing objects:  48% (44/91)\u001b[K\rremote: Compressing objects:  49% (45/91)\u001b[K\rremote: Compressing objects:  50% (46/91)\u001b[K\rremote: Compressing objects:  51% (47/91)\u001b[K\rremote: Compressing objects:  52% (48/91)\u001b[K\rremote: Compressing objects:  53% (49/91)\u001b[K\rremote: Compressing objects:  54% (50/91)\u001b[K\rremote: Compressing objects:  56% (51/91)\u001b[K\rremote: Compressing objects:  57% (52/91)\u001b[K\rremote: Compressing objects:  58% (53/91)\u001b[K\rremote: Compressing objects:  59% (54/91)\u001b[K\rremote: Compressing objects:  60% (55/91)\u001b[K\rremote: Compressing objects:  61% (56/91)\u001b[K\rremote: Compressing objects:  62% (57/91)\u001b[K\rremote: Compressing objects:  63% (58/91)\u001b[K\rremote: Compressing objects:  64% (59/91)\u001b[K\rremote: Compressing objects:  65% (60/91)\u001b[K\rremote: Compressing objects:  67% (61/91)\u001b[K\rremote: Compressing objects:  68% (62/91)\u001b[K\rremote: Compressing objects:  69% (63/91)\u001b[K\rremote: Compressing o"
+    ],
+    [
+      1.4e-05,
+      "bjects:  70% (64/91)\u001b[K\rremote: Compressing objects:  71% (65/91)\u001b[K\rremote: Compressing objects:  72% (66/91)\u001b[K\rremote: Compressing objects:  73% (67/91)\u001b[K\rremote: Compressing objects:  74% (68/91)\u001b[K\rremote: Compressing objects:  75% (69/91)\u001b[K\rremote: Compressing objects:  76% (70/91)\u001b[K\rremote: Compressing objects:  78% (71/91)\u001b[K\rremote: Compressing objects:  79% (72/91)\u001b[K\rremote: Compressing objects:  80% (73/91)\u001b[K\rremote: Compressing objects:  81% (74/91)\u001b[K\rremote: Compressing objects:  82% (75/91)\u001b[K\rremote: Compressing objects:  83% (76/91)\u001b[K\rremote: Compressing objects:  84% (77/91)\u001b[K\rremote: Compressing objects:  85% (78/91)\u001b[K\rremote: Compressing objects:  86% (79/91)\u001b[K\rremote: Compressing objects:  87% (80/91)\u001b[K\rremote: Compressing objects:  89% (81/91)\u001b[K\rremote: Compressing objects:  90% (82/91)\u001b[K\rremote: Compressing objects:  91% (83/91)\u001b[K\rremote: Compressing objects:  92% (84/91)\u001b[K\rremote: Compressing objects:  93% (85/91)\u001b[K\rremote: Compressing objects:  94% (86/91)\u001b[K\rremote: Co"
+    ],
+    [
+      1.5e-05,
+      "mpressing objects:  95% (87/91)\u001b[K\rremote: Compressing objects:  96% (88/91)\u001b[K\rremote: Compressing objects:  97% (89/91)\u001b[K\rremote: Compressing objects:  98% (90/91)\u001b[K\rremote: Compressing objects: 100% (91/91)\u001b[K\rremote: Compressing objects: 100% (91/91), done.\u001b[K\r\n"
+    ],
+    [
+      0.007099,
+      "Receiving objects:   0% (1/137)   \rReceiving objects:   1% (2/137)   \rReceiving objects:   2% (3/137)   \rReceiving objects:   3% (5/137)   \rReceiving objects:   4% (6/137)   \rReceiving objects:   5% (7/137)   \rReceiving objects:   6% (9/137)   \rReceiving objects:   7% (10/137)   \rReceiving objects:   8% (11/137)   \rReceiving objects:   9% (13/137)   \rReceiving objects:  10% (14/137)   \rReceiving objects:  11% (16/137)   \rReceiving objects:  12% (17/137)   \rReceiving objects:  13% (18/137)   \rReceiving objects:  14% (20/137)   \rReceiving objects:  15% (21/137)   \rReceiving objects:  16% (22/137)   \rReceiving objects:  17% (24/137)   \rReceiving objects:  18% (25/137)   \rReceiving objects:  19% (27/137)   \rReceiving objects:  20% (28/137)   \rReceiving objects:  21% (29/137)   \rReceiving objects:  22% (31/137)   \rReceiving objects:  23% (32/137)   \rReceiving objects:  24% (33/137)   \rReceiving objects:  25% (35/137)   \rReceiving objects:  26% (36/137)   \rReceiving objects:  27% (37/137)   \rReceiving objects:  28%"
+    ],
+    [
+      2e-05,
+      " (39/137)   \rReceiving objects:  29% (40/137)   \rReceiving objects:  30% (42/137)   \rReceiving objects:  31% (43/137)   \rReceiving objects:  32% (44/137)   \rReceiving objects:  33% (46/137)   \rReceiving objects:  34% (47/137)   \rReceiving objects:  35% (48/137)   \rReceiving objects:  36% (50/137)   \rReceiving objects:  37% (51/137)   \rReceiving objects:  38% (53/137)   \rReceiving objects:  39% (54/137)   \rReceiving objects:  40% (55/137)   \rReceiving objects:  41% (57/137)   \rReceiving objects:  42% (58/137)   \rReceiving objects:  43% (59/137)   \rReceiving objects:  44% (61/137)   \rReceiving objects:  45% (62/137)   \r"
+    ],
+    [
+      0.038274,
+      "Receiving objects:  46% (64/137)   \rReceiving objects:  47% (65/137)   \rReceiving objects:  48% (66/137)   \rReceiving objects:  49% (68/137)   \rReceiving objects:  50% (69/137)   \rReceiving objects:  51% (70/137)   \rReceiving objects:  52% (72/137)   \rReceiving objects:  53% (73/137)   \rReceiving objects:  54% (74/137)   \rReceiving objects:  55% (76/137)   \rReceiving objects:  56% (77/137)   \rReceiving objects:  57% (79/137)   \rReceiving objects:  58% (80/137)   \rReceiving objects:  59% (81/137)   \rReceiving objects:  60% (83/137)   \rReceiving objects:  61% (84/137)   \rReceiving objects:  62% (85/137)   \rReceiving objects:  63% (87/137)   \rReceiving objects:  64% (88/137)   \rReceiving objects:  65% (90/137)   \rReceiving objects:  66% (91/137)   \rReceiving objects:  67% (92/137)   \rReceiving objects:  68% (94/137)   \rReceiving objects:  69% (95/137)   \rReceiving objects:  70% (96/137)   \rReceiving objects:  71% (98/137)   \rReceiving objects:  72% (99/137)   \r"
+    ],
+    [
+      0.005686,
+      "Receiving objects:  73% (101/137)   \rReceiving objects:  74% (102/137)   \rReceiving objects:  75% (103/137)   \rReceiving objects:  76% (105/137)   \rReceiving objects:  77% (106/137)   \rReceiving objects:  78% (107/137)   \rReceiving objects:  79% (109/137)   \rReceiving objects:  80% (110/137)   \rReceiving objects:  81% (111/137)   \r"
+    ],
+    [
+      0.000442,
+      "remote: Total 137 (delta 60), reused 123 (delta 46), pack-reused 0\u001b[K\r\n"
+    ],
+    [
+      0.001016,
+      "Receiving objects:  82% (113/137)   \rReceiving objects:  83% (114/137)   \rReceiving objects:  84% (116/137)   \rReceiving objects:  85% (117/137)   \rReceiving objects:  86% (118/137)   \rReceiving objects:  87% (120/137)   \rReceiving objects:  88% (121/137)   \rReceiving objects:  89% (122/137)   \rReceiving objects:  90% (124/137)   \rReceiving objects:  91% (125/137)   \rReceiving objects:  92% (127/137)   \rReceiving objects:  93% (128/137)   \rReceiving objects:  94% (129/137)   \rReceiving objects:  95% (131/137)   \rReceiving objects:  96% (132/137)   \rReceiving objects:  97% (133/137)   \rReceiving objects:  98% (135/137)   \rReceiving objects:  99% (136/137)   \rReceiving objects: 100% (137/137)   \rReceiving objects: 100% (137/137), 56.90 KiB | 0 bytes/s, done.\r\nResolving deltas:   0% (0/60)   \r"
+    ],
+    [
+      7.1e-05,
+      "Resolving deltas:   1% (1/60)   \rResolving deltas:   5% (3/60)   \r"
+    ],
+    [
+      0.002818,
+      "Resolving deltas:  10% (6/60)   \rResolving deltas:  13% (8/60)   \rResolving deltas:  16% (10/60)   \rResolving deltas:  23% (14/60)   \rResolving deltas:  33% (20/60)   \rResolving deltas:  35% (21/60)   \rResolving deltas:  38% (23/60)   \rResolving deltas:  40% (24/60)   \rResolving deltas:  43% (26/60)   \rResolving deltas:  48% (29/60)   \rResolving deltas:  51% (31/60)   \rResolving deltas:  56% (34/60)   \rResolving deltas:  58% (35/60)   \rResolving deltas:  63% (38/60)   \rResolving deltas:  65% (39/60)   \rResolving deltas:  66% (40/60)   \rResolving deltas:  68% (41/60)   \rResolving deltas:  70% (42/60)   \rResolving deltas:  71% (43/60)   \rResolving deltas:  73% (44/60)   \rResolving deltas:  83% (50/60)   \rResolving deltas:  85% (51/60)   \rResolving deltas:  93% (56/60)   \rResolving deltas:  95% (57/60)   \rResolving deltas:  98% (59/60)   \rResolving deltas: 100% (60/60)   \rResolving deltas: 100% (60/60), done.\r\n"
+    ],
+    [
+      0.014572,
+      "\u001b]0;user@osc01:~\u0007[user@osc01 ~]$ "
+    ],
+    [
+      2.0,
+      "cd istio"
+    ],
+    [
+      0.490851,
+      "\r\n\u001b]0;user@osc01:~/istio\u0007[user@osc01 istio]$ "
+    ],
+    [
+      2.0,
+      "git checkout $ISTIO_VERSION # Switch to branch version that we are using"
+    ],
+    [
+      0.725511,
+      "\r\n"
+    ],
+    [
+      0.005308,
+      "Branch 1.3.1 set up to track remote branch 1.3.1 from origin.\r\nSwitched to a new branch '1.3.1'\r\n"
+    ],
+    [
+      0.000214,
+      "\u001b]0;user@osc01:~/istio\u0007[user@osc01 istio]$ "
+    ],
+    [
+      2.0,
+      "# Switch to traffic-management directory"
+    ],
+    [
+      0.424584,
+      "\r\n\u001b]0;user@osc01:~/istio\u0007[user@osc01 istio]$ "
+    ],
+    [
+      2.0,
+      "cd scripts/01-traffic-management"
+    ],
+    [
+      0.486271,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create Istio Gateway definition using ingress gateway"
+    ],
+    [
+      0.446864,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system apply -f 00-create-gateway.yaml"
+    ],
+    [
+      0.870401,
+      "\r\n"
+    ],
+    [
+      0.582185,
+      "gateway.networking.istio.io/mygateway created\r\n"
+    ],
+    [
+      0.004308,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find out Ingress gateway IP address"
+    ],
+    [
+      0.430519,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get svc istio-ingressgateway"
+    ],
+    [
+      0.446657,
+      "\r\n"
+    ],
+    [
+      0.077956,
+      "NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)                                                                                                                                      AGE\r\nistio-ingressgateway   LoadBalancer   10.100.231.48   192.168.142.249   15020:31771/TCP,80:31380/TCP,443:31390/TCP,31400:31400/TCP,15029:32460/TCP,15030:31033/TCP,15031:31153/TCP,15032:31364/TCP,15443:30407/TCP   24h\r\n"
+    ],
+    [
+      0.001209,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find out Ingress host"
+    ],
+    [
+      0.391646,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress..ip}') ; echo $INGRESS_H \rOST"
+    ],
+    [
+      0.845671,
+      "\r\n"
+    ],
+    [
+      0.061466,
+      "192.168.142.249\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Test gateway - should resturn 404"
+    ],
+    [
+      0.46171,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "curl -v http://$INGRESS_HOST"
+    ],
+    [
+      0.447159,
+      "\r\n"
+    ],
+    [
+      0.006667,
+      "* About to connect() to 192.168.142.249 port 80 (#0)\r\n*   Trying 192.168.142.249...\r\n"
+    ],
+    [
+      0.000179,
+      "* Connected to 192.168.142.249 (192.168.142.249) port 80 (#0)\r\n> GET / HTTP/1.1\r\r\n> User-Agent: curl/7.29.0\r\r\n> Host: 192.168.142.249\r\r\n> Accept: */*\r\r\n> \r\r\n"
+    ],
+    [
+      0.025987,
+      "< HTTP/1.1 404 Not Found\r\r\n< location: http://192.168.142.249/\r\r\n< date: Wed, 02 Oct 2019 21:41:20 GMT\r\r\n< server: istio-envoy\r\r\n< content-length: 0\r\r\n< \r\r\n* Connection #0 to host 192.168.142.249 left intact\r\n"
+    ],
+    [
+      0.000428,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create a virtual service bookinfo that routes through above defined gateway"
+    ],
+    [
+      2.0,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system apply -f 01-create-virtual-service.yaml"
+    ],
+    [
+      1.097023,
+      "\r\n"
+    ],
+    [
+      0.153335,
+      "virtualservice.networking.istio.io/bookinfo created\r\n"
+    ],
+    [
+      0.003154,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Test gateway - should resturn 200"
+    ],
+    [
+      1.15849,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "curl -o /dev/null -s -w \"%{http_code}\\n\" http://$INGRESS_HOST/productpage"
+    ],
+    [
+      0.870133,
+      "\r\n"
+    ],
+    [
+      0.773632,
+      "200\r\n"
+    ],
+    [
+      0.000373,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check service endpoints - Kubernetes capabilities"
+    ],
+    [
+      0.43885,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get ep | grep reviews"
+    ],
+    [
+      0.388903,
+      "\r\n"
+    ],
+    [
+      0.079728,
+      "\u001b[01;31m\u001b[Kreviews\u001b[m\u001b[K       192.168.230.233:9080,192.168.230.234:9080,192.168.230.242:9080   24h\r\n"
+    ],
+    [
+      0.002476,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check pod IP addresses "
+    ],
+    [
+      0.343329,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get pods -o=custom-columns=NAME:.metadata.name,POD_IP:.status.podIP"
+    ],
+    [
+      0.348994,
+      "\r\n"
+    ],
+    [
+      0.087363,
+      "NAME                              POD_IP\r\ndetails-v1-74f858558f-5g74w       192.168.230.248\r\nproductpage-v1-8554d58bff-2dszr   192.168.230.225\r\nratings-v1-7855f5bcb9-kpzsk       192.168.230.227\r\nreviews-v1-59fd8b965b-fpdqr       192.168.230.234\r\nreviews-v2-d6cfdb7d6-zvqqr        192.168.230.233\r\nreviews-v3-75699b5cfb-wp2jh       192.168.230.242\r\n"
+    ],
+    [
+      0.001423,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check gateway and virtual service"
+    ],
+    [
+      0.374543,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get gateway"
+    ],
+    [
+      0.342842,
+      "\r\n"
+    ],
+    [
+      0.067141,
+      "NAME        AGE\r\nmygateway   4m7s\r\n"
+    ],
+    [
+      0.001275,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get vs"
+    ],
+    [
+      0.694389,
+      "\r\n"
+    ],
+    [
+      0.073024,
+      "NAME       GATEWAYS      HOSTS   AGE\r\nbookinfo   [mygateway]   [*]     3m13s\r\n"
+    ],
+    [
+      0.00145,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find pod's internal IP address"
+    ],
+    [
+      0.398055,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get pods -o=custom-columns=NAME:.metadata.name,POD_IP:.status.podIP"
+    ],
+    [
+      0.396971,
+      "\r\n"
+    ],
+    [
+      0.076739,
+      "NAME                              POD_IP\r\ndetails-v1-74f858558f-5g74w       192.168.230.248\r\nproductpage-v1-8554d58bff-2dszr   192.168.230.225\r\nratings-v1-7855f5bcb9-kpzsk       192.168.230.227\r\nreviews-v1-59fd8b965b-fpdqr       192.168.230.234\r\nreviews-v2-d6cfdb7d6-zvqqr        192.168.230.233\r\nreviews-v3-75699b5cfb-wp2jh       192.168.230.242\r\n"
+    ],
+    [
+      0.001521,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find productpage pod IP address and test curl"
+    ],
+    [
+      0.39767,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "export PRODUCTPAGE_POD=$(kubectl -n istio-lab get pods -l app=productpage -o jsonpath='{.items..status.podIP}') ; echo $PRODUCTPAGE_POD"
+    ],
+    [
+      0.43359,
+      "\r\n"
+    ],
+    [
+      0.079596,
+      "192.168.230.225\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "curl -s http://$PRODUCTPAGE_POD:9080 | grep title"
+    ],
+    [
+      0.464994,
+      "\r\n"
+    ],
+    [
+      0.015578,
+      "    <\u001b[01;31m\u001b[Ktitle\u001b[m\u001b[K>Simple Bookstore App</\u001b[01;31m\u001b[Ktitle\u001b[m\u001b[K>\r\n"
+    ],
+    [
+      0.000269,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find cluster IP address - different than pod address\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      0.422248,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get svc -o custom-columns=NAME:.metadata.name,CLUSTER_IP:.spec.clusterIP"
+    ],
+    [
+      0.509133,
+      "\r\n"
+    ],
+    [
+      0.067811,
+      "NAME          CLUSTER_IP\r\ndetails       10.98.26.97\r\nproductpage   10.110.156.120\r\nratings       10.100.222.89\r\nreviews       10.97.241.241\r\n"
+    ],
+    [
+      0.001206,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find productpage IP address and run curl to test"
+    ],
+    [
+      0.41388,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "PRODUCTPAGE_IP=$(kubectl -n istio-lab get svc -l app=productpage -o jsonpath='{.items...spec.clusterIP}') ; echo $PRODUCTPAGE_IP"
+    ],
+    [
+      0.45955,
+      "\r\n"
+    ],
+    [
+      0.063449,
+      "10.110.156.120\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "curl -s http://$PRODUCTPAGE_IP:9080 | grep title"
+    ],
+    [
+      0.468169,
+      "\r\n"
+    ],
+    [
+      0.008183,
+      "    <\u001b[01;31m\u001b[Ktitle\u001b[m\u001b[K>Simple Bookstore App</\u001b[01;31m\u001b[Ktitle\u001b[m\u001b[K>\r\n"
+    ],
+    [
+      0.001047,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check product page end points"
+    ],
+    [
+      0.390943,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get ep productpage"
+    ],
+    [
+      0.373951,
+      "\r\n"
+    ],
+    [
+      0.068051,
+      "NAME          ENDPOINTS              AGE\r\nproductpage   192.168.230.225:9080   24h\r\n"
+    ],
+    [
+      0.001355,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Test DNS name resolution of the productpage"
+    ],
+    [
+      0.395927,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "dig +short productpage.istio-lab.svc.cluster.local @10.96.0.10"
+    ],
+    [
+      0.430937,
+      "\r\n"
+    ],
+    [
+      0.02535,
+      "10.110.156.120\r\n"
+    ],
+    [
+      0.00256,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Edit productpage service to change clusterip to nodeport"
+    ],
+    [
+      0.396401,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab edit svc productpage"
+    ],
+    [
+      0.619348,
+      "\r\n"
+    ],
+    [
+      0.096718,
+      "\u001b[?1049h\u001b[?1h\u001b="
+    ],
+    [
+      0.000736,
+      "\u001b[1;40r\u001b[?12;25h\u001b[?12l\u001b[?25h\u001b[27m\u001b[m\u001b[H\u001b[2J\u001b[?25l\u001b[40;1H\"/tmp/kubectl-edit-faqpu.yaml\" 32L, 1061C\u001b[1;1H# Please edit the object below. Lines beginning with a '#' will be ignored,\r\n# and an empty file will abort the edit. If an error occurs while saving this file will be\r\n# reopened with the relevant failures.\r\n#\r\napiVersion: v1\r\nkind: Service\r\nmetadata:\r\n  annotations:\r\n    kubectl.kubernetes.io/last-applied-configuration: |\u001b[10;7H{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"productpage\",\"service\":\"productpage\"},\"name\":\"productpage\",\"namespace\":\"istio-lab\"},\"spec\":{\"pp\u001b[11;1Horts\":[{\"name\":\"http\",\"port\":9080}],\"selector\":{\"app\":\"productpage\"}}}\r\n  creationTimestamp: \"2019-10-01T21:15:54Z\"\r\n  labels:\r\n    app: productpage\r\n    service: productpage\r\n  name: productpage\r\n  namespace: istio-lab\r\n  resourceVersion: \"81967\"\r\n  selfLink: /api/v1/namespaces/istio-lab/services/productpage\r\n  uid: d70c64c7-079e-4940-a239-103bde419bb6\r\nspec:\r\n  clusterIP: 10.110.156.120\r\n  ports:\r\n  "
+    ],
+    [
+      1.8e-05,
+      "- name: http\r\n    port: 9080\r\n    protocol: TCP\r\n    targetPort: 9080\r\n  selector:\r\n    app: productpage\r\n  sessionAffinity: None\r\n  type: ClusterIP\r\nstatus:\r\n  loadBalancer: {}\r\n\u001b[94m~                                                                                                                                                                                     \u001b[35;1H~                                                                                                                                                                                     \u001b[36;1H~                                                                                                                                                                                     \u001b[37;1H~                                                                                                                                                                                     \u001b[38;1H~                                                                                   "
+    ],
+    [
+      1.2e-05,
+      "                                                                                                  \u001b[39;1H~                                                                                                                                                                                     \u001b[1;1H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.457169,
+      "\r\n"
+    ],
+    [
+      0.499363,
+      "\r\n"
+    ],
+    [
+      0.081454,
+      "\r\n"
+    ],
+    [
+      0.083991,
+      "\r\n"
+    ],
+    [
+      0.083028,
+      "\r\n"
+    ],
+    [
+      0.083579,
+      "\r\n"
+    ],
+    [
+      0.083184,
+      "\r\n"
+    ],
+    [
+      0.08479,
+      "\r\n"
+    ],
+    [
+      0.083969,
+      "\r\n"
+    ],
+    [
+      0.085439,
+      "\r\n\r\n"
+    ],
+    [
+      0.082525,
+      "\r\n"
+    ],
+    [
+      0.083455,
+      "\r\n"
+    ],
+    [
+      0.084421,
+      "\r\n"
+    ],
+    [
+      0.082739,
+      "\r\n"
+    ],
+    [
+      0.086794,
+      "\r\n"
+    ],
+    [
+      0.080623,
+      "\r\n"
+    ],
+    [
+      0.082699,
+      "\r\n"
+    ],
+    [
+      0.083858,
+      "\r\n"
+    ],
+    [
+      0.084393,
+      "\r\n"
+    ],
+    [
+      0.0834,
+      "\r\n"
+    ],
+    [
+      0.084322,
+      "\r\n"
+    ],
+    [
+      0.082499,
+      "\r\n"
+    ],
+    [
+      0.083872,
+      "\r\n"
+    ],
+    [
+      0.084025,
+      "\r\n"
+    ],
+    [
+      0.083899,
+      "\r\n"
+    ],
+    [
+      0.083535,
+      "\r\n"
+    ],
+    [
+      0.187305,
+      "\r\n"
+    ],
+    [
+      0.176959,
+      "\r\n"
+    ],
+    [
+      0.158847,
+      "\r\n"
+    ],
+    [
+      0.271726,
+      "\u001b[m "
+    ],
+    [
+      0.500726,
+      " "
+    ],
+    [
+      0.08372,
+      "t"
+    ],
+    [
+      0.082951,
+      "y"
+    ],
+    [
+      0.083922,
+      "p"
+    ],
+    [
+      0.128168,
+      "e"
+    ],
+    [
+      0.184832,
+      ":"
+    ],
+    [
+      0.167135,
+      " "
+    ],
+    [
+      0.913023,
+      "\u001b[?25l\u001b[40;1H\u001b[1m-- INSERT --\u001b[m\u001b[40;13H\u001b[K\u001b[31;9H\u001b[K\u001b[31;9H\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.912975,
+      "\u001b[?25lN\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.278753,
+      "\u001b[?25lo\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.184181,
+      "\u001b[?25ld\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.175942,
+      "\u001b[?25le\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.375999,
+      "\u001b[?25lP\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.20802,
+      "\u001b[?25lo\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.304087,
+      "\u001b[?25lr\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.199718,
+      "\u001b[?25lt\u001b[?12l\u001b[?25h"
+    ],
+    [
+      1.029929,
+      "\u001b[40;1H\u001b[K\u001b[31;16H"
+    ],
+    [
+      0.538141,
+      "\u001b[?25l\u001b[?12l\u001b[?25h\u001b[?25l\u001b[40;1H:\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.23211,
+      "w"
+    ],
+    [
+      0.18423,
+      "q"
+    ],
+    [
+      0.176163,
+      "\r\u001b[?25l\"/tmp/kubectl-edit-faqpu.yaml\""
+    ],
+    [
+      0.003682,
+      " 32L, 1060C written\r\r\r\n\u001b[?1l\u001b>\u001b[?12l\u001b[?25h\u001b[?1049l"
+    ],
+    [
+      0.195612,
+      "service/productpage edited\r\n"
+    ],
+    [
+      0.002817,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check services"
+    ],
+    [
+      0.422576,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get svc "
+    ],
+    [
+      0.000417,
+      "productpage"
+    ],
+    [
+      0.453451,
+      "\r\n"
+    ],
+    [
+      0.071988,
+      "NAME          TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE\r\nproductpage   NodePort   10.110.156.120   <none>        9080:31757/TCP   24h\r\n"
+    ],
+    [
+      0.001375,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find name of the VM or master node"
+    ],
+    [
+      0.413841,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl get nodes"
+    ],
+    [
+      0.363784,
+      "\r\n"
+    ],
+    [
+      0.072426,
+      "NAME                      STATUS   ROLES    AGE    VERSION\r\nosc01.servicemesh.local   Ready    master   2d2h   v1.15.4\r\n"
+    ],
+    [
+      0.00149,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Look at the reviews pods and examine the labels assigned to these pods"
+    ],
+    [
+      1.164812,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get pods -l app=reviews --show-labels"
+    ],
+    [
+      0.486305,
+      "\r\n"
+    ],
+    [
+      0.069531,
+      "NAME                          READY   STATUS    RESTARTS   AGE   LABELS\r\nreviews-v1-59fd8b965b-fpdqr   2/2     Running   2          24h   app=reviews,pod-template-hash=59fd8b965b,version=v1\r\nreviews-v2-d6cfdb7d6-zvqqr    2/2     Running   2          24h   app=reviews,pod-template-hash=d6cfdb7d6,version=v2\r\nreviews-v3-75699b5cfb-wp2jh   2/2     Running   2          24h   app=reviews,pod-template-hash=75699b5cfb,version=v3\r\n"
+    ],
+    [
+      0.000988,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create destination rules for all microservices within Bookinfo"
+    ],
+    [
+      0.423367,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 02-create-destination-rules.yaml"
+    ],
+    [
+      0.365184,
+      "\r\n"
+    ],
+    [
+      0.217804,
+      "destinationrule.networking.istio.io/productpage created\r\n"
+    ],
+    [
+      0.00784,
+      "destinationrule.networking.istio.io/reviews created\r\n"
+    ],
+    [
+      0.007105,
+      "destinationrule.networking.istio.io/ratings created\r\n"
+    ],
+    [
+      0.010766,
+      "destinationrule.networking.istio.io/details created\r\n"
+    ],
+    [
+      0.002867,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Traffic Shifting"
+    ],
+    [
+      0.39112,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create the virtual service which uses a subset defined through a destination rule"
+    ],
+    [
+      0.499965,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 03-create-virtual-service-for-v1.yaml"
+    ],
+    [
+      0.411445,
+      "\r\n"
+    ],
+    [
+      0.147619,
+      "virtualservice.networking.istio.io/productpage created\r\n"
+    ],
+    [
+      0.010615,
+      "virtualservice.networking.istio.io/reviews created\r\n"
+    ],
+    [
+      0.00739,
+      "virtualservice.networking.istio.io/ratings created\r\n"
+    ],
+    [
+      0.008844,
+      "virtualservice.networking.istio.io/details created\r\n"
+    ],
+    [
+      0.003482,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Identity Based Traffic Routing"
+    ],
+    [
+      0.398541,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Modify the virtual service"
+    ],
+    [
+      0.358519,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 04-identity-based-traffic-routing.yaml"
+    ],
+    [
+      0.373737,
+      "\r\n"
+    ],
+    [
+      0.136537,
+      "virtualservice.networking.istio.io/reviews configured\r\n"
+    ],
+    [
+      0.003401,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Browser based routing"
+    ],
+    [
+      0.371771,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 05-chrome-browser-traffic-routing.yaml"
+    ],
+    [
+      0.387969,
+      "\r\n"
+    ],
+    [
+      0.206805,
+      "virtualservice.networking.istio.io/reviews configured\r\n"
+    ],
+    [
+      0.004675,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Canary deployment"
+    ],
+    [
+      0.365988,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Modify the reviews virtual service with weight based routing"
+    ],
+    [
+      0.453735,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 06-canary-deployment-weight-based-routing.yaml"
+    ],
+    [
+      0.382381,
+      "\r\n"
+    ],
+    [
+      0.141657,
+      "virtualservice.networking.istio.io/reviews configured\r\n"
+    ],
+    [
+      0.003378,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Run curl test 1000 times "
+    ],
+    [
+      1.165806,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "echo $INGRESS_HOST"
+    ],
+    [
+      0.405248,
+      "\r\n192.168.142.249\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "time curl -s http://$INGRESS_HOST/productpage?[1-1000] | grep -c \"full stars\""
+    ],
+    [
+      0.611782,
+      "\r\n"
+    ],
+    [
+      2.0,
+      "212\r\n"
+    ],
+    [
+      0.000374,
+      "\r\nreal\t0m57.282s\r\nuser\t0m0.119s\r\nsys\t0m0.132s\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Modify the reviews virtual service "
+    ],
+    [
+      0.46303,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 07-move-canary-to-production.yaml"
+    ],
+    [
+      0.494346,
+      "\r\n"
+    ],
+    [
+      0.484523,
+      "virtualservice.networking.istio.io/reviews configured\r\n"
+    ],
+    [
+      0.002869,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Run curl test 1000 times"
+    ],
+    [
+      0.527043,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "curl -s http://$INGRESS_HOST/productpage?[1-1000] | grep -c \"full stars\""
+    ],
+    [
+      0.507443,
+      "\r\n"
+    ],
+    [
+      2.0,
+      "2000\r\n"
+    ],
+    [
+      0.000217,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Fault Injection"
+    ],
+    [
+      0.390043,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Injecting http delay faults"
+    ],
+    [
+      0.468181,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Inject a delay of 7 seconds for the end user jason for the ratings service:"
+    ],
+    [
+      0.412503,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 08-inject-http-delay-fault.yaml"
+    ],
+    [
+      0.426984,
+      "\r\n"
+    ],
+    [
+      0.521229,
+      "virtualservice.networking.istio.io/ratings configured\r\n"
+    ],
+    [
+      0.00297,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007"
+    ],
+    [
+      1.6e-05,
+      "[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Injecting http abort faults"
+    ],
+    [
+      0.456044,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Modify the ratings virtual service to inject http abort for the test user jason"
+    ],
+    [
+      0.518549,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 09-inject-http-abort-fault.yaml"
+    ],
+    [
+      0.446627,
+      "\r\n"
+    ],
+    [
+      0.145645,
+      "virtualservice.networking.istio.io/ratings configured\r\n"
+    ],
+    [
+      0.002664,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Requesting Timeouts"
+    ],
+    [
+      0.43203,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Set the request timeout to 0.5 seconds for reviews service"
+    ],
+    [
+      0.358887,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 10-set-request-timeout.yaml"
+    ],
+    [
+      0.383847,
+      "\r\n"
+    ],
+    [
+      0.184656,
+      "virtualservice.networking.istio.io/reviews configured\r\n"
+    ],
+    [
+      0.003115,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Introduce a 2 seconds latency between reviews and ratings service"
+    ],
+    [
+      0.382056,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 11-inject-latency.yaml"
+    ],
+    [
+      0.382575,
+      "\r\n"
+    ],
+    [
+      0.155605,
+      "virtualservice.networking.istio.io/ratings configured\r\n"
+    ],
+    [
+      0.003054,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Remove the timeout and latency definitions from the virtual services before we begin circuit breaker testing"
+    ],
+    [
+      0.364476,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab delete -f 03-create-virtual-service-for-v1.yaml"
+    ],
+    [
+      0.445237,
+      "\r\n"
+    ],
+    [
+      0.065571,
+      "virtualservice.networking.istio.io \"productpage\" deleted\r\n"
+    ],
+    [
+      0.006146,
+      "virtualservice.networking.istio.io \"reviews\" deleted\r\n"
+    ],
+    [
+      0.004853,
+      "virtualservice.networking.istio.io \"ratings\" deleted\r\n"
+    ],
+    [
+      0.003816,
+      "virtualservice.networking.istio.io \"details\" deleted\r\n"
+    ],
+    [
+      0.006856,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab create -f 03-create-virtual-service-for-v1.yaml"
+    ],
+    [
+      0.390184,
+      "\r\n"
+    ],
+    [
+      0.131566,
+      "virtualservice.networking.istio.io/productpage created\r\n"
+    ],
+    [
+      0.004862,
+      "virtualservice.networking.istio.io/reviews created\r\n"
+    ],
+    [
+      0.005138,
+      "virtualservice.networking.istio.io/ratings created\r\n"
+    ],
+    [
+      0.00351,
+      "virtualservice.networking.istio.io/details created\r\n"
+    ],
+    [
+      0.00237,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Circuit Breaker"
+    ],
+    [
+      0.341616,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Implement the circuit breaker rules using destination rule for productpage\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      0.341514,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 12-modify-productpage-destination-rule-for-circuit-breaker.yaml"
+    ],
+    [
+      0.390151,
+      "\r\n"
+    ],
+    [
+      0.134757,
+      "destinationrule.networking.istio.io/productpage configured\r\n"
+    ],
+    [
+      0.002297,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Install Istio Fortio testing tool"
+    ],
+    [
+      0.399526,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 13-install-fortio-testing-tool.yaml"
+    ],
+    [
+      0.38168,
+      "\r\n"
+    ],
+    [
+      0.139111,
+      "service/fortio created\r\n"
+    ],
+    [
+      0.020361,
+      "deployment.apps/fortio-deploy created\r\n"
+    ],
+    [
+      0.003863,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get deploy fortio-deploy"
+    ],
+    [
+      0.468203,
+      "\r\n"
+    ],
+    [
+      0.094595,
+      "NAME            READY   UP-TO-DATE   AVAILABLE   AGE\r\nfortio-deploy   1/1     1            1           70s\r\n"
+    ],
+    [
+      0.00158,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check Istio proxy car is automatically injected in Fortio pod as shown by 2/2 "
+    ],
+    [
+      0.685421,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab get pods -l app=fortio"
+    ],
+    [
+      0.414396,
+      "\r\n"
+    ],
+    [
+      0.064795,
+      "NAME                             READY   STATUS    RESTARTS   AGE\r\nfortio-deploy-784c644f9c-2knvp   2/2     Running   0          87s\r\n"
+    ],
+    [
+      0.001173,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Run a simple test that will not trigger any circuit breaker rule"
+    ],
+    [
+      0.378504,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Make sure that there were no 5XX errors"
+    ],
+    [
+      0.494193,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "export FORTIO_POD=$(kubectl -n istio-lab get pods -l app=fortio --no-headers -o custom-columns=NAME:.metadata.name) ; echo $FORTIO_POD"
+    ],
+    [
+      0.666251,
+      "\r\n"
+    ],
+    [
+      0.0787,
+      "fortio-deploy-784c644f9c-2knvp\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it $FORTIO_POD -c fortio /usr/bin/fortio -- load -c 1 -qps 0 -n 1 -loglevel Warning http://productpage:9080"
+    ],
+    [
+      1.012297,
+      "\r\n"
+    ],
+    [
+      0.300849,
+      "21:59:31 I logger.go:97> Log level is now 3 Warning (was 2 Info)\r\nFortio 1.3.1 running at 0 queries per second, 8->8 procs, for 1 calls: http://productpage:9080\r\n"
+    ],
+    [
+      0.000583,
+      "Starting at max qps with 1 thread(s) [gomax 8] for exactly 1 calls (1 per thread + 0)\r\n"
+    ],
+    [
+      0.015553,
+      "Ended after 10.928081ms : 1 calls. qps=91.507\r\nAggregated Function Time : count 1 avg 0.010917018 +/- 0 min 0.010917018 max 0.010917018 sum 0.010917018\r\n# range, mid point, percentile, count\r\n>= 0.010917 <= 0.010917 , 0.010917 , 100.00, 1\r\n# target 50% 0.010917\r\n# target 75% 0.010917\r\n# target 90% 0.010917\r\n# target 99% 0.010917\r\n# target 99.9% 0.010917\r\nSockets used: 1 (for perfect keepalive, would be 1)\r\nCode 200 : 1 (100.0 %)\r\nResponse Header Sizes : count 1 avg 167 +/- 0 min 167 max 167 sum 167\r\nResponse Body/Total Sizes : count 1 avg 1850 +/- 0 min 1850 max 1850 sum 1850\r\nAll done 1 calls (plus 0 warmup) 10.917 ms avg, 91.5 qps\r\n"
+    ],
+    [
+      0.056789,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Change the number of concurrent connection to 3 (-c 3) and send 20 requests (-n 20) and run the test"
+    ],
+    [
+      0.467224,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it $FORTIO_POD -c fortio /usr/bin/fortio -- load -c 3 -qps 0 -n 20 -loglevel Warning http://productpage:9080"
+    ],
+    [
+      0.769773,
+      "\r\n"
+    ],
+    [
+      0.28493,
+      "21:59:46 I logger.go:97> Log level is now 3 Warning (was 2 Info)\r\nFortio 1.3.1 running at 0 queries per second, 8->8 procs, for 20 calls: http://productpage:9080\r\n"
+    ],
+    [
+      0.005872,
+      "Starting at max qps with 3 thread(s) [gomax 8] for exactly 20 calls (6 per thread + 2)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n"
+    ],
+    [
+      0.008476,
+      "21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n21:59:46 W http_client.go:679> Parsed non ok code 503 (HTTP/1.1 503)\r\n"
+    ],
+    [
+      0.029312,
+      "Ended after 41.204535ms : 20 calls. qps=485.38\r\nAggregated Function Time : count 20 avg 0.004346235 +/- 0.003423 min 0.000339113 max 0.010670484 sum 0.086924701\r\n# range, mid point, percentile, count\r\n>= 0.000339113 <= 0.001 , 0.000669557 , 35.00, 7\r\n> 0.001 <= 0.002 , 0.0015 , 40.00, 1\r\n> 0.002 <= 0.003 , 0.0025 , 45.00, 1\r\n> 0.003 <= 0.004 , 0.0035 , 50.00, 1\r\n> 0.005 <= 0.006 , 0.0055 , 55.00, 1\r\n> 0.006 <= 0.007 , 0.0065 , 75.00, 4\r\n> 0.007 <= 0.008 , 0.0075 , 80.00, 1\r\n> 0.008 <= 0.009 , 0.0085 , 90.00, 2\r\n> 0.009 <= 0.01 , 0.0095 , 95.00, 1\r\n> 0.01 <= 0.0106705 , 0.0103352 , 100.00, 1\r\n# target 50% 0.004\r\n# target 75% 0.007\r\n# target 90% 0.009\r\n# target 99% 0.0105364\r\n# target 99.9% 0.0106571\r\nSockets used: 11 (for perfect keepalive, would be 3)\r\nCode 200 : 11 (55.0 %)\r\nCode 503 : 9 (45.0 %)\r\nResponse Header Sizes : count 20 avg 91.85 +/- 83.08 min 0 max 167 sum 1837\r\nResponse Body/Total Sizes : count 20 avg 1125.95 +/- 800.5 min 241 max 1850 sum 22519\r\nAll done 20 calls (plus 0 warmup) 4.346 ms avg, 48"
+    ],
+    [
+      2.6e-05,
+      "5.4 qps\r\n"
+    ],
+    [
+      0.044235,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Revert the destination rules for all services to their original state "
+    ],
+    [
+      0.506614,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 02-create-destination-rules.yaml"
+    ],
+    [
+      0.443241,
+      "\r\n"
+    ],
+    [
+      0.361018,
+      "destinationrule.networking.istio.io/productpage configured\r\n"
+    ],
+    [
+      0.002596,
+      "destinationrule.networking.istio.io/reviews unchanged\r\n"
+    ],
+    [
+      0.003246,
+      "destinationrule.networking.istio.io/ratings unchanged\r\n"
+    ],
+    [
+      0.001988,
+      "destinationrule.networking.istio.io/details unchanged\r\n"
+    ],
+    [
+      0.002404,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Managing Traffic"
+    ],
+    [
+      0.412833,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Managing Ingress Traffic Patterns"
+    ],
+    [
+      0.438979,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check external IP address of the ingress gateway."
+    ],
+    [
+      0.460432,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get svc istio-ingressgateway -o custom-columns=Name:.metadata.name,EXTERNAL_IP:.status.loadBalancer.ingress[0].ip"
+    ],
+    [
+      1.028587,
+      "\r\n"
+    ],
+    [
+      0.059204,
+      "Name                   EXTERNAL_IP\r\nistio-ingressgateway   192.168.142.249\r\n"
+    ],
+    [
+      0.001275,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create an entry in /etc/hosts file"
+    ],
+    [
+      0.422154,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "export INGRESS_IP=$(kubectl -n istio-system get svc istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}') ; echo $INGRESS_IP"
+    ],
+    [
+      0.555936,
+      "\r\n"
+    ],
+    [
+      0.071962,
+      "192.168.142.249\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "if ! grep -q bookinfo.istio.io /etc/hosts ; then echo \"$INGRESS_IP bookinfo.istio.io\" | sudo tee -a /etc/hosts; fi"
+    ],
+    [
+      0.462747,
+      "\r\n"
+    ],
+    [
+      0.031297,
+      "192.168.142.249 bookinfo.istio.io\r\n"
+    ],
+    [
+      0.000746,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create bookinfo.istio.io virtual service"
+    ],
+    [
+      0.390229,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system apply -f 14-create-bookinfo-virtual-service.yaml"
+    ],
+    [
+      0.381022,
+      "\r\n"
+    ],
+    [
+      0.154764,
+      "virtualservice.networking.istio.io/bookinfo.istio.io created\r\n"
+    ],
+    [
+      0.00314,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Test http://bookinfo.istio.io within the virtual machine"
+    ],
+    [
+      0.396342,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "curl -s http://bookinfo.istio.io | grep title"
+    ],
+    [
+      0.436232,
+      "\r\n"
+    ],
+    [
+      0.017521,
+      "    <\u001b[01;31m\u001b[Ktitle\u001b[m\u001b[K>Simple Bookstore App</\u001b[01;31m\u001b[Ktitle\u001b[m\u001b[K>\r\n"
+    ],
+    [
+      0.001491,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Managing Egress Traffic Patterns\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Command to find out the current outbound traffic policy mode"
+    ],
+    [
+      0.476439,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get cm istio -o yaml | grep -m1 -o \"mode: ALLOW_ANY\""
+    ],
+    [
+      0.420627,
+      "\r\n"
+    ],
+    [
+      0.131074,
+      "\u001b[01;31m\u001b[Kmode: ALLOW_ANY\u001b[m\u001b[K\r\n"
+    ],
+    [
+      0.001472,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Find out ratings pod IP address to test connectivity to an external service"
+    ],
+    [
+      0.4519,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "export RATING_POD=$(kubectl -n istio-lab get pods -l app=ratings -o jsonpath='{.items..metadata.name}') ; echo $RATING_POD"
+    ],
+    [
+      0.419541,
+      "\r\n"
+    ],
+    [
+      0.105389,
+      "ratings-v1-7855f5bcb9-kpzsk\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Run curl from ratings pod to test https://www.ibm.com and check the http code status"
+    ],
+    [
+      0.749583,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -LI https://www.ibm.com | grep \"HTTP/\""
+    ],
+    [
+      0.718082,
+      "\r\n"
+    ],
+    [
+      0.533554,
+      "\u001b[01;31m\u001b[KHTTP/\u001b[m\u001b[K2 303 \r\r\n"
+    ],
+    [
+      0.121694,
+      "\u001b[01;31m\u001b[KHTTP/\u001b[m\u001b[K2 200 \r\r\n"
+    ],
+    [
+      0.048581,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -LI https://www.cnn.com | grep \"HTTP/\""
+    ],
+    [
+      0.649116,
+      "\r\n"
+    ],
+    [
+      0.479567,
+      "\u001b[01;31m\u001b[KHTTP/\u001b[m\u001b[K2 200 \r\r\n"
+    ],
+    [
+      0.042844,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Blocking Access to external services"
+    ],
+    [
+      0.380991,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Change the config map for mode: ALLOW_ANY to mode: REGISTRY_ONLY"
+    ],
+    [
+      0.404908,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get cm istio -o yaml | sed 's/mode: ALLOW_ANY/mode: REGISTRY_ONLY/g' | kubectl replace -n istio-system -f -"
+    ],
+    [
+      0.636126,
+      "\r\n"
+    ],
+    [
+      0.192099,
+      "configmap/istio replaced\r\n"
+    ],
+    [
+      0.00298,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check if mode: REGISTRY_ONLY has been set"
+    ],
+    [
+      0.455302,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get cm istio -o yaml | grep -m 1 -o \"mode: REGISTRY_ONLY\""
+    ],
+    [
+      0.384003,
+      "\r\n"
+    ],
+    [
+      0.064237,
+      "\u001b[01;31m\u001b[Kmode: REGISTRY_ONLY\u001b[m\u001b[K\r\n"
+    ],
+    [
+      0.00088,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Repeat curl test again for external services ibm.com"
+    ],
+    [
+      0.38847,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -LI https://www.ibm.com | grep \"HTTP/\""
+    ],
+    [
+      1.550224,
+      "\r\n"
+    ],
+    [
+      0.360206,
+      "command terminated with exit code 35\r\n"
+    ],
+    [
+      0.001894,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Repeat curl test again for external services cnn.com"
+    ],
+    [
+      0.478347,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -LI https://www.cnn.com | grep \"HTTP/\""
+    ],
+    [
+      1.661326,
+      "\r\n"
+    ],
+    [
+      0.453554,
+      "command terminated with exit code 35\r\n"
+    ],
+    [
+      0.001341,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Blocking Access to external services"
+    ],
+    [
+      0.988457,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create a http ServiceEntry to allow access to http://httpbin.org"
+    ],
+    [
+      0.813475,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 15-http-service-entry-for-httpbin.yaml"
+    ],
+    [
+      0.750081,
+      "\r\n"
+    ],
+    [
+      0.273367,
+      "serviceentry.networking.istio.io/httpbin created\r\n"
+    ],
+    [
+      0.002534,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# ServiceEntry definition to allow https access to www.ibm.com"
+    ],
+    [
+      0.539466,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 16-https-service-entry-for-ibm.yaml"
+    ],
+    [
+      0.422004,
+      "\r\n"
+    ],
+    [
+      0.232586,
+      "serviceentry.networking.istio.io/ibm created\r\n"
+    ],
+    [
+      0.004486,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Wait couple of seconds and then use curl from ratings microservice to test external services for google"
+    ],
+    [
+      2.0,
+      "\b\u001b[K"
+    ],
+    [
+      0.223803,
+      "\b\u001b[K"
+    ],
+    [
+      0.177518,
+      "\b\u001b[K"
+    ],
+    [
+      0.14992,
+      "\b\u001b[K"
+    ],
+    [
+      0.176323,
+      "\b\u001b[K"
+    ],
+    [
+      0.367716,
+      "\b\u001b[K"
+    ],
+    [
+      0.520201,
+      "i"
+    ],
+    [
+      0.224081,
+      "b"
+    ],
+    [
+      0.199951,
+      "m"
+    ],
+    [
+      0.304093,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -LI https://www.ibm.com | grep \"HTTP/\""
+    ],
+    [
+      1.091073,
+      "\r\n"
+    ],
+    [
+      0.522789,
+      "\u001b[01;31m\u001b[KHTTP/\u001b[m\u001b[K2 303 \r\r\n"
+    ],
+    [
+      0.175441,
+      "\u001b[01;31m\u001b[KHTTP/\u001b[m\u001b[K2 200 \r\r\n"
+    ],
+    [
+      0.041956,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check for httpbin.org"
+    ],
+    [
+      0.493654,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "RATING_POD=$(kubectl -n istio-lab get pods -l app=ratings -o jsonpath='{.items..metadata.name}') ; echo $RATING_POD"
+    ],
+    [
+      0.404832,
+      "\r\n"
+    ],
+    [
+      0.066409,
+      "ratings-v1-7855f5bcb9-kpzsk\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl http://httpbin.org/headers"
+    ],
+    [
+      0.636906,
+      "\r\n"
+    ],
+    [
+      0.374298,
+      "{\r\n  \"headers\": {\r\n    \"Accept\": \"*/*\", \r\n    \"Host\": \"httpbin.org\", \r\n    \"User-Agent\": \"curl/7.52.1\", \r\n    \"X-B3-Sampled\": \"1\", \r\n    \"X-B3-Spanid\": \"165bf5c350919c7c\", \r\n    \"X-B3-Traceid\": \"af76bb50f2746850165bf5c350919c7c\", \r\n    \"X-Envoy-Decorator-Operation\": \"httpbin.org:80/*\", \r\n    \"X-Istio-Attributes\": \"CikKGGRlc3RpbmF0aW9uLnNlcnZpY2UuaG9zdBINEgtodHRwYmluLm9yZwopChhkZXN0aW5hdGlvbi5zZXJ2aWNlLm5hbWUSDRILaHR0cGJpbi5vcmcKLAodZGVzdGluYXRpb24uc2VydmljZS5uYW1lc3BhY2USCxIJaXN0aW8tbGFiCkIKCnNvdXJjZS51aWQSNBIya3ViZXJuZXRlczovL3JhdGluZ3MtdjEtNzg1NWY1YmNiOS1rcHpzay5pc3Rpby1sYWI=\"\r\n  }\r\n}\r\n"
+    ],
+    [
+      0.040385,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check the istio-proxy logs "
+    ],
+    [
+      0.477165,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab logs -c istio-proxy $RATING_POD | tail | grep curl"
+    ],
+    [
+      0.445685,
+      "\r\n"
+    ],
+    [
+      0.142192,
+      "[2019-10-02T21:52:39.542Z] \"GET /ratings/0 HTTP/1.1\" 200 - \"-\" \"-\" 0 48 0 0 \"-\" \"\u001b[01;31m\u001b[Kcurl\u001b[m\u001b[K/7.29.0\" \"11a9af65-5681-9723-9e51-3695adfd6c28\" \"ratings:9080\" \"127.0.0.1:9080\" inbound|9080|http|ratings.istio-lab.svc.cluster.local - 192.168.230.227:9080 192.168.230.233:49250 - default\r\n[2019-10-02T21:52:39.605Z] \"GET /ratings/0 HTTP/1.1\" 200 - \"-\" \"-\" 0 48 0 0 \"-\" \"\u001b[01;31m\u001b[Kcurl\u001b[m\u001b[K/7.29.0\" \"a9514f81-b5bf-9085-8782-a0fcb2936757\" \"ratings:9080\" \"127.0.0.1:9080\" inbound|9080|http|ratings.istio-lab.svc.cluster.local - 192.168.230.227:9080 192.168.230.233:49250 - default\r\n[2019-10-02T21:52:39.664Z] \"GET /ratings/0 HTTP/1.1\" 200 - \"-\" \"-\" 0 48 0 0 \"-\" \"\u001b[01;31m\u001b[Kcurl\u001b[m\u001b[K/7.29.0\" \"6a4fc720-60d9-97a9-a2ae-2b5c59f59e3c\" \"ratings:9080\" \"127.0.0.1:9080\" inbound|9080|http|ratings.istio-lab.svc.cluster.local - 192.168.230.227:9080 192.168.230.233:49250 - default\r\n[2019-10-02T21:52:39.724Z] \"GET /ratings/0 HTTP/1.1\" 200 - \"-\" \"-\" 0 48 0 0 \"-\" \"\u001b[01;31m\u001b[Kcurl\u001b[m\u001b[K/7.29.0\" \"34d5d913-7b3d-929f-8acb-f61b545f738b"
+    ],
+    [
+      3.2e-05,
+      "\" \"ratings:9080\" \"127.0.0.1:9080\" inbound|9080|http|ratings.istio-lab.svc.cluster.local - 192.168.230.227:9080 192.168.230.233:49250 - default\r\n[2019-10-02T21:52:39.782Z] \"GET /ratings/0 HTTP/1.1\" 200 - \"-\" \"-\" 0 48 0 0 \"-\" \"\u001b[01;31m\u001b[Kcurl\u001b[m\u001b[K/7.29.0\" \"845660ca-3eb7-9f1e-892b-b3c29f630cb1\" \"ratings:9080\" \"127.0.0.1:9080\" inbound|9080|http|ratings.istio-lab.svc.cluster.local - 192.168.230.227:9080 192.168.230.233:49250 - default\r\n[2019-10-02T21:52:39.841Z] \"GET /ratings/0 HTTP/1.1\" 200 - \"-\" \"-\" 0 48 0 0 \"-\" \"\u001b[01;31m\u001b[Kcurl\u001b[m\u001b[K/7.29.0\" \"9b9c780c-4666-9dff-92c5-cfa397b97bf7\" \"ratings:9080\" \"127.0.0.1:9080\" inbound|9080|http|ratings.istio-lab.svc.cluster.local - 192.168.230.227:9080 192.168.230.233:49250 - default\r\n[2019-10-02T22:06:50.470Z] \"GET /headers HTTP/1.1\" 200 - \"-\" \"-\" 0 583 51 50 \"-\" \"\u001b[01;31m\u001b[Kcurl\u001b[m\u001b[K/7.52.1\" \"d6325193-0dd3-9b52-abb1-86c8f52162c2\" \"httpbin.org\" \"34.225.33.222:80\" outbound|80||httpbin.org - 34.225.33.222:80 192.168.230.227:48260 - default\r\n"
+    ],
+    [
+      0.000248,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Test https://www.ibm.com"
+    ],
+    [
+      0.622902,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -LI https://www.ibm.com | grep \"HTTP/\""
+    ],
+    [
+      0.677665,
+      "\r\n"
+    ],
+    [
+      0.482499,
+      "\u001b[01;31m\u001b[KHTTP/\u001b[m\u001b[K2 303 \r\r\n"
+    ],
+    [
+      0.1092,
+      "\u001b[01;31m\u001b[KHTTP/\u001b[m\u001b[K2 200 \r\r\n"
+    ],
+    [
+      0.042638,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check if we have access to https://www.cnn.com"
+    ],
+    [
+      0.430557,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -LI https://www.cnn.com | grep \"HTTP/\""
+    ],
+    [
+      0.493181,
+      "\r\n"
+    ],
+    [
+      0.371931,
+      "command terminated with exit code 35\r\n"
+    ],
+    [
+      0.001801,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Routing rules for external services"
+    ],
+    [
+      0.438811,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Add timeout rule "
+    ],
+    [
+      0.404504,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 17-add-timeout-for-httpbin-virtual-service.yaml"
+    ],
+    [
+      0.549794,
+      "\r\n"
+    ],
+    [
+      0.393808,
+      "virtualservice.networking.istio.io/httpbin created\r\n"
+    ],
+    [
+      0.004673,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Access httpbin.org and introduce a delay of 5 seconds and check if a timeout occurs from our end"
+    ],
+    [
+      0.445131,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "time kubectl -n istio-lab exec -it -c ratings $RATING_POD -- curl -o /dev/null -s -w \"%{http_code}\\n\" http://httpbin.org/delay/5"
+    ],
+    [
+      0.492933,
+      "\r\n"
+    ],
+    [
+      2.0,
+      "504\r\n"
+    ],
+    [
+      0.056046,
+      "\r\nreal\t0m3.360s\r\nuser\t0m0.081s\r\nsys\t0m0.027s\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Traffic Mirroring"
+    ],
+    [
+      0.469975,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Deploy httpbin-v1"
+    ],
+    [
+      0.37958,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 18-deploy-httpbin-v1.yaml"
+    ],
+    [
+      0.396322,
+      "\r\n"
+    ],
+    [
+      0.136945,
+      "deployment.extensions/httpbin-v1 created\r\n"
+    ],
+    [
+      0.003678,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Deploy httpbin-v2"
+    ],
+    [
+      0.373505,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 19-deploy-httpbin-v2.yaml"
+    ],
+    [
+      0.413468,
+      "\r\n"
+    ],
+    [
+      0.161192,
+      "deployment.extensions/httpbin-v2 created\r\n"
+    ],
+    [
+      0.003308,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Deploy the httpbin service"
+    ],
+    [
+      0.358314,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 20-create-kubernetes-httpbin-service.yaml"
+    ],
+    [
+      0.403087,
+      "\r\n"
+    ],
+    [
+      0.498175,
+      "service/httpbin created\r\n"
+    ],
+    [
+      0.004919,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create destination rules to create subsets"
+    ],
+    [
+      0.373138,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 21-create-destination-rules-subsets.yaml"
+    ],
+    [
+      0.383123,
+      "\r\n"
+    ],
+    [
+      1.09002,
+      "destinationrule.networking.istio.io/httpbin created\r\n"
+    ],
+    [
+      0.003081,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Create virtual service to direct 100% of traffic to subset v1"
+    ],
+    [
+      1.350356,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 22-create-httpbin-virtual-service.yaml"
+    ],
+    [
+      0.400701,
+      "\r\n"
+    ],
+    [
+      0.748892,
+      "virtualservice.networking.istio.io/httpbin configured\r\n"
+    ],
+    [
+      0.005618,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Use first command line window for httpbin:V1 tail"
+    ],
+    [
+      0.846134,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "V1_POD=$(kubectl -n istio-lab get pod -l app=httpbin,version=v1 -o jsonpath={.items..metadata.name})"
+    ],
+    [
+      0.412138,
+      "\r\n"
+    ],
+    [
+      0.067779,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "echo $V1_POD"
+    ],
+    [
+      0.382243,
+      "\r\nhttpbin-v1-b9985cc7d-2grjb\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab -c httpbin logs $V1_POD"
+    ],
+    [
+      0.408345,
+      "\r\n"
+    ],
+    [
+      0.081668,
+      "[2019-10-02 22:09:27 +0000] [1] [INFO] Starting gunicorn 19.9.0\r\n[2019-10-02 22:09:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)\r\n[2019-10-02 22:09:27 +0000] [1] [INFO] Using worker: sync\r\n[2019-10-02 22:09:27 +0000] [8] [INFO] Booting worker with pid: 8\r\n"
+    ],
+    [
+      0.001544,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Use second command line window for httpbin:v2 tail"
+    ],
+    [
+      0.478715,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "V2_POD=$(kubectl -n istio-lab get pod -l app=httpbin,version=v2 -o jsonpath={.items..metadata.name})"
+    ],
+    [
+      0.390324,
+      "\r\n"
+    ],
+    [
+      0.07461,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "echo $V2_POD"
+    ],
+    [
+      0.365563,
+      "\r\nhttpbin-v2-5cdb74d4c7-vtq9r\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab -c httpbin logs $V2_POD"
+    ],
+    [
+      0.409259,
+      "\r\n"
+    ],
+    [
+      0.07992,
+      "[2019-10-02 22:09:28 +0000] [1] [INFO] Starting gunicorn 19.9.0\r\n[2019-10-02 22:09:28 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)\r\n[2019-10-02 22:09:28 +0000] [1] [INFO] Using worker: sync\r\n[2019-10-02 22:09:28 +0000] [8] [INFO] Booting worker with pid: 8\r\n"
+    ],
+    [
+      0.00137,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Open one more command line window and run the following curl command using ratings pod to send traffic to httpbin service"
+    ],
+    [
+      0.436354,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "RATING_POD=$(kubectl -n istio-lab get pods -l app=ratings -o jsonpath='{.items..metadata.name}')"
+    ],
+    [
+      0.380505,
+      "\r\n"
+    ],
+    [
+      0.082944,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "echo $RATING_POD"
+    ],
+    [
+      0.379017,
+      "\r\nratings-v1-7855f5bcb9-kpzsk\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it $RATING_POD -c ratings -- curl"
+    ],
+    [
+      0.000371,
+      " h"
+    ],
+    [
+      0.001703,
+      "ttp://httpbin:8000/headers | python -m json.tool"
+    ],
+    [
+      0.65108,
+      "\r\n"
+    ],
+    [
+      0.434478,
+      "{\r\n    \"headers\": {\r\n        \"Accept\": \"*/*\",\r\n        \"Content-Length\": \"0\",\r\n        \"Host\": \"httpbin:8000\",\r\n        \"User-Agent\": \"curl/7.52.1\",\r\n        \"X-B3-Parentspanid\": \"e25c255e79bc0a3a\",\r\n        \"X-B3-Sampled\": \"1\",\r\n        \"X-B3-Spanid\": \"a433e80ecba21c79\",\r\n        \"X-B3-Traceid\": \"4036591441879299e25c255e79bc0a3a\"\r\n    }\r\n}\r\n"
+    ],
+    [
+      0.000747,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check tail of v1"
+    ],
+    [
+      0.438699,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab -c httpbin logs $V1_POD"
+    ],
+    [
+      0.461252,
+      "\r\n"
+    ],
+    [
+      0.086292,
+      "[2019-10-02 22:09:27 +0000] [1] [INFO] Starting gunicorn 19.9.0\r\n[2019-10-02 22:09:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)\r\n[2019-10-02 22:09:27 +0000] [1] [INFO] Using worker: sync\r\n[2019-10-02 22:09:27 +0000] [8] [INFO] Booting worker with pid: 8\r\n127.0.0.1 - - [02/Oct/2019:22:10:44 +0000] \"GET /headers HTTP/1.1\" 200 303 \"-\" \"curl/7.52.1\"\r\n"
+    ],
+    [
+      0.001128,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Check tail of v2"
+    ],
+    [
+      0.382201,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab -c httpbin logs $V2_POD"
+    ],
+    [
+      0.372235,
+      "\r\n"
+    ],
+    [
+      0.097313,
+      "[2019-10-02 22:09:28 +0000] [1] [INFO] Starting gunicorn 19.9.0\r\n[2019-10-02 22:09:28 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)\r\n[2019-10-02 22:09:28 +0000] [1] [INFO] Using worker: sync\r\n[2019-10-02 22:09:28 +0000] [8] [INFO] Booting worker with pid: 8\r\n"
+    ],
+    [
+      0.001543,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Mirror traffic from v1 to v2"
+    ],
+    [
+      0.365963,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab apply -f 23-mirror-traffic-between-v1-and-v2.yaml"
+    ],
+    [
+      0.405334,
+      "\r\n"
+    ],
+    [
+      0.286406,
+      "virtualservice.networking.istio.io/httpbin configured\r\n"
+    ],
+    [
+      0.002555,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Send same traffic to httpbin:v1 and we should see log line appear in both httpbin:v1 and httpbin:v2 pods"
+    ],
+    [
+      0.764506,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab exec -it $RATING_POD -c ratings -- curl http://httpbin:8000/headers | python -m json.tool"
+    ],
+    [
+      0.660819,
+      "\r\n"
+    ],
+    [
+      0.401544,
+      "{\r\n    \"headers\": {\r\n        \"Accept\": \"*/*\",\r\n        \"Content-Length\": \"0\",\r\n        \"Host\": \"httpbin:8000\",\r\n        \"User-Agent\": \"curl/7.52.1\",\r\n        \"X-B3-Parentspanid\": \"74badb722019a36a\",\r\n        \"X-B3-Sampled\": \"1\",\r\n        \"X-B3-Spanid\": \"2839aa46ed404734\",\r\n        \"X-B3-Traceid\": \"65adebea35736ee274badb722019a36a\"\r\n    }\r\n}\r\n"
+    ],
+    [
+      0.005794,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# httpbin:v1, shows one more line in addition the previous one that we had already received"
+    ],
+    [
+      0.414065,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab -c httpbin logs $V1_POD"
+    ],
+    [
+      0.405897,
+      "\r\n"
+    ],
+    [
+      0.078971,
+      "[2019-10-02 22:09:27 +0000] [1] [INFO] Starting gunicorn 19.9.0\r\n[2019-10-02 22:09:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)\r\n[2019-10-02 22:09:27 +0000] [1] [INFO] Using worker: sync\r\n[2019-10-02 22:09:27 +0000] [8] [INFO] Booting worker with pid: 8\r\n127.0.0.1 - - [02/Oct/2019:22:10:44 +0000] \"GET /headers HTTP/1.1\" 200 303 \"-\" \"curl/7.52.1\"\r\n127.0.0.1 - - [02/Oct/2019:22:11:36 +0000] \"GET /headers HTTP/1.1\" 200 303 \"-\" \"curl/7.52.1\"\r\n"
+    ],
+    [
+      0.001157,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# httpbin:v2, shows the new line"
+    ],
+    [
+      0.438235,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-lab -c httpbin logs $V2_POD"
+    ],
+    [
+      0.595841,
+      "\r\n"
+    ],
+    [
+      0.105474,
+      "[2019-10-02 22:09:28 +0000] [1] [INFO] Starting gunicorn 19.9.0\r\n[2019-10-02 22:09:28 +0000] [1] [INFO] Listening at: http://0.0.0.0:80 (1)\r\n[2019-10-02 22:09:28 +0000] [1] [INFO] Using worker: sync\r\n[2019-10-02 22:09:28 +0000] [8] [INFO] Booting worker with pid: 8\r\n127.0.0.1 - - [02/Oct/2019:22:11:36 +0000] \"GET /headers HTTP/1.1\" 200 343 \"-\" \"curl/7.52.1\"\r\n"
+    ],
+    [
+      0.0046,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "## Cleaning-up"
+    ],
+    [
+      0.374026,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Change the mode from mode: REGISTRY_ONLY to mode: ALLOW_ANY for the purpose of next lab exercises"
+    ],
+    [
+      0.494251,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get cm istio -o yaml | sed 's/mode: REGISTRY_ONLY/mode: ALLOW_ANY/g' | kubectl replace -n istio-system -f -"
+    ],
+    [
+      0.493438,
+      "\r\n"
+    ],
+    [
+      0.214183,
+      "configmap/istio replaced\r\n"
+    ],
+    [
+      0.002668,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "# Double check if mode: ALLOW_ANY has been set"
+    ],
+    [
+      0.685419,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "kubectl -n istio-system get cm istio -o yaml | grep -m 1 -o \"mode: ALLOW_ANY\""
+    ],
+    [
+      0.49421,
+      "\r\n"
+    ],
+    [
+      0.070675,
+      "\u001b[01;31m\u001b[Kmode: ALLOW_ANY\u001b[m\u001b[K\r\n"
+    ],
+    [
+      0.001142,
+      "\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      2.0,
+      "### End of Istio Traffic management exercises"
+    ],
+    [
+      0.620101,
+      "\r\n\u001b]0;user@osc01:~/istio/scripts/01-traffic-management\u0007[user@osc01 01-traffic-management]$ "
+    ],
+    [
+      0.903725,
+      "e"
+    ],
+    [
+      0.200036,
+      "x"
+    ],
+    [
+      0.207466,
+      "i"
+    ],
+    [
+      0.18562,
+      "t"
+    ],
+    [
+      0.184174,
+      "\r\nlogout\r\n"
+    ]
+  ]
+}
