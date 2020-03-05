@@ -76,11 +76,6 @@ Prior to Divvycloud, Anjali worked at IBM and Merlin. She has 9+ years of profes
 **Vikram Khatri**
 Vikram Khatri is the chief architect of Cloud Pak for Data System at IBM. Vikram has 20 years of experience leading and mentoring high-performing, cross-functional teams to deliver high-impact, best-in-class technology solutions. Vikram is a visionary thought leader when it comes to architecting large-scale transformational solutions from monolithic to cloud-native applications that include data and AI. He is an industry-leading technical expert with a track record of leveraging deep technical expertise to develop solutions, resulting in revenues exceeding $1 billion over 14 years, and is also a technology subject matter expert in cloud-native technologies who frequently speaks at industry conferences and trade shows.
 
-
-## Other books by the authors
-* [Mastering Linux Network Administration](https://www.packtpub.com/networking-and-servers/mastering-linux-network-administration?utm_source=github&utm_medium=repository&utm_campaign=9781784399597)
-* [Linux Mint Essentials](https://www.packtpub.com/networking-and-servers/linux-mint-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781782168157)
-
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
 
