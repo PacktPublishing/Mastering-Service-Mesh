@@ -42,11 +42,14 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 ## Get to Know the Authors
 **Anjali Khatri**
-Anjali Khatri is an enterprise cloud architect at DivvyCloud, leading the cloud-native growth of the company. She helps customers to secure their cloud resources and services running on AWS, Google, Azure, and other cloud providers. She is leading the product and post-sales deployment strategy for enterprise customers by enhancing the future capabilities of DivvyCloud, building customer case studies, architecting feature requests, and so on with support from customer services, engineering, and sales to provide continuous delivery.
-Prior to Divvycloud, Anjali worked at IBM and Merlin. She has 9+ years of professional experience, including program management for software development, open source analytics sales, and IT networking consulting.
+Anjali Khatri is an enterprise cloud architect at DivvyCloud, leading the cloud-native growth of the company. She helps customers to secure their cloud resources and services running on AWS, Google, Azure, and other cloud providers. She is leading the product and
+post-sales deployment strategy for enterprise customers by enhancing the future capabilities of DivvyCloud, building customer case studies, architecting feature requests, and so on with support from customer success, engineering, and sales to provide
+continuous delivery. Prior to Divvycloud, Anjali worked at IBM and Merlin. She has 9+ years of professional experience, including program management for software development, open source analytics sales, and IT networking consulting.
 
 **Vikram Khatri**
 Vikram Khatri is the chief architect of Cloud Pak for Data System at IBM. Vikram has 20 years of experience leading and mentoring high-performing, cross-functional teams to deliver high-impact, best-in-class technology solutions. Vikram is a visionary thought leader when it comes to architecting large-scale transformational solutions from monolithic to cloud-native applications that include data and AI. He is an industry-leading technical expert with a track record of leveraging deep technical expertise to develop solutions, resulting in revenues exceeding $1 billion over 14 years, and is also a technology subject matter expert in cloud-native technologies who frequently speaks at industry conferences and trade shows.
+
+** This book is written by a daughter-father team. **
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
